@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<svg width="48px" height="48px" viewBox="0 0 48 48" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <path d="M0 0L48 0L48 48L0 48L0 0Z" id="path_1" />
+    <clipPath id="mask_1">
+      <use xlink:href="#path_1" />
+    </clipPath>
+  </defs>
+  <g id="Picture-icon">
+    <path d="M0 0L48 0L48 48L0 48L0 0Z" id="Background" fill="none" fill-rule="evenodd" stroke="none" />
+    <g clip-path="url(#mask_1)">
+      <path d="M40 41L8 41C5.8 41 4 39.2 4 37L4 11C4 8.8 5.8 7 8 7L40 7C42.2 7 44 8.8 44 11L44 37C44 39.2 42.2 41 40 41L40 41Z" id="Shape" fill="#F57C00" stroke="none" />
+      <path d="M35 13C33.3431 13 32 14.3431 32 16C32 17.6568 33.3431 19 35 19C36.6568 19 38 17.6569 38 16C38 14.3432 36.6569 13 35 13L35 13Z" id="Shape" fill="#FFF9C4" stroke="none" />
+      <path d="M20 16L9 32L31 32L20 16Z" id="Shape" fill="#942A09" stroke="none" />
+      <path d="M31 22L23 32L39 32L31 22Z" id="Shape" fill="#BF360C" stroke="none" />
+    </g>
+  </g>
+</svg>

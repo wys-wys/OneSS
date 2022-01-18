@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<svg width="48px" height="48px" viewBox="0 0 48 48" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <path d="M0 0L48 0L48 48L0 48L0 0Z" id="path_1" />
+    <clipPath id="mask_1">
+      <use xlink:href="#path_1" />
+    </clipPath>
+  </defs>
+  <g id="Folder-icon">
+    <path d="M0 0L48 0L48 48L0 48L0 0Z" id="Background" fill="none" fill-rule="evenodd" stroke="none" />
+    <g clip-path="url(#mask_1)">
+      <path d="M40 12L22 12L18 8L8 8C5.8 8 4 9.8 4 12L4 20L44 20L44 16C44 13.8 42.2 12 40 12L40 12Z" id="Shape" fill="#FFA000" stroke="none" />
+      <path d="M40 12L8 12C5.8 12 4 13.8 4 16L4 36C4 38.2 5.8 40 8 40L40 40C42.2 40 44 38.2 44 36L44 16C44 13.8 42.2 12 40 12L40 12Z" id="Shape" fill="#FFCA28" stroke="none" />
+    </g>
+  </g>
+</svg>
