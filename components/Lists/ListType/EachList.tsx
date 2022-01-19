@@ -10,9 +10,8 @@ export default function EachList({user, route, data}: { user: string, route?: st
     return (
         <div title={"File list"} className={"mx-2 h-50px text-gray-900"}>
             {data.map(({name, size, id, folder, file}, index) => {
-
-                if (folder) {
-                    return (
+                return (
+                    folder ?
                         <div key={index} title={"Folder list"}
                              className={"group flex flex-row space-x-1 hover:bg-black hover:bg-opacity-10 border-b-2"}>
                             <FileIcons kind={"folder"}/>
@@ -24,27 +23,24 @@ export default function EachList({user, route, data}: { user: string, route?: st
                                  className={"basis-1/6 flex items-center justify-center"}>{`${folder.childCount} items`}
                             </div>
                             <div title={"Action"}
-                                 className={"basis-1/12 flex flex-row justify-center items-center text-4xl invisible group-hover:visible"}>
+                                 className={"basis-1/12 flex flex-row justify-center items-center invisible group-hover:visible"}>
                                 <FileIcons kind={"share"} href={"#"}/>
                             </div>
                         </div>
-                    )
-                }
-
-                return (
-                    <div key={index} title={"File list"}
-                         className={"group flex flex-row space-x-1 hover:bg-black hover:bg-opacity-10 border-b-2"}>
-                        <SelectIcon mimeType={file.mimeType}/>
-                        <div title={"Name"} className={"basis-3/4 text-2xl flex items-center"}>{name}</div>
-                        <div title={"Size"}
-                             className={"basis-1/6 flex items-center justify-center"}>{`${ConvertB(size)}`}
+                        :
+                        <div key={index} title={"File list"}
+                             className={"group flex flex-row space-x-1 hover:bg-black hover:bg-opacity-10 border-b-2"}>
+                            <SelectIcon mimeType={file.mimeType}/>
+                            <div title={"Name"} className={"basis-3/4 text-2xl flex items-center"}>{name}</div>
+                            <div title={"Size"}
+                                 className={"basis-1/6 flex items-center justify-center"}>{`${ConvertB(size)}`}
+                            </div>
+                            <div title={"Action"}
+                                 className={"basis-1/12 flex flex-row justify-center items-center invisible group-hover:visible"}>
+                                <FileIcons kind={"download"} href={`https://${baseSetting.site}/dl/${user}/${id}`}/>
+                                <FileIcons kind={"share"} href={"#"}/>
+                            </div>
                         </div>
-                        <div title={"Action"}
-                             className={"basis-1/12 flex flex-row justify-center items-center text-4xl invisible group-hover:visible"}>
-                            <FileIcons kind={"download"} href={`https://${baseSetting.site}/dl/${user}/${id}`}/>
-                            <FileIcons kind={"share"} href={"#"}/>
-                        </div>
-                    </div>
                 )
             })}
         </div>
