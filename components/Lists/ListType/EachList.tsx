@@ -21,11 +21,10 @@ export default function EachList({user, route, data}: { user: string, route?: st
                                 <div title={"Name"}>{name}</div>
                             </a>
                             <div title={"Size"}
-                                 className={"basis-1/12 flex items-center justify-center"}>{`${folder.childCount} items`}
+                                 className={"basis-1/6 flex items-center justify-center"}>{`${folder.childCount} items`}
                             </div>
                             <div title={"Action"}
-                                 className={"basis-1/6 flex flex-row justify-center items-center text-4xl invisible group-hover:visible"}>
-                                <FileIcons kind={"view"} href={"#"}/>
+                                 className={"basis-1/12 flex flex-row justify-center items-center text-4xl invisible group-hover:visible"}>
                                 <FileIcons kind={"share"} href={"#"}/>
                             </div>
                         </div>
@@ -38,11 +37,10 @@ export default function EachList({user, route, data}: { user: string, route?: st
                         <SelectIcon mimeType={file.mimeType}/>
                         <div title={"Name"} className={"basis-3/4 text-2xl flex items-center"}>{name}</div>
                         <div title={"Size"}
-                             className={"basis-1/12 flex items-center justify-center"}>{`${ConvertB(size)}`}
+                             className={"basis-1/6 flex items-center justify-center"}>{`${ConvertB(size)}`}
                         </div>
                         <div title={"Action"}
-                             className={"basis-1/6 flex flex-row justify-center items-center text-4xl invisible group-hover:visible"}>
-                            <FileIcons kind={"view"} href={"#"}/>
+                             className={"basis-1/12 flex flex-row justify-center items-center text-4xl invisible group-hover:visible"}>
                             <FileIcons kind={"download"} href={`https://${baseSetting.site}/dl/${user}/${id}`}/>
                             <FileIcons kind={"share"} href={"#"}/>
                         </div>
