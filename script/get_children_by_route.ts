@@ -1,19 +1,10 @@
 import axios from "axios";
 
 import baseSetting from "../setting/baseSetting"
+import getToken from "./get_token";
 
 
-async function getToken() {
-    const res = await axios.post(baseSetting.endpoints.token_endpoint, new URLSearchParams(baseSetting.authorization), {
-        headers: {
-            'Content-Type': 'application/x-www-form-urlencoded',
-        },
-    })
-    return res.data.access_token
-}
-
-
-export async function getChildrenByRoute(route: string, user: string) {
+export default async function getChildrenByRoute(user: string, route: string) {
     const accessToken = await getToken()
     const url = `${baseSetting.endpoints.graph_endpoint}/users/${user}/drive/root:/${baseSetting.folder}${route}:/children`
 
@@ -23,7 +14,7 @@ export async function getChildrenByRoute(route: string, user: string) {
                 'Authorization': `Bearer ${accessToken}`
             },
             params: {
-                select: 'name,size,id,folder,file'
+                select: 'name,size,id,folder,file,@microsoft.graph.downloadUrl'
             },
         })
         return res.data.value
@@ -31,5 +22,3 @@ export async function getChildrenByRoute(route: string, user: string) {
         return 404
     }
 }
-
-export default getChildrenByRoute

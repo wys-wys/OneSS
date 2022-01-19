@@ -3,13 +3,13 @@ import FileIcons from "../../FileIcons";
 import baseSetting from "../../../setting/baseSetting";
 import SelectIcon from "./SelectIcon";
 
-type ItemData = Array<{ name: string, size: number, id: string, folder: { childCount: number }, file: { mimeType: string } }>
+type ItemData = Array<{ name: string, size: number, id: string, folder: { childCount: number }, file: { mimeType: string }, "@microsoft.graph.downloadUrl": string }>
 
 export default function EachList({user, route, data}: { user: string, route?: string[], data: ItemData }) {
 
     return (
         <div title={"File list"} className={"mx-2 h-50px text-gray-900"}>
-            {data.map(({name, size, id, folder, file}, index) => {
+            {data.map(({name, size, id, folder, file, "@microsoft.graph.downloadUrl": dl}, index) => {
                 return (
                     folder ?
                         <div key={index} title={"Folder list"}
@@ -37,7 +37,7 @@ export default function EachList({user, route, data}: { user: string, route?: st
                             </div>
                             <div title={"Action"}
                                  className={"basis-1/12 flex flex-row justify-center items-center invisible group-hover:visible"}>
-                                <FileIcons kind={"download"} href={`https://${baseSetting.site}/dl/${user}/${id}`}/>
+                                <FileIcons kind={"download"} href={dl} download/>
                                 <FileIcons kind={"share"} href={"#"}/>
                             </div>
                         </div>

@@ -21,18 +21,21 @@ const selectIcon: any = {
     view: View
 };
 
-const FileIcons = ({kind, href}: { kind: string, href?: string }) => {
+const FileIcons = ({kind, href, download}: { kind: string, href?: string, download?: boolean }) => {
 
     const {src} = selectIcon[kind];
 
     return (
         !href ? <img src={src} className={"w-8 h-8"} alt={kind}/> :
-            <a target="_blank"
-               rel="noopener noreferrer"
-               href={href}
-               className={"hover:bg-white hover:bg-opacity-30"}>
-                <img src={src} className={"w-8 h-8"} alt={kind}/>
-            </a>
+            download ? <a href={href} download>
+                    <img src={src} className={"w-8 h-8"} alt={kind}/></a>
+                :
+                <a target="_blank"
+                   rel="noopener noreferrer"
+                   href={href}
+                   className={"hover:bg-white hover:bg-opacity-30"}>
+                    <img src={src} className={"w-8 h-8"} alt={kind}/>
+                </a>
     )
 };
 

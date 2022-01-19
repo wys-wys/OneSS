@@ -15,7 +15,7 @@ export default function UserIndex({data}: InferGetServerSidePropsType<typeof get
 export const getServerSideProps = async (context: { query: { user: string }; }) => {
     const {user} = context.query
     const total_route = ""
-    const data = await getChildrenByRoute(total_route, user)
+    const data = await getChildrenByRoute(user, total_route)
     return {
         props: {
             data,

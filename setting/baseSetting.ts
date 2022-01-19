@@ -1,6 +1,6 @@
 const baseSetting = {
-    site:process.env.NEXT_PUBLIC_SITE!,
-    folder:"OneSS",
+    // site:process.env.NEXT_PUBLIC_SITE!,
+    folder: "OneSS",
     authorization: {
         client_id: process.env.CLIENT_ID!,
         scope: "https://graph.microsoft.com/.default",

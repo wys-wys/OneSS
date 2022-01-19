@@ -15,7 +15,7 @@ export default function UserAndRoute({data}: InferGetServerSidePropsType<typeof 
 export const getServerSideProps = async (context: { query: { user: string; route: string[]; }; }) => {
     const {user, route} = context.query
     const total_route = `/${route.join('/')}`
-    const data = await getChildrenByRoute(total_route, user)
+    const data = await getChildrenByRoute(user, total_route)
     return {
         props: {
             data,
