@@ -1,6 +1,6 @@
 import FileIcons from "../../FileIcons";
 
-import baseSetting from "../../../setting/baseSetting";
+import baseSetting from "../../../../setting/baseSetting";
 import SelectIcon from "./SelectIcon";
 
 type ItemData = Array<{ name: string, size: number, id: string, folder: { childCount: number }, file: { mimeType: string }, "@microsoft.graph.downloadUrl": string }>

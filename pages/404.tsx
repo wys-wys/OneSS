@@ -1,10 +1,3 @@
-import type {NextPage} from 'next'
-
-
-const Fof: NextPage = () => {
-    return (
-        <div>404</div>
-    )
+export default function Custom404() {
+    return <h1>404 - Page Not Found</h1>
 }
-
-export default Fof

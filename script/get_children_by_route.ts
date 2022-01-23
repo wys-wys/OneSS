@@ -1,7 +1,7 @@
 import axios from "axios";
 
-import baseSetting from "../setting/baseSetting"
-import getToken from "./get_token";
+import baseSetting from "@/setting/baseSetting"
+import getToken from "@/script/get_token";
 
 
 export default async function getChildrenByRoute(user: string, route: string) {
@@ -14,7 +14,7 @@ export default async function getChildrenByRoute(user: string, route: string) {
                 'Authorization': `Bearer ${accessToken}`
             },
             params: {
-                select: 'name,size,id,folder,file,@microsoft.graph.downloadUrl'
+                select: 'name,size,id,folder,file,image,video,@microsoft.graph.downloadUrl'
             },
         })
         return res.data.value

@@ -1,8 +1,8 @@
 import {useRouter} from 'next/router'
 import {InferGetServerSidePropsType} from "next";
 
-import getChildrenByRoute from "../../script/get_children_by_route";
-import List from "../../components/Lists/List";
+import getChildrenByRoute from "../../../script/get_children_by_route";
+import List from "../../../components/bk/Lists/List";
 
 export default function UserIndex({data}: InferGetServerSidePropsType<typeof getServerSideProps>) {
     const {user} = useRouter().query
