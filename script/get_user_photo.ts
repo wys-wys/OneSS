@@ -17,7 +17,7 @@ export default async function getUserPhoto(userName: string) {
             responseType: 'arraybuffer'
         })
 
-        return new Buffer(res.data, 'binary').toString('base64')
+        return Buffer.from(res.data, 'binary').toString('base64')
     } catch (e) {
         return false
     }

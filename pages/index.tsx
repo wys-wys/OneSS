@@ -1,12 +1,11 @@
 import fs from "fs";
 
-import FileList from "@/components/List/FileList";
 import userList from "@/setting/userList";
 import getUserPhoto from "@/script/get_user_photo";
 
 export default function Home() {
     return (
-        <FileList/>
+        <div className={"text-2xl text-gray-200"}>index</div>
     )
 }
 
@@ -14,18 +13,9 @@ export default function Home() {
 export const getStaticProps = async () => {
     for (let userName of userList) {
         const photo = await getUserPhoto(userName)
-
-        if (!photo) {
-            break
-        }
-
-        fs.writeFileSync(`./public/UserPhoto/${userName}.jpg`, photo, 'base64')
+        !photo ? console.log(`\n==============\nNo user: ${userName}\n==============`) :
+            fs.writeFileSync(`./public/UserPhoto/${userName}.jpg`, photo, 'base64')
     }
 
-    return {
-        props: {
-            ok: 1
-        },
-    }
-
+    return {props: {ok: 233},}
 }

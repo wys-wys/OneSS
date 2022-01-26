@@ -1,3 +1,3 @@
-const userList = ["share@dzaaaaaa.com", 'oness_test@dzaaaaaa.com']
+const userList = ["share@dzaaaaaa.com", 'no@user', 'oness_test@dzaaaaaa.com']
 
 export default userList
