@@ -19,6 +19,6 @@ export default async function getChildrenByRoute(user: string, route: string) {
         })
         return res.data.value
     } catch (e) {
-        return 404
+        return false
     }
 }

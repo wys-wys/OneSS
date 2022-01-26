@@ -1,16 +1,31 @@
-import type {NextPage} from 'next'
+import fs from "fs";
 
 import FileList from "@/components/List/FileList";
-import UserList from "@/components/UserList";
+import userList from "@/setting/userList";
+import getUserPhoto from "@/script/get_user_photo";
 
-
-const Home: NextPage = () => {
+export default function Home() {
     return (
-        <>
-            <FileList/>
-            <UserList/>
-        </>
+        <FileList/>
     )
 }
 
-export default Home
+
+export const getStaticProps = async () => {
+    for (let userName of userList) {
+        const photo = await getUserPhoto(userName)
+
+        if (!photo) {
+            break
+        }
+
+        fs.writeFileSync(`./public/UserPhoto/${userName}.jpg`, photo, 'base64')
+    }
+
+    return {
+        props: {
+            ok: 1
+        },
+    }
+
+}
