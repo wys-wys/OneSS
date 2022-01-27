@@ -6,4 +6,5 @@ export type dataType = {
     file: { mimeType: string, hashes: object }
     image: { height: number, width: number }
     video: { bitrate: number, height: number, width: number }
+    "@microsoft.graph.downloadUrl": string
 }

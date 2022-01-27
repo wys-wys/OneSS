@@ -10,7 +10,7 @@ export default function MyApp({Component, pageProps}: AppProps,) {
         <div className={"flex justify-center items-center p-4 pb-6 " +
             "w-screen h-screen bg-fixed bg-center bg-cover"}
              style={{backgroundImage: `url(https://bing.biturl.top/?format=image)`}}>
-            <div className={"flex flex-col justify-center items-center w-full h-full rounded-lg " +
+            <div className={"flex flex-col w-full h-full rounded-lg p-2 " +
                 "bg-blue-400 bg-opacity-25 backdrop-blur-sm " +
                 "shadow-list border border-gray-100 border-opacity-20"}>
                 <Component {...pageProps} />
