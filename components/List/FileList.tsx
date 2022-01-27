@@ -6,26 +6,26 @@ import ItemList from "@/components/List/ItemList";
 export default function FileList({user, route, data}: { user: string, route?: string[], data: dataType[] }) {
     return (
         <div className={"overflow-y-auto"}>
-            <Header user={user} route={route}/>
+            <ListHeader user={user} route={route}/>
             <ItemList user={user} route={route} data={data}/>
         </div>
     )
 }
 
-function Header({user, route}: { user: string, route?: string[] }) {
+function ListHeader({user, route}: { user: string, route?: string[] }) {
     return (
-        <div className={"p-1 bg-gray-200"}>
-            <span className={"text-2xl text-gray-500 hover:bg-black hover:bg-opacity-10"}>
+        <div className={"p-2 bg-indigo-900"}>
+            <span className={"text-2xl text-gray-200 hover:bg-white hover:bg-opacity-10"}>
                 <Link href={`/${user}`}>
                 <a>{user.split('@')[0].toUpperCase()}</a>
                 </Link>
             </span>
 
-            <span title={"Path"} className={"text-2xl text-gray-500"}>
+            <span title={"Path"} className={"text-2xl text-gray-200"}>
                 {route && route.map((item, index) => {
                     return <span key={index}>{'>'}
                         <Link href={`/${user}/${route.slice(0, index + 1).join('/')}`}>
-                        <a className={"hover:bg-black hover:bg-opacity-10"}>{item}</a>
+                        <a className={"hover:bg-white hover:bg-opacity-10"}>{item}</a>
                         </Link>
                     </span>
                 })}

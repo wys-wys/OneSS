@@ -15,11 +15,11 @@ export default function UserList() {
 
     return (
         <div onClick={onToggle}
-             className={`fixed left-0 flex flex-col items-center bg-blue-400 p-3 h-full w-fit shadow-md
-             overflow-y-auto transform duration-200 space-y-2 ${userShow ? "-translate-x-0" : "-translate-x-2/3"}`}>
+             className={`fixed bottom-0 flex flex-row items-center bg-blue-900 p-3 w-full h-fit shadow-md
+             overflow-x-auto transform duration-200 space-x-2 ${userShow ? "translate-y-0" : "translate-y-3/4"}`}>
             {userList.map((userName, index) => {
                 return (
-                    <div key={index} title={userName} className={"items-center duration-200 hover:scale-125"}>
+                    <div key={index} title={userName} className={"items-center duration-100 hover:scale-125"}>
                         <Link href={`/${userName}`}>
                             <a><Image src={`/UserPhoto/${userName}.jpg`} width={64} height={64} alt={userName}
                                       placeholder={"blur"} blurDataURL={"/UserPhoto/blur.webp"}/></a>
