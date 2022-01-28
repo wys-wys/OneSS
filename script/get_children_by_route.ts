@@ -6,7 +6,7 @@ import getToken from "@/script/get_token";
 
 export default async function getChildrenByRoute(user: string, route: string | string[] = '') {
     const accessToken = await getToken()
-    const url = `${baseSetting.endpoints.graph_endpoint}/users/${user}/drive/root:/${baseSetting.folder}${route}:/children`
+    const url = encodeURI(`${baseSetting.endpoints.graph_endpoint}/users/${user}/drive/root:${baseSetting.folder}${route}:/children`)
 
     try {
         const res = await axios.get(url, {
