@@ -14,7 +14,7 @@ export default function ItemList({user, route, data}: { user: string, route?: st
                         ?
                         <div key={index} className={"group flex flex-row space-x-2 hover:bg-white hover:bg-opacity-10 border-b border-gray-500"}>
                             <Folder32Regular/>
-                            <Link href={`/${user}/${route ? route.slice(-1) + '/' : ''}${name}`}>
+                            <Link href={`/${user}/${route ? route.join('/') + '/' : ''}${name}`}>
                                 <a className={"basis-5/6 text-xl flex items-center hover:bg-white hover:bg-opacity-30 truncate"}>{name}</a>
                             </Link>
                             <div className={"basis-1/12 flex items-center justify-center hidden md:block"}>{`${ConvertB(size)}`}

@@ -4,7 +4,7 @@ import baseSetting from "@/setting/baseSetting"
 import getToken from "@/script/get_token";
 
 
-export default async function getChildrenByRoute(user: string, route: string | string[] = '') {
+export default async function getChildrenByRoute(user: string, route: string = '') {
     const accessToken = await getToken()
     const url = encodeURI(`${baseSetting.endpoints.graph_endpoint}/users/${user}/drive/root:${baseSetting.folder}${route}:/children`)
 
