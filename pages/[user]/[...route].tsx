@@ -7,7 +7,7 @@ import FileList from "@/components/List/FileList";
 export default function UserIndex({data}: InferGetServerSidePropsType<typeof getServerSideProps>) {
     const {user, route} = useRouter().query
     return (
-        !data ? <div className={"text-2xl text-gray-200"}>404 - Item Not Found</div> :
+        !data ? <div className={"flex justify-center items-center text-2xl text-gray-200"}>404 - Item Not Found</div> :
             <FileList user={user as string} route={route as string[]} data={data}/>
     )
 }
