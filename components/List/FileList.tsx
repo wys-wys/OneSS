@@ -1,9 +1,19 @@
 import Link from "next/link";
+import useSWR from "swr";
+import {ArrowSync24Regular} from "@fluentui/react-icons";
 
-import {dataType} from "@/script/data_type";
 import ItemList from "@/components/List/ItemList";
+import {fetcher} from "@/script/swr_get";
 
-export default function FileList({user, route, data}: { user: string, route?: string[], data: dataType[] }) {
+export default function FileList({user, route}: { user: string, route?: string[] }) {
+    const {data, error} = useSWR(`/api/children?user=${user}&route=${route ? route.join('/') : ''}`, fetcher)
+
+    if (!data) return <div className={"flex justify-center items-center w-full h-full animate-spin text-gray-200"}>
+        <ArrowSync24Regular className={"w-1/3 h-1/3"}/>
+    </div>
+
+    if (error) return <div className={"text-2xl text-gray-200"}>failed to load</div>
+
     return (
         <div className={"overflow-y-auto"}>
             <ListHeader user={user} route={route}/>

@@ -17,9 +17,10 @@ export default function ItemList({user, route, data}: { user: string, route?: st
                             <Link href={`/${user}/${route ? route.join('/') + '/' : ''}${name}`}>
                                 <a className={"basis-5/6 text-xl flex items-center hover:bg-white hover:bg-opacity-30 truncate"}>{name}</a>
                             </Link>
-                            <div className={"basis-1/12 flex items-center justify-center hidden md:block"}>{`${ConvertB(size)}`}
+                            <div className={"basis-1/12 flex items-center justify-center md:block"}>{`${ConvertB(size)}`}
                             </div>
                             <div className={"basis-1/12 flex flex-row justify-center items-center invisible group-hover:visible"}>
+                                <ArrowDownload24Regular className={"invisible"}/>
                                 <Share24Regular/>
                             </div>
                         </div>
