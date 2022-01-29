@@ -17,7 +17,7 @@ export default function ItemId() {
 
     if (error || data.status == 404) return <div className={"flex justify-center items-center h-full text-2xl text-gray-200"}>failed to load or not found.</div>
 
-    const {name, size, createdDateTime, lastModifiedDateTime, "@microsoft.graph.downloadUrl": dl, thumbnails}: dataType = data
+    const {name, size, createdDateTime, lastModifiedDateTime, thumbnails}: dataType = data
 
     return (
         <div className={"flex flex-col lg:flex-row justify-center items-center w-full h-full p-2 space-y-4 lg:space-x-4 text-gray-200"}>
@@ -29,7 +29,7 @@ export default function ItemId() {
                 <div>{ConvertB(size)}</div>
                 <div>createdDateTime: {createdDateTime}</div>
                 <div>lastModifiedDateTime: {lastModifiedDateTime}</div>
-                <a href={dl} className={"hover:bg-white hover:bg-opacity-10"} download>
+                <a href={`/api/download?user=${user}&id=${id}`} className={"hover:bg-white hover:bg-opacity-10"}>
                     <ArrowDownload48Regular/></a>
             </div>
         </div>

@@ -8,6 +8,5 @@ export type dataType = {
     video: { bitrate: number, height: number, width: number }
     createdDateTime: string
     lastModifiedDateTime: string
-    "@microsoft.graph.downloadUrl": string
     thumbnails: { 0: { large: { width: number, height: number, url: string } } }
 }
