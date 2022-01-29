@@ -15,7 +15,7 @@ export default function UserList() {
 
     return (
         <div onClick={onToggle}
-             className={`fixed bottom-0 flex flex-row items-center bg-blue-900 p-3 w-full h-fit shadow-md
+             className={`fixed bottom-0 flex flex-row items-center bg-blue-900 p-3 w-full shadow-md
              overflow-x-auto transform duration-200 space-x-2 ${userShow ? "translate-y-3/4" : "translate-y-0"}`}>
             {userList.map((userName, index) => {
                 return (
