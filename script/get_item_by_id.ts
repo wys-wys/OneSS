@@ -7,7 +7,6 @@ import getToken from "@/script/get_token";
 export default async function getItemById(user: string, id: string) {
     const accessToken = await getToken()
     const url = encodeURI(`${baseSetting.endpoints.graph_endpoint}/users/${user}/drive/items/${id}?$expand=thumbnails`)
-
     try {
         const res = await axios.get(url, {
             headers: {
@@ -19,6 +18,6 @@ export default async function getItemById(user: string, id: string) {
         })
         return res.data
     } catch (e) {
-        return false
+        return {status: 404}
     }
 }

@@ -12,7 +12,7 @@ export default function FileList({user, route}: { user: string, route?: string[]
         <ArrowSync24Regular className={"w-1/3 h-1/3"}/>
     </div>
 
-    if (error) return <div className={"text-2xl text-gray-200"}>failed to load</div>
+    if (error || data.status == 404) return <div className={"flex justify-center items-center h-full text-2xl text-gray-200"}>failed to load or not found.</div>
 
     return (
         <div className={"overflow-y-auto"}>

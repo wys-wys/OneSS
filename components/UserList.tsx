@@ -21,8 +21,7 @@ export default function UserList() {
                 return (
                     <div key={index} title={userName} className={"items-center duration-100 hover:scale-125"}>
                         <Link href={`/${userName}`}>
-                            <a><Image src={`/UserPhoto/${userName}.jpg`} width={64} height={64} alt={userName}
-                                      placeholder={"blur"} blurDataURL={"/UserPhoto/blur.webp"}/></a>
+                            <a><Image src={`/UserPhoto/${userName}.jpg`} width={64} height={64} alt={userName}/></a>
                         </Link>
                     </div>
                 )
