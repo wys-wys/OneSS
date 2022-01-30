@@ -19,10 +19,11 @@ video
 
 优先考虑接口，安全等方向
 
+* 亮主题!
+* Share按钮!(目前建议复直接制链接分享
 * api-music api-video 及相应页面!
 * 批量下载!
 * 更好item页面
-* 亮主题?
 * 所以文件都可以的简单预览功能?
 * ~~评论按位置分区~~
 
@@ -47,6 +48,8 @@ video
 [GPL-3.0](LICENSE) © [Tualin14](https://github.com/Tualin14)
 
 # 个人用快捷链接 - Other
+
+[快捷在线编辑](https://github.dev/Tualin14/OneSS)
 
 [Next.js](https://nextjs.org/docs/getting-started)
 
