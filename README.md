@@ -1,14 +1,13 @@
 # OneSS - Onedrive Sharing System
 
-for better sharing !
-
-为了更好的分享！
+为了更好的分享! | For better sharing !
 
 # Features | English
 
 * 免费! | Free !
 * 文件分享与下载 | Share and Download
 * 多用户支持 | Multi-user support
+* 评论支持 | Comment support
 
 # Deploy | English
 
@@ -20,12 +19,12 @@ video
 
 优先考虑接口，安全等方向
 
-* 更好item页面
-* Giscus评论区!
 * api-music api-video 及相应页面!
-* 可个性化网站
+* 批量下载!
+* 更好item页面
 * 亮主题?
 * 所以文件都可以的简单预览功能?
+* ~~评论按位置分区~~
 
 # Motivation
 

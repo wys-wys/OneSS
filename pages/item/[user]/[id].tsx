@@ -5,7 +5,6 @@ import {ArrowDownload48Regular, ArrowSync24Regular} from "@fluentui/react-icons"
 import ConvertB from "@/script/convert_bit";
 import {fetcher} from "@/script/swr_get";
 import {dataType} from "@/script/data_type";
-import GiscusComponent from "@/components/GiscusComponent";
 
 
 export default function ItemId() {
@@ -20,21 +19,19 @@ export default function ItemId() {
 
     const {name, size, createdDateTime, lastModifiedDateTime, thumbnails}: dataType = data
 
-    return (<>
-            <div className={"flex flex-col items-center w-full h-full p-2 space-y-4 text-gray-200"}>
-                {thumbnails["0"] &&
-                    <img src={thumbnails["0"].large.url} alt={'thumbnails'} className={"w-fit h-1/5"}/>}
-                {/*<Image src={thumbnails["0"].large.url} alt={'thumbnails'} width={thumbnails["0"].large.width / 2} height={thumbnails["0"].large.height / 2}/>}*/}
-                <div className={"flex justify-center items-center h-fit w-full lg:w-1/2 flex flex-col space-y-2 truncate"}>
-                    <div className={"text-2xl"}>{name}</div>
-                    <div>{ConvertB(size)}</div>
-                    <div>createdDateTime: {createdDateTime}</div>
-                    <div>lastModifiedDateTime: {lastModifiedDateTime}</div>
-                    <a href={`/api/download?user=${user}&id=${id}`} className={"hover:bg-white hover:bg-opacity-10"}>
-                        <ArrowDownload48Regular/></a>
-                </div>
-                {/*<GiscusComponent/>*/}
+    return (
+        <div className={"flex flex-col items-center w-full h-full p-2 space-y-4 text-gray-200"}>
+            {thumbnails["0"] &&
+                <img src={thumbnails["0"].large.url} alt={'thumbnails'} className={"w-fit h-1/5"}/>}
+            {/*<Image src={thumbnails["0"].large.url} alt={'thumbnails'} width={thumbnails["0"].large.width / 2} height={thumbnails["0"].large.height / 2}/>}*/}
+            <div className={"flex justify-center items-center h-fit w-full lg:w-1/2 flex flex-col space-y-2 truncate"}>
+                <div className={"text-2xl"}>{name}</div>
+                <div>{ConvertB(size)}</div>
+                <div>createdDateTime: {createdDateTime}</div>
+                <div>lastModifiedDateTime: {lastModifiedDateTime}</div>
+                <a href={`/api/download?user=${user}&id=${id}`} className={"hover:bg-white hover:bg-opacity-10"}>
+                    <ArrowDownload48Regular/></a>
             </div>
-        </>
+        </div>
     )
 }

@@ -2,12 +2,12 @@ import '@/styles/globals.css'
 import type {AppProps} from 'next/app'
 import Head from 'next/head'
 
-import UserList from "@/components/UserList";
+import Menu from "@/components/Menu";
 
 
 export default function MyApp({Component, pageProps}: AppProps,) {
     return (
-        <div className={"flex justify-center items-center overflow-hidden pb-6 w-screen h-screen bg-gray-900"}>
+        <div className={"flex justify-center items-center overflow-hidden pb-8 w-screen h-screen bg-gray-900"}>
             <Head>
                 <title>OneSS</title>
                 <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"/>
@@ -21,7 +21,7 @@ export default function MyApp({Component, pageProps}: AppProps,) {
             <div className={"flex flex-col w-full h-full rounded-lg"}>
                 <Component {...pageProps} />
             </div>
-            <UserList/>
+            <Menu/>
         </div>
     );
 }
