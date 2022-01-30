@@ -1,25 +1,29 @@
 import Script from 'next/script';
+import {useTheme} from "next-themes";
 
-const Giscus = () => {
+import giscus from "@/setting/giscusSetting";
+
+export default function Giscus() {
+    const {theme, resolvedTheme} = useTheme()
+    const commentsTheme = theme === 'dark' || resolvedTheme === 'dark' ? "dark_high_contrast" : "light_high_contrast"
+
     return (
         <>
-            <div className="w-full my-8 p-4 giscus"/>
+            <div className="w-full my-8 p-4 giscus overflow-y-auto"/>
             <Script src="https://giscus.app/client.js"
-                    data-repo="Tualin14/OneSS"
-                    data-repo-id="R_kgDOGe5t-w"
-                    data-category="Announcements"
-                    data-category-id="DIC_kwDOGe5t-84CA65K"
-                    data-mapping="specific"
-                    data-term="Welcome to OneSS!"
+                    data-repo={giscus.repo}
+                    data-repo-id={giscus.repo_id}
+                    data-category={giscus.category}
+                    data-category-id={giscus.category_id}
+                    data-mapping={"specific"}
+                    data-term={giscus.term}
                     data-reactions-enabled="1"
                     data-emit-metadata="0"
                     data-input-position="top"
-                    data-theme="dark_high_contrast"
-                    data-lang="zh-CN"
+                    data-theme={commentsTheme}
+                    data-lang="en"
                     crossOrigin="anonymous"
                     async/>
         </>
     )
 }
-
-export default Giscus

@@ -9,7 +9,7 @@ const baseSetting = {
     endpoints: {
         token_endpoint: `https://login.microsoftonline.com/${process.env.TENANT_ID}/oauth2/v2.0/token`,
         graph_endpoint: "https://graph.microsoft.com/v1.0"
-    }
+    },
 }
 
 

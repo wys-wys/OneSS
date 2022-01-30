@@ -5,7 +5,7 @@ import getUserPhoto from "@/script/get_user_photo";
 
 export default function Home() {
     return (
-        <div className={"flex flex-col justify-center items-center w-full h-full text-gray-200 space-y-4"}>
+        <div className={"flex flex-col justify-center items-center w-full h-full text-gray-900 dark:text-gray-200 space-y-4"}>
             <div className={"text-8xl"}>OneSS</div>
             <div className={"text-2xl"}>Site designed by <a href={"https://github.com/Tualin14"} className={"font-bold underline"}>Tualin14</a>,
                 App icon by <a href={"https://github.com/microsoft/fluentui-system-icons"} className={"font-bold underline"}>fluentui-system-icons(MIT)</a>

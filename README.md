@@ -6,8 +6,9 @@
 
 * 免费! | Free !
 * 文件分享与下载 | Share and Download
-* 多用户支持 | Multi-user support
-* 评论支持 | Comment support
+* 多用户支持 | Multi-user Support
+* 评论支持 | Comment Support
+* 暗主题 | Dark Mode
 
 # Deploy | English
 
@@ -19,11 +20,12 @@ video
 
 优先考虑接口，安全等方向
 
-* 亮主题!
-* Share按钮!(目前建议复直接制链接分享
+* Share按钮! (目前是个摆设,目前建议复直接制链接分享
 * api-music api-video 及相应页面!
 * 批量下载!
-* 更好item页面
+* 更好item页面 (目前能显示就行
+* 文件数在200以上的支持 (目前可以不要在文件夹里放200及以上文件解决
+* 评论区在切换主题后不能一块切换问题 (不好解决，目前建议刷新页面
 * 所以文件都可以的简单预览功能?
 * ~~评论按位置分区~~
 
@@ -42,6 +44,8 @@ video
 [fluentui-system-icons(MIT)](https://github.com/microsoft/fluentui-system-icons)
 
 [Giscus(MIT)](https://github.com/giscus/giscus)
+
+[next-themes](https://github.com/pacocoursey/next-themes)
 
 # Licence
 
