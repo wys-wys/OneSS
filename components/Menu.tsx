@@ -22,7 +22,7 @@ export default function Menu() {
                 <Link href={`/`}>
                     <a className={"hover:bg-white hover:bg-opacity-10"}><Home48Regular className={"w-12 h-12"}/></a></Link>
                 <Link href={`/comment`}>
-                    <a className={"hover:bg-white hover:bg-opacity-10"}><Comment48Regular className={"w-12 h-12"}/></a></Link>
+                    <a target="_blank" className={"hover:bg-white hover:bg-opacity-10"}><Comment48Regular className={"w-12 h-12"}/></a></Link>
             </div>
             {userList.map((userName, index) => {
                 return (

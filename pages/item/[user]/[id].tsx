@@ -1,4 +1,5 @@
 import {useRouter} from "next/router";
+import Link from "next/link";
 import useSWR from "swr";
 import {ArrowDownload48Regular, ArrowSync24Regular} from "@fluentui/react-icons";
 
@@ -29,8 +30,10 @@ export default function ItemId() {
                 <div>{ConvertB(size)}</div>
                 <div>createdDateTime: {createdDateTime}</div>
                 <div>lastModifiedDateTime: {lastModifiedDateTime}</div>
-                <a href={`/api/download?user=${user}&id=${id}`} className={"hover:bg-white hover:bg-opacity-10"}>
-                    <ArrowDownload48Regular/></a>
+                <Link href={`/api/download?user=${user}&id=${id}`}>
+                    <a target="_blank" className={"hover:bg-white hover:bg-opacity-10"}>
+                        <ArrowDownload48Regular/></a>
+                </Link>
             </div>
         </div>
     )
