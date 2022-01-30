@@ -6,6 +6,7 @@ for better sharing !
 
 # Features | English
 
+* 免费! | Free !
 * 文件分享与下载 | Share and Download
 * 多用户支持 | Multi-user support
 
@@ -20,7 +21,7 @@ video
 优先考虑接口，安全等方向
 
 * 更好item页面
-* 用户与header路径不能显示滚动条!
+* Giscus评论区!
 * api-music api-video 及相应页面!
 * 可个性化网站
 * 亮主题?
@@ -39,6 +40,8 @@ video
 [tailwindcss(MIT)](https://github.com/tailwindlabs/tailwindcss)
 
 [fluentui-system-icons(MIT)](https://github.com/microsoft/fluentui-system-icons)
+
+[Giscus(MIT)](https://github.com/giscus/giscus)
 
 # Licence
 

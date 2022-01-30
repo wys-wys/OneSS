@@ -19,9 +19,9 @@ export default function UserList() {
              overflow-x-auto transform duration-200 space-x-2 ${userShow ? "translate-y-3/4" : "translate-y-0"}`}>
             {userList.map((userName, index) => {
                 return (
-                    <div key={index} title={userName} className={"items-center duration-100 hover:scale-125"}>
+                    <div key={index} title={userName} className={"items-center ease-in-out duration-300 hover:scale-125"}>
                         <Link href={`/${userName}`}>
-                            <a><Image src={`/UserPhoto/${userName}.jpg`} width={64} height={64} alt={userName}/></a>
+                            <a><Image src={`/UserPhoto/${userName}.jpg`} width={64} height={64} layout={"fixed"} alt={userName}/></a>
                         </Link>
                     </div>
                 )
