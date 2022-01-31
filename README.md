@@ -12,8 +12,6 @@
 
 # Deploy | English(wait)
 
-video
-
 本文以开发者账户演示，其他账户只要能在Azure创建应用就行
 
 1. 应用注册部分
@@ -38,6 +36,8 @@ video
        ![6](/doc/DeployPhoto/6.png)
     3. 部署
 6. 成功后及可访问
+
+[视频流程](https://www.bilibili.com/video/BV1SZ4y1d73v/)
 
 # Need ? to do : not to do
 
