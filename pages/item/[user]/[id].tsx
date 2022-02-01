@@ -1,7 +1,7 @@
 import {useRouter} from "next/router";
 import Link from "next/link";
 import useSWR from "swr";
-import {ArrowDownload48Regular, ArrowSync24Regular, Copy24Regular} from "@fluentui/react-icons";
+import {ArrowDownload48Regular, ArrowSync24Regular, Copy24Regular, DocumentSearch24Regular} from "@fluentui/react-icons";
 
 import ConvertB from "@/script/convert_bit";
 import {fetcher} from "@/script/swr_get";
@@ -35,6 +35,12 @@ export default function ItemId() {
                     <div className={"text-xl"}>Last Modified DateTime:</div>
                     <div>{lastModifiedDateTime}</div>
                     <div>
+                        <Link href={`/api/preview?user=${user}&id=${id}`}>
+                            <a target="_blank">
+                                <DocumentSearch24Regular
+                                    className={"w-8 h-8 \"hover:bg-black dark:hover:bg-white hover:bg-opacity-10 dark:hover:bg-opacity-10\""}/>
+                            </a>
+                        </Link>
                         <Copy24Regular className={"w-8 h-8 hover:bg-black dark:hover:bg-white hover:bg-opacity-10 dark:hover:bg-opacity-10"}
                                        onClick={() => {
                                            try {

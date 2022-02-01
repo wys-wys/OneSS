@@ -7,6 +7,7 @@
 * 免费! | Free !
 * 快速的文件下载 | Fast File Download
 * 多用户支持 | Multi-user Support
+* 预览功能 | Preview Support
 * 评论支持 | Comment Support
 * 暗主题 | Dark Mode
 
@@ -43,12 +44,10 @@
 
 ## 优先考虑接口，安全等方向
 
-* api-music api-video 及相应页面!
 * 批量下载!
 * 更好item页面 (目前能显示就行
 * 文件数在200以上的支持 (目前可以不在文件夹里放200及以上文件解决
 * 评论区在切换主题后不能一块切换问题 (不好解决，目前建议刷新页面
-* 所有文件都可以的简单预览功能?
 * ~~评论按位置分区~~
 
 # Issues

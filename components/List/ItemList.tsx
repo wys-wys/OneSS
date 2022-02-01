@@ -1,5 +1,7 @@
 import Link from "next/link";
-import {ArrowDownload24Regular, Copy24Regular, Document32Regular, Folder32Regular, Image24Regular, Video32Regular} from "@fluentui/react-icons";
+import {
+    ArrowDownload24Regular, Copy24Regular, Document32Regular, DocumentSearch24Regular, Folder32Regular, Image24Regular, Video32Regular
+} from "@fluentui/react-icons";
 
 import {dataType} from "@/script/data_type";
 import ConvertB from "@/script/convert_bit";
@@ -34,7 +36,13 @@ export default function ItemList({user, route, data}: { user: string, route?: st
                             </Link>
                             <div className={"basis-1/12 flex items-center justify-center hidden md:block"}>{`${ConvertB(size)}`}
                             </div>
-                            <div className={"basis-1/12 flex flex-row justify-center items-center invisible group-hover:visible"}>
+                            <div className={"basis-1/12 flex flex-row justify-center items-center space-x-1 invisible group-hover:visible"}>
+                                <Link href={`/api/preview?user=${user}&id=${id}`}>
+                                    <a target="_blank">
+                                        <DocumentSearch24Regular
+                                            className={"w-8 h-8 hover:bg-black dark:hover:bg-white hover:bg-opacity-10 dark:hover:bg-opacity-10"}/>
+                                    </a>
+                                </Link>
                                 <Copy24Regular className={"w-8 h-8 hover:bg-black dark:hover:bg-white hover:bg-opacity-10 dark:hover:bg-opacity-10"}
                                                onClick={() => {
                                                    try {
@@ -45,9 +53,9 @@ export default function ItemList({user, route, data}: { user: string, route?: st
                                                    }
                                                }}/>
                                 <Link href={`/api/download?user=${user}&id=${id}`}>
-                                    <a target="_blank"
-                                       className={"hover:bg-black dark:hover:bg-white hover:bg-opacity-10 dark:hover:bg-opacity-10"}>
-                                        <ArrowDownload24Regular className={"w-8 h-8"}/>
+                                    <a target="_blank">
+                                        <ArrowDownload24Regular
+                                            className={"w-8 h-8 hover:bg-black dark:hover:bg-white hover:bg-opacity-10 dark:hover:bg-opacity-10"}/>
                                     </a>
                                 </Link>
                             </div>
