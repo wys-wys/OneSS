@@ -1,5 +1,5 @@
 import Link from "next/link";
-import {ArrowDownload24Regular, Document32Regular, Folder32Regular, Image24Regular, Share24Regular, Video32Regular} from "@fluentui/react-icons";
+import {ArrowDownload24Regular, Copy24Regular, Document32Regular, Folder32Regular, Image24Regular, Video32Regular} from "@fluentui/react-icons";
 
 import {dataType} from "@/script/data_type";
 import ConvertB from "@/script/convert_bit";
@@ -21,8 +21,6 @@ export default function ItemList({user, route, data}: { user: string, route?: st
                             <div className={"basis-1/12 flex items-center justify-center hidden md:block"}>{`${ConvertB(size)}`}
                             </div>
                             <div className={"basis-1/12 flex flex-row justify-center items-center invisible group-hover:visible"}>
-                                <ArrowDownload24Regular className={"w-8 h-8 invisible"}/>
-                                <Share24Regular className={"w-8 h-8"}/>
                             </div>
                         </div>
                         :
@@ -37,11 +35,21 @@ export default function ItemList({user, route, data}: { user: string, route?: st
                             <div className={"basis-1/12 flex items-center justify-center hidden md:block"}>{`${ConvertB(size)}`}
                             </div>
                             <div className={"basis-1/12 flex flex-row justify-center items-center invisible group-hover:visible"}>
+                                <Copy24Regular className={"w-8 h-8 hover:bg-black dark:hover:bg-white hover:bg-opacity-10 dark:hover:bg-opacity-10"}
+                                               onClick={() => {
+                                                   try {
+                                                       navigator.clipboard.writeText(`${window.location.host}/item/${user}/${id}`)
+                                                       alert("Copied!")
+                                                   } catch (e) {
+                                                       alert('Failed to copy!')
+                                                   }
+                                               }}/>
                                 <Link href={`/api/download?user=${user}&id=${id}`}>
                                     <a target="_blank"
-                                       className={"hover:bg-black dark:hover:bg-white hover:bg-opacity-10 dark:hover:bg-opacity-10"}><ArrowDownload24Regular
-                                        className={"w-8 h-8"}/></a></Link>
-                                <Share24Regular className={"w-8 h-8"}/>
+                                       className={"hover:bg-black dark:hover:bg-white hover:bg-opacity-10 dark:hover:bg-opacity-10"}>
+                                        <ArrowDownload24Regular className={"w-8 h-8"}/>
+                                    </a>
+                                </Link>
                             </div>
                         </div>
                 )

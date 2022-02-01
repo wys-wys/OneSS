@@ -5,7 +5,7 @@
 # Features | English
 
 * 免费! | Free !
-* 文件分享与下载 | Share and Download
+* 快速的文件下载 | Fast File Download
 * 多用户支持 | Multi-user Support
 * 评论支持 | Comment Support
 * 暗主题 | Dark Mode
@@ -43,7 +43,6 @@
 
 ## 优先考虑接口，安全等方向
 
-* Share按钮! (目前是个摆设,目前建议复直接制链接分享
 * api-music api-video 及相应页面!
 * 批量下载!
 * 更好item页面 (目前能显示就行
@@ -64,7 +63,7 @@
 
 假设存在一个字幕组或者汉化组，把完成的合法，合规作品传到适当网站，但因为莫须有的原因被审核删除，那么就需要一个更好的分享位置，最好是权力掌握在自己手里的地方。OneSS便出现了。
 
-这是LSW计划的一部分，让OneSS更像OSS一样的使用。
+目标是让OneSS更像OSS一样的使用。
 
 # FAQ(随时补充)
 
@@ -92,7 +91,10 @@
 
 * 为什么api都以user为单位?直接root也可以获取到想要的data。
 
-  泄权问题，并不会出现把所有盘全分享的情况。
+  泄权问题，会出现把所有盘全分享的情况。
+* 为什么item也照片没有用<Image>,而用<img>?
+
+  因为跨域问题，要添加到next的配置文件，但预览图并不是都在一个域里。
 
 # Credit
 
