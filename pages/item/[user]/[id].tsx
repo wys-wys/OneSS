@@ -38,7 +38,7 @@ export default function ItemId() {
                         <Link href={`/api/preview?user=${user}&id=${id}`}>
                             <a target="_blank">
                                 <DocumentSearch24Regular
-                                    className={"w-8 h-8 \"hover:bg-black dark:hover:bg-white hover:bg-opacity-10 dark:hover:bg-opacity-10\""}/>
+                                    className={"w-8 h-8 hover:bg-black dark:hover:bg-white hover:bg-opacity-10 dark:hover:bg-opacity-10"}/>
                             </a>
                         </Link>
                         <Copy24Regular className={"w-8 h-8 hover:bg-black dark:hover:bg-white hover:bg-opacity-10 dark:hover:bg-opacity-10"}
