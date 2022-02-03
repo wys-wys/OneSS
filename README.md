@@ -10,14 +10,14 @@
 * 预览功能 | Preview Support
 * 评论支持 | Comment Support
 * 暗主题 | Dark Mode
-* 视频在线观看 | Video Online
+* 视频在线观看 | Watch Video Online
 
 # Deploy | English(wait)
 
 本文以开发者账户演示，其他账户只要能在Azure创建应用就行
 
 1. 应用注册部分
-    1. 登录[Azure管理中心](aad.portal.azure.com)
+    1. 登录[Azure管理中心](http://aad.portal.azure.com)
     2. 点击Azure Active Directory>应用注册>新注册，名称随便填，受支持的帐户类型选 仅此组织目录中的帐户。注册
        ![1](/doc/DeployPhoto/1.png)
     3. 记录 CLIENT_ID，TENANT_ID 值
@@ -39,7 +39,7 @@
     3. 部署
 6. 成功后及可访问
 
-[视频流程](https://www.bilibili.com/video/BV1SZ4y1d73v/)
+[视频流程(Chinese)](https://www.bilibili.com/video/BV1SZ4y1d73v/)
 
 # Need ? to do : not to do
 
@@ -82,16 +82,16 @@
   目前考虑到的是以文件为核心的讨论应该集中起来管理，但如果有人能够提供一个合理的情景也会考虑。
 * 为什么不做搜索功能?
 
-  提供搜索功能会面临泄权。并且身为分享者，不希望伸手党的出现，分享应该是分享者的主动分享 - 我愿意分享我的藏书，但我不希望有人翻我的书阁。
-* ~~为什么要在音乐/视频文件夹建相同的xxx/xxx?~~
-
-  ~~Graph的搜索功能并不准确，这是为了更好的识别音乐/视频文件夹。~~
+  提供搜索功能会面临泄权。建议用浏览器自带页面搜索 Ctrl + F
 
 ## 程序相关
 
 * 为什么api都以user为单位?直接root也可以获取到想要的data。
 
   泄权问题，会出现把所有盘全分享的情况。
+* video的api返回有非video文件。
+
+  筛选放服务器端会造成压力并且减慢响应速度，所以返回的文件有video属性，可以在客户端筛选。
 * 为什么item也照片没有用<Image>,而用<img>?
 
   因为跨域问题，要添加到next的配置文件，但预览图并不是都在一个域里。

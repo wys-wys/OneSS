@@ -26,7 +26,7 @@ async function getVideo(user: string) {
             },
             params: {
                 expand: 'thumbnails',
-                select: 'name,id,createdBy'
+                select: 'name,id,video,createdBy'
             },
         })
         return res.data.value
