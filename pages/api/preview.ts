@@ -1,12 +1,11 @@
 import axios from "axios";
 import {NextApiResponse} from 'next'
 
-import {dataType} from "@/script/data_type";
 import getToken from "@/script/get_token";
 import baseSetting from "@/setting/baseSetting";
 
 
-export default async (req: { query: { user: string, id: string } }, res: NextApiResponse<dataType>) => {
+export default async (req: { query: { user: string, id: string } }, res: NextApiResponse) => {
     const {'user': user, 'id': id} = req.query
     const url = await getItemPreviewUrl(user, id)
     res.redirect(307, url)

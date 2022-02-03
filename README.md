@@ -10,6 +10,7 @@
 * 预览功能 | Preview Support
 * 评论支持 | Comment Support
 * 暗主题 | Dark Mode
+* 视频在线观看 | Video Online
 
 # Deploy | English(wait)
 

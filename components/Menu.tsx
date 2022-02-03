@@ -3,7 +3,7 @@ import Image from 'next/image'
 import Link from 'next/link'
 
 import userList from "@/setting/userList"
-import {Home48Regular, Comment48Regular} from "@fluentui/react-icons";
+import {Home48Regular, Comment48Regular, VideoClip24Regular} from "@fluentui/react-icons";
 import ThemeSwitch from "@/components/ThemeSwitch";
 
 export default function Menu() {
@@ -29,6 +29,10 @@ export default function Menu() {
                 <Link href={`/comment`}>
                     <a target="_blank" className={"hover:bg-black dark:hover:bg-white hover:bg-opacity-10 dark:hover:bg-opacity-10"}>
                         <Comment48Regular className={"w-12 h-12"}/></a>
+                </Link>
+                <Link href={`/videos`}>
+                    <a target="_blank" className={"hover:bg-black dark:hover:bg-white hover:bg-opacity-10 dark:hover:bg-opacity-10"}>
+                        <VideoClip24Regular className={"w-12 h-12"}/></a>
                 </Link>
             </div>
             {userList.map((userName, index) => {
