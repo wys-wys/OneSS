@@ -2,7 +2,7 @@ import Link from "next/link";
 import useSWR from "swr";
 import {ArrowSync24Regular} from "@fluentui/react-icons";
 
-import ItemList from "@/components/List/ItemList";
+import EachItem from "@/components/List/EachItem";
 import {fetcher} from "@/script/swr_get";
 
 export default function FileList({user, route}: { user: string, route?: string[] }) {
@@ -19,7 +19,7 @@ export default function FileList({user, route}: { user: string, route?: string[]
     return (
         <div className={`overflow-y-auto`}>
             <ListHeader user={user} route={route}/>
-            <ItemList user={user} route={route} data={data}/>
+            <EachItem user={user} route={route} data={data}/>
         </div>
     )
 }

@@ -7,7 +7,7 @@ import {dataType} from "@/script/data_type";
 import ConvertB from "@/script/convert_bit";
 
 
-export default function ItemList({user, route, data}: { user: string, route?: string[], data: dataType[] }) {
+export default function EachItem({user, route, data}: { user: string, route?: string[], data: dataType[] }) {
     return (
         <div className={"mx-2 h-fit text-gray-800 dark:text-gray-300"}>
             {data.map(({name, size, id, folder, file, image, video}, index) => {

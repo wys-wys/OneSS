@@ -1,22 +1,21 @@
-# OneSS - Onedrive Sharing System
+# OneSS
 
-为了更好的分享! | For better sharing !
+让你的 Onedrive 能像 OSS 一样使用 | Make your Onedrive work like OSS(Object Storage Service)
 
-# Features | English
+# 特性 | Features
 
 * 免费! | Free !
 * 快速的文件下载 | Fast File Download
 * 多用户支持 | Multi-user Support
-* 预览功能 | Preview Support
 * 评论支持 | Comment Support
+* 预览功能 | Preview Support
 * 暗主题 | Dark Mode
 * 视频在线观看 | Watch Video Online
+* 可以做图床，视频云 | Cloud Storage Services for Photos and Video
 
-# [Deploy(Chinese)](/doc/deploy.md) | English
+# [部署(Chinese)](/doc/deploy.md) | Deploy
 
-# Need ? to do : not to do
-
-## 优先考虑接口，安全等方向
+# To do
 
 * 文件数在200以上的支持 (目前可以不在文件夹里放200及以上文件解决
 * 批量下载!
@@ -27,13 +26,11 @@
 
 欢迎提建议，如添加什么功能。
 
-不理睬迷惑问题，如E5如何注册。如有提出，请自重。
-
 # Motivation
 
 假设存在一个字幕组或者汉化组，把完成的合法，合规作品传到适当网站，但因为莫须有的原因被审核删除，那么就需要一个更好地分享位置，最好是权力掌握在自己手里的地方。OneSS便出现了。
 
-目标是让OneSS更像OSS一样的使用。
+目标是让OneSS更像OSS一样的使用！
 
 # [FAQ(随时补充)](/doc/FAQ.md)
 
@@ -52,17 +49,3 @@
 # Licence
 
 [GPL-3.0](LICENSE) © [Tualin14](https://github.com/Tualin14)
-
-# Other
-
-## 个人用快捷链接
-
-* [快捷在线编辑](https://github.dev/Tualin14/OneSS)
-* [Next.js](https://nextjs.org/docs/getting-started)
-* [Tailwind CSS](https://tailwindcss.com/docs/installation)
-* [在 Microsoft Graph 中使用文件](https://docs.microsoft.com/zh-cn/graph/api/resources/onedrive?view=graph-rest-1.0)
-* [OneSS-Layout-Reference](https://www.figma.com/file/HDZZCJay6QIIZq8MTEL8Ab/OneSS-Layout-Reference)
-
-## 如果你是个人版，推荐一个很好的相似项目
-
-* [onedrive-vercel-index](https://github.com/spencerwooo/onedrive-vercel-index)
