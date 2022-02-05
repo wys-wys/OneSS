@@ -27,6 +27,6 @@ async function getChildrenByRoute(user: string, route: string = '') {
         })
         return res.data.value
     } catch (e) {
-        return {status: 404}
+        return {status: 233}
     }
 }

@@ -22,11 +22,11 @@ async function getItemById(user: string, id: string) {
             },
             params: {
                 expand: 'thumbnails',
-                select: 'name,size,id,createdDateTime,lastModifiedDateTime,@microsoft.graph.downloadUrl'
+                select: 'name,size,id,createdDateTime,lastModifiedDateTime'
             },
         })
         return res.data
     } catch (e) {
-        return {status: 404}
+        return {status: 233}
     }
 }

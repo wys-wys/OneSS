@@ -11,7 +11,7 @@ export default async (req: NextApiRequest, res: NextApiResponse<dataType[]>) => 
     let data: dataType[] = []
     for (let i of userList) {
         let eachData = await getVideo(i)
-        eachData.status != 404 && (data = data.concat(eachData))
+        eachData.status != 233 && (data = data.concat(eachData))
     }
     res.status(200).json(data)
 }
@@ -31,6 +31,6 @@ async function getVideo(user: string) {
         })
         return res.data.value
     } catch (e) {
-        return {status: 404}
+        return {status: 233}
     }
 }

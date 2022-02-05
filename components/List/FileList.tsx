@@ -13,7 +13,7 @@ export default function FileList({user, route}: { user: string, route?: string[]
         <ArrowSync24Regular className={"animate-spin text-gray-900 dark:text-gray-200 w-1/3 h-1/3"}/>
     </div>
 
-    if (error || data.status == 404) return <div className={"flex justify-center items-center h-full text-2xl text-gray-900 dark:text-gray-200"}>failed to load
+    if (error || data.status == 233) return <div className={"flex justify-center items-center h-full text-2xl text-gray-900 dark:text-gray-200"}>failed to load
         or not found.</div>
 
     return (

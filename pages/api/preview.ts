@@ -22,6 +22,6 @@ async function getItemPreviewUrl(user: string, id: string) {
         })
         return res.data.getUrl
     } catch (e) {
-        return {status: 404}
+        return {status: 233}
     }
 }

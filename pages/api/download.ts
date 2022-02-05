@@ -25,6 +25,6 @@ async function getDownload(user: string, id: string) {
         })
         return res.data['@microsoft.graph.downloadUrl']
     } catch (e) {
-        return {status: 404}
+        return {status: 233}
     }
 }
