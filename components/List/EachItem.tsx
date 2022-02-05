@@ -46,7 +46,7 @@ export default function EachItem({user, route, data}: { user: string, route?: st
                                 <Copy24Regular className={"w-8 h-8 hover:bg-black dark:hover:bg-white hover:bg-opacity-10 dark:hover:bg-opacity-10"}
                                                onClick={() => {
                                                    try {
-                                                       navigator.clipboard.writeText(`${window.location.host}/item/${user}/${id}`)
+                                                       navigator.clipboard.writeText(`${window.location.host}/api/download?user=${user}&id=${id}`)
                                                        alert("Copied!")
                                                    } catch (e) {
                                                        alert('Failed to copy!')

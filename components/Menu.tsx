@@ -5,6 +5,7 @@ import Link from 'next/link'
 import userList from "@/setting/userList"
 import {Home48Regular, Comment48Regular, VideoClipMultiple24Regular} from "@fluentui/react-icons";
 import ThemeSwitch from "@/components/ThemeSwitch";
+import giscusSetting from "@/setting/giscusSetting";
 
 export default function Menu() {
     const [userShow, setUserShow] = useState(false);
@@ -26,10 +27,10 @@ export default function Menu() {
                     <a className={"hover:bg-black dark:hover:bg-white hover:bg-opacity-10 dark:hover:bg-opacity-10"}>
                         <Home48Regular className={"w-12 h-12"}/></a>
                 </Link>
-                <Link href={`/comment`}>
+                {giscusSetting.enabled && <Link href={`/comment`}>
                     <a target="_blank" className={"hover:bg-black dark:hover:bg-white hover:bg-opacity-10 dark:hover:bg-opacity-10"}>
                         <Comment48Regular className={"w-12 h-12"}/></a>
-                </Link>
+                </Link>}
                 <Link href={`/videos`}>
                     <a target="_blank" className={"hover:bg-black dark:hover:bg-white hover:bg-opacity-10 dark:hover:bg-opacity-10"}>
                         <VideoClipMultiple24Regular className={"w-12 h-12"}/></a>

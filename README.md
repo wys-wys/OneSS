@@ -4,21 +4,23 @@
 
 # 特性 | Features
 
-* 免费! | Free !
-* 快速的文件下载 | Fast File Download
-* 多用户支持 | Multi-user Support
-* 评论支持 | Comment Support
-* 预览功能 | Preview Support
-* 暗主题 | Dark Mode
-* 视频在线观看 | Watch Video Online
-* 可以做图床，视频云 | Cloud Storage Services for Photos and Video
+- 免费! | Free !
+- 快速的文件下载 | Fast File Download
+- 可以做图床，视频云 | Cloud Storage Services for Photos and Video[(demo)](https://www.dzaaaaaa.com/blog/LSW/OneSS)
+- 多用户支持 | Multi-user Support
+- 评论支持 | Comment Support
+- 预览功能 | Preview Support
+- 暗主题 | Dark Mode
+- 视频在线观看 | Watch Video Online
 
-# [部署(Chinese)](/doc/deploy.md) | Deploy
+# [部署](/doc/deploy.md) | Deploy
+
+# [api(施工中)](/doc/api.md)
 
 # To do
 
-* 文件数在200以上的支持 (目前可以不在文件夹里放200及以上文件解决
-* 批量下载!
+- 文件数在200以上的支持 (目前可以不在文件夹里放200及以上文件解决
+- 批量下载
 
 # Issues
 

@@ -15,13 +15,13 @@ export default function Videos() {
         or not found.</div>
 
     return (
-        <div className={"p-4 grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 grid-flow-col gap-4 text-gray-900 dark:text-gray-200"}>
+        <div className={"p-4 grid grid-cols-2 md:grid-cols-4 xl:grid-cols-6 grid-flow-col gap-4 text-gray-900 dark:text-gray-200"}>
             {data.map(({name, id, createdBy, video, thumbnails}: dataType, index: number) => {
                 return (video &&
                     <Link key={index} href={`/videos/play?user=${createdBy.user.email}&id=${id}`}>
-                        <a target="_blank" className={"hover:ring-2 ring-gray-900 dark:ring-gray-200"}>
+                        <a target="_blank" className={"rounded-md hover:ring-2 ring-gray-900 dark:ring-gray-200"}>
                             <div className={"aspect-video bg-center bg-cover rounded-md"} style={{backgroundImage: `url(${thumbnails["0"].large.url})`}}/>
-                            <div className={"truncate"}>{name}</div>
+                            <div className={"truncate text-xl"}>{name}</div>
                         </a>
                     </Link>
                 )
