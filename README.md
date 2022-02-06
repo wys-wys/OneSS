@@ -40,6 +40,8 @@
 
 [Next.js(MIT)](https://github.com/vercel/next.js)
 
+[swr(MIT)](https://github.com/vercel/swr)
+
 [tailwindcss(MIT)](https://github.com/tailwindlabs/tailwindcss)
 
 [fluentui-system-icons(MIT)](https://github.com/microsoft/fluentui-system-icons)

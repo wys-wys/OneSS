@@ -9,8 +9,8 @@ import userList from "@/setting/userList";
 
 export default async (req: NextApiRequest, res: NextApiResponse<dataType[]>) => {
     let data: dataType[] = []
-    for (let i of userList) {
-        let eachData = await getVideo(i)
+    for (let user of userList) {
+        let eachData = await getVideo(user)
         eachData.status != 233 && (data = data.concat(eachData))
     }
     res.status(200).json(data)
