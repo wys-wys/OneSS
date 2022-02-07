@@ -1,9 +1,9 @@
 import useSWR from "swr";
 import Link from "next/link";
-import {fetcher} from "@/script/swr_get";
 import {ArrowSync24Regular} from "@fluentui/react-icons";
 
 import {dataType} from "@/script/data_type";
+import {fetcher} from "@/script/swr_get";
 
 
 export default function Videos() {
@@ -18,14 +18,14 @@ export default function Videos() {
         <div className={"p-4 grid grid-cols-2 md:grid-cols-4 2xl:grid-cols-6 overflow-y-auto gap-4 text-gray-900 dark:text-gray-200"}>
             {data.map(({name, id, createdBy, video, thumbnails}: dataType, index: number) => {
                 return (video &&
-                        <div>
-                    <Link key={index} href={`/videos/play?user=${createdBy.user.email}&id=${id}`}>
-                        <a target="_blank" className={"rounded-md hover:ring-2 ring-gray-900 dark:ring-gray-200"}>
-                            <div className={"aspect-video bg-center bg-cover rounded-md"} style={{backgroundImage: `url(${thumbnails["0"].large.url})`}}/>
-                            <div className={"truncate text-xl"}>{name}</div>
-                        </a>
-                    </Link>
-                        </div>
+                    <div>
+                        <Link key={index} href={`/videos/play?user=${createdBy.user.email}&id=${id}`}>
+                            <a target="_blank" className={"rounded-md hover:ring-2 ring-gray-900 dark:ring-gray-200"}>
+                                <div className={"aspect-video bg-center bg-cover rounded-md"} style={{backgroundImage: `url(${thumbnails["0"].large.url})`}}/>
+                                <div className={"truncate text-xl"}>{name}</div>
+                            </a>
+                        </Link>
+                    </div>
                 )
             })}
         </div>
