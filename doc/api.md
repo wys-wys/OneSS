@@ -1,7 +1,5 @@
 # api
 
-施工中...
-
 ```typescript
 export type dataType = {
   id: string;
@@ -44,4 +42,4 @@ export type dataType = {
 
   `All videos in the shared user's Video folder`
 
-  `response:name,id,video,createdBy`
+  `response: name,id,video,createdBy`
