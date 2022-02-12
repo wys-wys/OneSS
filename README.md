@@ -1,3 +1,5 @@
+<img src="/public/oness.svg" width="200" height="300" alt="OneSS" align=center/>
+
 # OneSS
 
 让你的 Onedrive 能像 OSS 一样使用 | Make your Onedrive work like OSS(Object Storage Service)
