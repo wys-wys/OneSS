@@ -1,4 +1,4 @@
-<img src="/public/oness.svg" width="400" height="400" alt="OneSS" align=center/>
+<img src="/public/OneSS_T.svg" height="100" alt="OneSS"/>
 
 # OneSS
 
