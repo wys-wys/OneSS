@@ -9,9 +9,8 @@ const ThemeSwitch = () => {
     useEffect(() => setMounted(true), [])
 
     return (
-        <button aria-label="Dark Mode" className="w-12 h-12" onClick={() => setTheme(theme === 'dark' || resolvedTheme === 'dark' ? 'light' : 'dark')}>
-            {mounted && (theme === 'dark' || resolvedTheme === 'dark') ?
-                <WeatherSunny48Regular/> : <WeatherMoon48Regular/>}
+        <button className="w-12 h-12" onClick={() => setTheme(theme === 'dark' || resolvedTheme === 'dark' ? 'light' : 'dark')}>
+            {mounted && (theme === 'dark' || resolvedTheme === 'dark') ? <WeatherSunny48Regular/> : <WeatherMoon48Regular/>}
         </button>
     )
 }

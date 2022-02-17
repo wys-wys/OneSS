@@ -2,7 +2,7 @@ import Link from "next/link";
 import useSWR from "swr";
 import {ArrowSync24Regular} from "@fluentui/react-icons";
 
-import EachItem from "@/components/List/EachItem";
+import EachItem from "@/components/bk/List/EachItem";
 import {fetcher} from "@/script/swr_get";
 
 export default function FileList({user, route}: { user: string, route?: string[] }) {
