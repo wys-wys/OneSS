@@ -11,12 +11,12 @@ export default function IconList() {
 
             <Link href={"/"}><a>
                 <div className={"flex items-center justify-center text-ob dark:text-ow rounded hover:bg-ow hover:bg-opacity-20"}>
-                    <VscHome className={"w-12 h-12"}/>
+                    <VscHome className={"w-8 h-8"}/>
                 </div>
             </a></Link>
 
             <Link href={"/apiList"}><a>
-                <div className={"w-12 h-12 flex items-center justify-center text-2xl text-ob dark:text-ow rounded hover:bg-ow hover:bg-opacity-20"}>
+                <div className={"w-8 h-8 flex items-center justify-center text-xl text-ob dark:text-ow rounded hover:bg-ow hover:bg-opacity-20"}>
                     API
                 </div>
             </a></Link>
@@ -24,8 +24,8 @@ export default function IconList() {
             <ThemeSwitch/>
 
             <Link href={"https://github.com/Tualin14/OneSS"}><a target={'_blank'}>
-                <div className={"w-12 h-12 flex items-center justify-center text-ob dark:text-ow rounded hover:bg-ow hover:bg-opacity-20"}>
-                    <VscGithub className={"w-11 h-11"}/>
+                <div className={"w-8 h-8 flex items-center justify-center text-ob dark:text-ow rounded hover:bg-ow hover:bg-opacity-20"}>
+                    <VscGithub className={"w-7 h-7"}/>
                 </div>
             </a></Link>
         </div>

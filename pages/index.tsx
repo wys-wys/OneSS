@@ -15,12 +15,12 @@ export default function Home() {
 }
 
 
-export const getStaticProps = async () => {
-    for (let userName of userList) {
-        const photo = await getUserPhoto(userName)
-        !photo ? console.log(`\n==============\nNo user: ${userName}\n==============`) :
-            fs.writeFileSync(`./public/UserPhoto/${userName}.jpg`, photo, 'base64')
-    }
-
-    return {props: {ok: 233},}
-}
+// export const getStaticProps = async () => {
+//     for (let userName of userList) {
+//         const photo = await getUserPhoto(userName)
+//         !photo ? console.log(`\n==============\nNo user: ${userName}\n==============`) :
+//             fs.writeFileSync(`./public/UserPhoto/${userName}.jpg`, photo, 'base64')
+//     }
+//
+//     return {props: {ok: 233},}
+// }

@@ -1,6 +1,6 @@
 import {useRouter} from 'next/router'
 
-import FileList from "@/components/bk/List/FileList";
+import FileList from "@/components/FileList";
 import Menu from "@/components/menu/Menu";
 
 

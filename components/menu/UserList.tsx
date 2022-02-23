@@ -6,7 +6,7 @@ import userList from "@/setting/userList";
 
 export default function UserList({userShow}: { userShow: boolean }) {
     return (
-        <div className={`fixed bottom-0 w-full p-2 transition ease-in-out duration-[400ms] ${userShow ? "translate-y-full" : "translate-y-0"}`}>
+        <div className={`fixed bottom-0 w-full p-2 transition ease-in-out duration-[400ms] ${userShow ? "translate-y-0" : "translate-y-full"}`}>
             <div className={`w-full h-[100px] px-4 border border-ow border-opacity-20 
             flex overflow-x-auto items-center space-x-2 bg-op rounded-xl backdrop-blur bg-opacity-90 dark:bg-opacity-40`}>
                 {userList.map((userName, index) => {
