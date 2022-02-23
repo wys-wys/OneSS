@@ -9,7 +9,7 @@ export default function Discussion() {
     const commentsTheme = theme === 'dark' || resolvedTheme === 'dark' ? "dark_high_contrast" : "light_high_contrast"
 
     return (
-        <div className="giscus w-2/3 h-5/6 p-2 overflow-y-auto">
+        <div className="giscus w-full h-5/6 p-2 overflow-y-auto">
             <Script src="https://giscus.app/client.js"
                     data-repo={giscus.repo}
                     data-repo-id={giscus.repo_id}

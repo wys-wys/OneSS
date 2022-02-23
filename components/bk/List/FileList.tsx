@@ -26,13 +26,7 @@ export default function FileList({user, route}: { user: string, route?: string[]
 
 function ListHeader({user, route}: { user: string, route?: string[] }) {
     return (
-        <div className={"flex flex-row items-center p-2 bg-indigo-600 dark:bg-indigo-900 overflow-x-auto"}>
-            <div className={"text-2xl text-gray-900 dark:text-gray-200 hover:bg-black dark:hover:bg-white hover:bg-opacity-10 dark:hover:bg-opacity-10"}>
-                <Link href={`/${user}`}>
-                    <a>{user.split('@')[0].toUpperCase()}</a>
-                </Link>
-            </div>
-
+        <div className={"flex flex-row items-center p-2  overflow-x-auto"}>
             <div className={"flex flex-row items-center text-2xl text-gray-900 dark:text-gray-200"}>
                 {route && route.map((item, index) => {
                     return <div key={index}>{'>'}

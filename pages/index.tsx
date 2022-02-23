@@ -2,31 +2,25 @@ import fs from "fs";
 
 import userList from "@/setting/userList";
 import getUserPhoto from "@/script/get_user_photo";
-import Heading from "@/components/Heading";
-import Discussion from "@/components/Discussion";
+import Menu from "@/components/menu/Menu";
 import Logo from "@/components/Logo";
 
 export default function Home() {
     return (
-        <div className={"w-full h-full"}>
-            <Heading/>
-            <div className={"w-full h-full flex"}>
-                <div className={"w-full h-4/5 flex justify-center items-center"}>
-                    <Logo/>
-                </div>
-                <Discussion/>
-            </div>
+        <div className={'flex flex-col items-center'}>
+            <Menu userName={'OneSS'}/>
+            <Logo/>
         </div>
     )
 }
 
 
-// export const getStaticProps = async () => {
-//     for (let userName of userList) {
-//         const photo = await getUserPhoto(userName)
-//         !photo ? console.log(`\n==============\nNo user: ${userName}\n==============`) :
-//             fs.writeFileSync(`./public/UserPhoto/${userName}.jpg`, photo, 'base64')
-//     }
-//
-//     return {props: {ok: 233},}
-// }
+export const getStaticProps = async () => {
+    for (let userName of userList) {
+        const photo = await getUserPhoto(userName)
+        !photo ? console.log(`\n==============\nNo user: ${userName}\n==============`) :
+            fs.writeFileSync(`./public/UserPhoto/${userName}.jpg`, photo, 'base64')
+    }
+
+    return {props: {ok: 233},}
+}

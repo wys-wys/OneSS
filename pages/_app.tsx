@@ -3,7 +3,7 @@ import type {AppProps} from 'next/app'
 import Head from 'next/head'
 import {ThemeProvider} from 'next-themes'
 
-import UserList from "@/components/UserList";
+import UserList from "@/components/menu/UserList";
 
 
 export default function MyApp({Component, pageProps}: AppProps,) {
@@ -21,9 +21,8 @@ export default function MyApp({Component, pageProps}: AppProps,) {
                 <meta name="theme-color" content="#ffffff"/>
             </Head>
 
-            <UserList/>
-            <div className={"w-screen h-screen pl-[100px] overflow-hidden bg-ow dark:bg-ob"}>
-                <Component {...pageProps} />
+            <div className={"h-screen overflow-hidden bg-ow dark:bg-ob"}>
+                <Component {...pageProps}/>
             </div>
 
         </ThemeProvider>
