@@ -1,7 +1,7 @@
 # api
 
 ```typescript
-export type dataType = {
+export type itemType = {
   id: string;
   name: string;
   size: number;
@@ -16,7 +16,7 @@ export type dataType = {
 };
 ```
 
-# GET you.domain.com/api/
+# GET: you.domain.com/api/
 
 - children?user={user}&route={rout}
 
@@ -37,9 +37,3 @@ export type dataType = {
 - user
 
   `response: userList`
-
-- videos
-
-  `All videos in the shared user's Video folder`
-
-  `response: name,id,video,createdBy`
