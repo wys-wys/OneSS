@@ -1,4 +1,4 @@
-<img src="/public/OneSS_T.svg" height="100" alt="OneSS"/>
+![OneSS_T](https://oness.dzaaaaaa.com/OneSS_T.svg)
 
 # OneSS
 

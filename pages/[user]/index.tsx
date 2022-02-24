@@ -1,11 +1,13 @@
 import {useRouter} from 'next/router'
 
-import FileList from "@/components/List/FileList";
+import ItemList from "@/components/itemList/ItemList";
+import SetUserName from "@/components/SetUserName";
 
 
 export default function UserIndex() {
     const {user} = useRouter().query
-    return (
-        <FileList user={user as string}/>
-    )
+
+    SetUserName(user as string)
+
+    return <ItemList user={user as string}/>
 }
