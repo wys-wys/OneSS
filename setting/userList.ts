@@ -1,3 +1,3 @@
-const userList = ["share@dzaaaaaa.com", "share@dzaaaaaa.com", 'share@dzaaaaaa.com', 'share@dzaaaaaa.com', 'share@dzaaaaaa.com', 'share@dzaaaaaa.com', 'share@dzaaaaaa.com', 'share@dzaaaaaa.com']
+const userList = ["share@dzaaaaaa.com"]
 
 export default userList

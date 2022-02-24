@@ -2,7 +2,7 @@ import Link from "next/link";
 
 import {VscGithub, VscHome} from "react-icons/vsc";
 
-import ThemeSwitch from "@/components/menu/ThemeSwitch";
+import DarkSwitch from "@/components/menu/DarkSwitch";
 
 
 export default function IconList() {
@@ -21,7 +21,7 @@ export default function IconList() {
                 </div>
             </a></Link>
 
-            <ThemeSwitch/>
+            <DarkSwitch/>
 
             <Link href={"https://github.com/Tualin14/OneSS"}><a target={'_blank'}>
                 <div className={"w-8 h-8 flex items-center justify-center text-ob dark:text-ow rounded hover:bg-ow hover:bg-opacity-20"}>

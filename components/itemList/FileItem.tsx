@@ -1,8 +1,11 @@
 import Image from "next/image";
-import {getIconForFile} from "vscode-icons-js";
 import Link from "next/link";
-import ConvertB from "@/script/convert_bit";
+import {getIconForFile} from "vscode-icons-js";
+
 import {VscCloudDownload, VscCopy, VscLiveShare, VscOpenPreview} from "react-icons/vsc";
+
+import convertB from "@/script/convert_bit";
+
 
 export default function FileItem({user, name, size, id, index}: { user: string, name: string, size: number, id: string, index: number }) {
     return (
@@ -21,7 +24,7 @@ export default function FileItem({user, name, size, id, index}: { user: string, 
             </Link>
 
             {/*Size*/}
-            <div className={"basis-1/12 flex items-center text-center hidden md:block"}>{ConvertB(size)}</div>
+            <div className={"basis-1/12 flex items-center text-center hidden md:block"}>{convertB(size)}</div>
 
             {/*Action*/}
             <div className={"basis-1/12 flex flex-row justify-center items-center space-x-1 md:invisible group-hover:visible"}>
@@ -29,26 +32,27 @@ export default function FileItem({user, name, size, id, index}: { user: string, 
                     <a target="_blank"><VscOpenPreview className={"w-7 h-7 rounded hover:bg-ob dark:hover:bg-ow hover:bg-opacity-20 dark:hover:bg-opacity-20"}/></a>
                 </Link>
 
-                <VscLiveShare className={'w-7 h-7 rounded hover:bg-ob dark:hover:bg-ow hover:bg-opacity-20 dark:hover:bg-opacity-20'} onClick={() => {
+                <button onClick={() => {
                     try {
                         navigator.clipboard.writeText(`https://${window.location.host}/item/${user}/${id}`)
                         alert(`Copied: https://${window.location.host}/item/${user}/${id}`)
                     } catch (e) {
                         alert('Failed to copy!')
                     }
-                }}/>
+                }}>
+                    <VscLiveShare className={'w-7 h-7 rounded hover:bg-ob dark:hover:bg-ow hover:bg-opacity-20 dark:hover:bg-opacity-20'}/></button>
 
-                <VscCopy className={"w-7 h-7 rounded hover:bg-ob dark:hover:bg-ow hover:bg-opacity-20 dark:hover:bg-opacity-20"}
-                         onClick={() => {
-                             try {
-                                 navigator.clipboard.writeText(`https://${window.location.host}/api/download?user=${user}&id=${id}`)
-                                 alert(`Copied: https://${window.location.host}/api/download?user=${user}&id=${id}`)
-                             } catch (e) {
-                                 alert('Failed to copy!')
-                             }
-                         }}/>
+                <button onClick={() => {
+                    try {
+                        navigator.clipboard.writeText(`https://${window.location.host}/api/item/content?user=${user}&id=${id}`)
+                        alert(`Copied: https://${window.location.host}/api/item/content?user=${user}&id=${id}`)
+                    } catch (e) {
+                        alert('Failed to copy!')
+                    }
+                }}>
+                    <VscCopy className={"w-7 h-7 rounded hover:bg-ob dark:hover:bg-ow hover:bg-opacity-20 dark:hover:bg-opacity-20"}/></button>
 
-                <Link href={`/api/download?user=${user}&id=${id}`}>
+                <Link href={`/api/item/content?user=${user}&id=${id}`}>
                     <a target="_blank"><VscCloudDownload className={"w-7 h-7 rounded hover:bg-ob dark:hover:bg-ow hover:bg-opacity-20 dark:hover:bg-opacity-20"}/></a>
                 </Link>
             </div>
