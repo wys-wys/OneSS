@@ -5,7 +5,7 @@ export default function Logo() {
     const {theme, resolvedTheme} = useTheme()
 
     return (
-        <div className={'p-4 w-2/3 md:w-3/5'}>
+        <div className={'p-4 w-2/3 md:w-1/3'}>
             {theme === 'dark' || resolvedTheme === 'dark' ?
                 <svg viewBox="0 0 624 600" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <circle cx="500" cy="476" r="124" fill="#1F7EFE" fillOpacity="0.8"/>

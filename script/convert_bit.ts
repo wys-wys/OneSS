@@ -1,4 +1,4 @@
-export default function convertB(B: number) {
+export default function ConvertB(B: number) {
     let size: string
     if (B < 1024) {
         size = B.toFixed(2) + "B";

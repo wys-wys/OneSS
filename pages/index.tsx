@@ -2,20 +2,14 @@ import fs from "fs";
 
 import userList from "@/setting/userList";
 import getUserPhoto from "@/script/get_user_photo";
+import Menu from "@/components/menu/Menu";
 import Logo from "@/components/Logo";
-import Comments from "@/components/Comments";
-import SetUserName from "@/components/SetUserName";
-import giscusSetting from "@/setting/giscusSetting";
-
 
 export default function Home() {
-
-    SetUserName('OneSS')
-
     return (
-        <div className={'h-screen flex flex-col md:flex-row items-center md:items-start overflow-y-scroll'}>
+        <div className={'flex flex-col md:flex-row items-center'}>
+            <Menu userName={'OneSS'}/>
             <Logo/>
-            {giscusSetting.enabled && <Comments/>}
         </div>
     )
 }

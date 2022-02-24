@@ -22,7 +22,7 @@ export type dataType = {
 
   `response: name,size,id,folder,file,image,video`
 
-- item/content?user={user}&id={id}
+- download?user={user}&id={id}
 
   `redirect: downloadUrl`
 

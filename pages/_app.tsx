@@ -3,7 +3,7 @@ import type {AppProps} from 'next/app'
 import Head from 'next/head'
 import {ThemeProvider} from 'next-themes'
 
-import Menu from "@/components/menu/Menu";
+import UserList from "@/components/menu/UserList";
 
 
 export default function MyApp({Component, pageProps}: AppProps,) {
@@ -20,8 +20,6 @@ export default function MyApp({Component, pageProps}: AppProps,) {
                 <meta name="msapplication-TileColor" content="#da532c"/>
                 <meta name="theme-color" content="#ffffff"/>
             </Head>
-
-            <Menu/>
 
             <div className={"h-screen pt-12 overflow-hidden transition ease-in duration-500 bg-ow dark:bg-ob"}>
                 <Component {...pageProps}/>

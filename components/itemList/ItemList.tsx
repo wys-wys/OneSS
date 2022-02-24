@@ -12,9 +12,13 @@ import ListHeader from "@/components/itemList/ListHeader";
 export default function ItemList({user, route}: { user: string, route?: string[] }) {
     const {data, error} = useSWR(`/api/children?user=${user}&route=${route ? route.join('/') : ''}`, fetcher)
 
-    if (!data) return <div className={'px-4'}>{user && <ListHeader user={user} route={route}/>}<VscSync className={"animate-spin text-ob dark:text-ow w-1/3 h-1/3"}/></div>
+    if (!data) return <div className={'px-4'}>
+        {user && <ListHeader user={user} route={route}/>}
+        <VscSync className={"animate-spin text-ob dark:text-ow w-1/3 h-1/3"}/>
+    </div>
 
-    if (error || data.status == 233) return <div className={"flex justify-center items-center h-full text-2xl text-ob dark:text-ow"}>failed to load or not found.</div>
+    if (error || data.status == 233) return <div className={"flex justify-center items-center h-full text-2xl text-ob dark:text-ow"}>failed to load
+        or not found.</div>
 
     return (
         <div className={`px-4`}>
