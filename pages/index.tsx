@@ -8,9 +8,9 @@ import SetUserName from "@/components/SetUserName";
 import giscusSetting from "@/setting/giscusSetting";
 
 
-export default function Home() {
+export default function Home({ok}: { ok: string }) {
 
-    SetUserName('OneSS')
+    SetUserName(ok)
 
     return (
         <div className={'h-screen flex flex-col md:flex-row items-center md:items-start overflow-y-scroll'}>
@@ -20,12 +20,12 @@ export default function Home() {
     )
 }
 
-export const getStaticProps = async () => {
+export async function getStaticProps() {
     for (let userName of userList) {
         const photo = await getUserPhoto(userName)
         !photo ? console.log(`\n==============\nNo user: ${userName}\n==============`) :
-            fs.writeFileSync(`/public/UserPhoto/${userName}.jpg`, photo, 'base64')
+            fs.writeFileSync(`./public/UserPhoto/${userName}.jpg`, photo, 'base64')
     }
 
-    return {props: {ok: 233},}
+    return {props: {ok: 'OneSS'}}
 }
