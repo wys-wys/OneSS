@@ -1,8 +1,11 @@
 import Image from "next/image";
-import {getIconForFolder} from "vscode-icons-js";
 import Link from "next/link";
-import ConvertB from "@/script/convert_bit";
-import {VscLiveShare} from "react-icons/vsc";
+import {getIconForFolder} from "vscode-icons-js";
+
+import {VscCloud, VscLiveShare} from "react-icons/vsc";
+
+import convertB from "@/script/convert_bit";
+
 
 export default function FolderItem({user, route, name, size, index}: { user: string, route?: string[], name: string, size: number, index: number }) {
     return (
@@ -20,18 +23,24 @@ export default function FolderItem({user, route, name, size, index}: { user: str
             </Link>
 
             {/*Size*/}
-            <div className={"basis-1/12 flex items-center text-center hidden md:block"}>{ConvertB(size)}</div>
+            <div className={"basis-1/12 flex items-center text-center hidden md:block"}>{convertB(size)}</div>
 
             {/*Action*/}
             <div className={"basis-1/12 flex flex-row justify-center items-center space-x-1 md:invisible group-hover:visible"}>
-                <VscLiveShare className={'w-7 h-7 rounded hover:bg-ob dark:hover:bg-ow hover:bg-opacity-20 dark:hover:bg-opacity-20'} onClick={() => {
+                <VscCloud className={'w-7 h-7 invisible'}/>
+
+                <button onClick={() => {
                     try {
                         navigator.clipboard.writeText(`https://${window.location.host}/${user}/${route ? route.join('/') + '/' : ''}${name}`)
                         alert(`Copied: https://${window.location.host}/${user}/${route ? route.join('/') + '/' : ''}${name}`)
                     } catch (e) {
                         alert('Failed to copy!')
                     }
-                }}/>
+                }}>
+                    <VscLiveShare className={'w-7 h-7 rounded hover:bg-ob dark:hover:bg-ow hover:bg-opacity-20 dark:hover:bg-opacity-20'}/></button>
+
+                <VscCloud className={'w-7 h-7 invisible'}/>
+                <VscCloud className={'w-7 h-7 invisible'}/>
             </div>
         </div>
     )

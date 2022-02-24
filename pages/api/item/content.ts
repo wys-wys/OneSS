@@ -7,11 +7,11 @@ import baseSetting from "@/setting/baseSetting";
 
 export default async (req: { query: { user: string, id: string } }, res: NextApiResponse) => {
     const {'user': user, 'id': id} = req.query
-    const url = await getDownload(user, id)
+    const url = await getContent(user, id)
     res.redirect(307, url)
 }
 
-async function getDownload(user: string, id: string) {
+async function getContent(user: string, id: string) {
     const accessToken = await getToken()
     const url = encodeURI(`${baseSetting.endpoints.graph_endpoint}/users/${user}/drive/items/${id}`)
     try {
