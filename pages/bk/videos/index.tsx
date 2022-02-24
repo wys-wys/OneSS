@@ -2,7 +2,7 @@ import useSWR from "swr";
 import Link from "next/link";
 import {ArrowSync24Regular} from "@fluentui/react-icons";
 
-import {dataType} from "@/script/data_type";
+import {itemType} from "@/script/item_type";
 import {fetcher} from "@/script/swr_get";
 
 
@@ -16,7 +16,7 @@ export default function Videos() {
 
     return (
         <div className={"p-4 grid grid-cols-2 md:grid-cols-4 2xl:grid-cols-6 overflow-y-auto gap-4 text-gray-900 dark:text-gray-200"}>
-            {data.map(({name, id, createdBy, video, thumbnails}: dataType, index: number) => {
+            {data.map(({name, id, createdBy, video, thumbnails}: itemType, index: number) => {
                 return (video &&
                     <div className={"rounded-md hover:ring-2 ring-gray-900 dark:ring-gray-200"}>
                         <Link key={index} href={`/videos/play?user=${createdBy.user.email}&id=${id}`}>

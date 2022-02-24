@@ -1,14 +1,14 @@
 import axios from "axios";
 import type {NextApiRequest, NextApiResponse} from 'next'
 
-import {dataType} from "@/script/data_type";
+import {itemType} from "@/script/item_type";
 import getToken from "@/script/get_token";
 import baseSetting from "@/setting/baseSetting";
 import userList from "@/setting/userList";
 
 
-export default async (req: NextApiRequest, res: NextApiResponse<dataType[]>) => {
-    let data: dataType[] = []
+export default async (req: NextApiRequest, res: NextApiResponse<itemType[]>) => {
+    let data: itemType[] = []
     for (let user of userList) {
         let eachData = await getVideo(user)
         eachData.status != 233 && (data = data.concat(eachData))

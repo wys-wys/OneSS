@@ -21,7 +21,7 @@ export default function MyApp({Component, pageProps}: AppProps,) {
                 <meta name="theme-color" content="#ffffff"/>
             </Head>
 
-            <div className={"h-screen overflow-hidden transition ease-in duration-500 bg-ow dark:bg-ob"}>
+            <div className={"h-screen pt-12 overflow-hidden transition ease-in duration-500 bg-ow dark:bg-ob"}>
                 <Component {...pageProps}/>
             </div>
 

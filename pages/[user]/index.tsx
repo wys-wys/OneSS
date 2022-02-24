@@ -1,6 +1,6 @@
 import {useRouter} from 'next/router'
 
-import FileList from "@/components/FileList";
+import ItemList from "@/components/itemList/ItemList";
 import Menu from "@/components/menu/Menu";
 
 
@@ -9,7 +9,7 @@ export default function UserIndex() {
     return (
         <div>
             <Menu userName={user as string}/>
-            <FileList user={user as string}/>
+            <ItemList user={user as string}/>
         </div>
     )
 }

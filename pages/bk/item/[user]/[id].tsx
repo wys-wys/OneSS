@@ -5,7 +5,7 @@ import {ArrowDownload48Regular, ArrowSync24Regular, Copy24Regular, DocumentSearc
 
 import ConvertB from "@/script/convert_bit";
 import {fetcher} from "@/script/swr_get";
-import {dataType} from "@/script/data_type";
+import {itemType} from "@/script/item_type";
 
 
 export default function ItemId() {
@@ -19,7 +19,7 @@ export default function ItemId() {
     if (error || data.status == 233) return <div className={"flex justify-center items-center h-full text-2xl text-gray-900 dark:text-gray-200"}>failed to load
         or not found.</div>
 
-    const {name, size, createdDateTime, lastModifiedDateTime, thumbnails}: dataType = data
+    const {name, size, createdDateTime, lastModifiedDateTime, thumbnails}: itemType = data
 
     return (
         <div className={"flex items-center justify-center w-full h-full text-gray-900 dark:text-gray-200"}>

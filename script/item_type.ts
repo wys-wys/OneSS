@@ -1,4 +1,4 @@
-export type dataType = {
+export type itemType = {
     id: string
     name: string
     size: number
