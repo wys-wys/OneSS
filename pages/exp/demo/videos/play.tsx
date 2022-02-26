@@ -8,7 +8,7 @@ export default function DemoVideoPlay() {
     SetUserName(user as string)
 
     return (
-        <div className={"flex justify-center aspect-video p-4 overflow-y-auto"}>
+        <div className={"h-full flex justify-center aspect-video p-8"}>
             <video src={`/api/item/content?user=${user}&id=${id}`} controls/>
         </div>
     )

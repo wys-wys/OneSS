@@ -1,6 +1,6 @@
 import Link from "next/link";
 
-import {VscGithub, VscHome} from "react-icons/vsc";
+import {VscBeaker, VscGithub, VscHome} from "react-icons/vsc";
 
 import DarkSwitch from "@/components/menu/DarkSwitch";
 
@@ -15,9 +15,9 @@ export default function IconList() {
                 </div>
             </a></Link>
 
-            <Link href={"/apiList"}><a>
+            <Link href={"/exp"}><a>
                 <div className={"w-8 h-8 flex items-center justify-center text-xl text-ob dark:text-ow rounded hover:bg-ow hover:bg-opacity-20"}>
-                    API
+                    <VscBeaker className={'w-7 h-7'}/>
                 </div>
             </a></Link>
 

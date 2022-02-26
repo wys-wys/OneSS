@@ -22,7 +22,7 @@ export default function DemoVideos() {
             {data.map(({name, id, createdBy, video, thumbnails}: itemType, index: number) => {
                 return (video &&
                     <div className={"rounded-md hover:ring-2 ring-gray-900 dark:ring-gray-200"}>
-                        <Link key={index} href={`/apiList/demo/videos/play?user=${createdBy.user.email}&id=${id}`}>
+                        <Link key={index} href={`/exp/demo/videos/play?user=${createdBy.user.email}&id=${id}`}>
                             <a target="_blank">
                                 <div className={"aspect-video bg-center bg-cover rounded-md"} style={{backgroundImage: `url(${thumbnails["0"].large.url})`}}/>
                                 <div className={"truncate text-xl"}>{name}</div>
