@@ -1,4 +1,4 @@
-# Deploy
+# 部署
 
 本文以开发者账户演示，其他账户只要能在 Azure 创建应用就行
 
@@ -25,4 +25,4 @@
    3. 部署
 5. 成功后及可访问
 
-[视频流程](https://www.bilibili.com/video/BV1SZ4y1d73v/)
+若根据 Readme 无法成功部署，可参考[视频流程](https://www.bilibili.com/video/BV1SZ4y1d73v/)

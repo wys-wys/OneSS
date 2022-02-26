@@ -14,9 +14,17 @@
 - 预览功能 | Preview Support
 - 暗主题 | Dark Mode
 
-# [部署](/doc/deploy.md) | Deploy
+# start
 
-# [api(施工中)](/doc/api.md)
+## [部署](/doc/deploy_zh.md) | Deploy
+
+## 使用 | How to use
+
+在自己 OneDrive 的根目录建立名为 OneSS 的文件夹 | Create a folder named OneSS in the root directory of your OneDrive
+
+# 实验性功能 | Experimental feature
+
+- [API (Under Construction)](/doc/exp/API.md)
 
 # To do
 
