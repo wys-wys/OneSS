@@ -6,10 +6,10 @@ from xml.dom.minidom import Document
 
 doc = Document()
 
-now = datetime.datetime.now().timestamp()
+now = datetime.datetime.now()
 
-music_root = doc.createElement("MusicRoot")
-music_root.setAttribute('Timestamp', str(now))
+music_root = doc.createElement("MusicFromOneSS")
+music_root.setAttribute('RefreshTime', str(now))
 doc.appendChild(music_root)
 
 ONESS_API = 'https://oness.dzaaaaaa.com/api'
@@ -23,12 +23,31 @@ def s(user, route):
         try:
             i['folder']
         except:
-            c_i(user, i)
+            try:
+                i['image']
+            except:
+                is_music(user, i, route)
+            else:
+                is_img(user, i, route)
         else:
             s(user, '%s/%s' % (route, i['name']))
 
 
-def c_i(user, i):
+def is_img(user, i, route):
+    content = quote('%s/item/content?user=%s&id=%s' % (ONESS_API, user, i['id']))
+
+    cover = doc.createElement("Cover")
+    cover.setAttribute('Route', route)
+
+    content_cover = doc.createElement('Content')
+    content_cover_text = doc.createTextNode(content)
+    content_cover.appendChild(content_cover_text)
+    cover.appendChild(content_cover)
+
+    music_root.appendChild(cover)
+
+
+def is_music(user, i, route):
     name = quote(i['name'])
 
     try:
@@ -41,6 +60,7 @@ def c_i(user, i):
     content = quote('%s/item/content?user=%s&id=%s' % (ONESS_API, user, i['id']))
 
     music = doc.createElement("Music")
+    music.setAttribute('Route', route)
     # Name
     name_music = doc.createElement('Name')
     name_music_text = doc.createTextNode(name)
@@ -65,5 +85,5 @@ if __name__ == '__main__':
     for user in userList:
         s(user, 'Music')
 
-    with open('./public/exp/music.xml', 'w', encoding='utf-8') as f:
+    with open('../public/exp/music.xml', 'w', encoding='utf-8') as f:
         doc.writexml(f, addindent='\t', newl='\n', encoding='utf-8')
