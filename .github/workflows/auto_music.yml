@@ -25,7 +25,7 @@ jobs:
 
       - name: Run
         run: |
-          python ./exp/create_index.py
+          python ./exp/music_index.py
 
       - name: Push
         run: |
@@ -33,4 +33,4 @@ jobs:
           git config --global user.name "Tualin14"
           git add .
           git commit -m "Refresh Music" -a
-          git push origin dev:dev
+          git push origin main:main
