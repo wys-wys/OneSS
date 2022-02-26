@@ -1,0 +1,33 @@
+name: auto_music
+
+on:
+  schedule:
+    - cron: '0 0 * * *'
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v2
+      - name: Set up Python 3.9
+        uses: actions/setup-python@v2
+        with:
+          python-version: 3.9
+      
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install requests
+
+      - name: Run
+        run: |
+          python ./exp/create_index.py
+
+      - name: Push
+        run: |
+          git config --global user.email "t@dzaaaaaa.com"
+          git config --global user.name "Tualin14"
+          git add .
+          git commit -m "Refresh Music" -a
+          git push origin dev:dev
