@@ -85,5 +85,5 @@ if __name__ == '__main__':
     for user in userList:
         s(user, 'Music')
 
-    with open('../public/exp/music.xml', 'w', encoding='utf-8') as f:
+    with open('./public/exp/music.xml', 'w', encoding='utf-8') as f:
         doc.writexml(f, addindent='\t', newl='\n', encoding='utf-8')
