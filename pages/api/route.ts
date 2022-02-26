@@ -7,18 +7,19 @@ import baseSetting from "@/setting/baseSetting";
 import userList from "@/setting/userList";
 
 
-export default async (req: NextApiRequest, res: NextApiResponse<itemType[]>) => {
+export default async (req: { query: { p: string } }, res: NextApiResponse<itemType[]>) => {
+    const {'p': route} = req.query
     let data: itemType[] = []
     for (let user of userList) {
-        let eachData = await getVideo(user)
+        let eachData = await getByRoute(user, route)
         eachData.status != 233 && (data = data.concat(eachData))
     }
     res.status(200).json(data)
 }
 
-async function getVideo(user: string) {
+async function getByRoute(user: string, route: string) {
     const accessToken = await getToken()
-    const url = encodeURI(`${baseSetting.endpoints.graph_endpoint}/users/${user}/drive/root:${baseSetting.folder}/Video:/children`)
+    const url = encodeURI(`${baseSetting.endpoints.graph_endpoint}/users/${user}/drive/root:${baseSetting.folder}/${route}:/children`)
     try {
         const res = await axios.get(url, {
             headers: {
@@ -26,7 +27,7 @@ async function getVideo(user: string) {
             },
             params: {
                 expand: 'thumbnails',
-                select: 'name,id,video,createdBy'
+                select: 'name,size,id,folder,file,image,video,createdBy'
             },
         })
         return res.data.value
