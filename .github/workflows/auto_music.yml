@@ -26,6 +26,13 @@ jobs:
       - name: Run
         run: |
           python ./exp/music_index.py
+          
+      - name: commit
+        run: |
+          git config --global user.email t@dzaaaaaa.com
+          git config --global user.name Tualin14
+          git add .
+          git commit -m "Refresh Music" -a
 
       - name: Push
         uses: ad-m/github-push-action@master
