@@ -38,3 +38,5 @@ yarn-error.log*
 
 # typescript
 *.tsbuildinfo
+exp/music.xml
+public/music/music.xml
