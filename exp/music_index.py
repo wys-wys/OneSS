@@ -1,14 +1,18 @@
 import requests
+import datetime
 from urllib.parse import quote
 
 from xml.dom.minidom import Document
 
 doc = Document()
 
+now = datetime.datetime.now().timestamp()
+
 music_root = doc.createElement("MusicRoot")
+music_root.setAttribute('Timestamp', str(now))
 doc.appendChild(music_root)
 
-ONESS_API = 'https://oness-dev.dzaaaaaa.com/api'
+ONESS_API = 'https://oness.dzaaaaaa.com/api'
 
 
 def s(user, route):
@@ -61,5 +65,5 @@ if __name__ == '__main__':
     for user in userList:
         s(user, 'Music')
 
-    with open('./public/music/music.xml', 'w', encoding='utf-8') as f:
+    with open('./public/exp/music.xml', 'w', encoding='utf-8') as f:
         doc.writexml(f, addindent='\t', newl='\n', encoding='utf-8')
