@@ -22,7 +22,7 @@ async function getChildrenByRoute(user: string, route: string = '') {
                 'Authorization': `Bearer ${accessToken}`
             },
             params: {
-                select: 'name,size,id,folder,file,image,video'
+                select: 'name,size,id,folder,file,image,video,createdBy'
             },
         })
         return res.data.value

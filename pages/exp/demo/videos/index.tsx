@@ -11,7 +11,7 @@ import SetUserName from "@/components/SetUserName";
 export default function DemoVideos() {
     SetUserName('Demo Videos')
 
-    const {data, error} = useSWR(`/api/videos`, fetcher)
+    const {data, error} = useSWR(`/api/route?p=Video`, fetcher)
 
     if (!data) return <VscSync className={"animate-spin text-gray-900 dark:text-gray-200 w-1/3 h-1/3"}/>
 
