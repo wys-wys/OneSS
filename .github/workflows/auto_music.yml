@@ -25,12 +25,9 @@ jobs:
 
       - name: Run
         run: |
-          python ./exp/create_index.py
+          python ./exp/music_index.py
 
       - name: Push
-        run: |
-          git config --global user.email "t@dzaaaaaa.com"
-          git config --global user.name "Tualin14"
-          git add .
-          git commit -m "Refresh Music" -a
-          git push origin dev:dev
+        uses: ad-m/github-push-action@master
+        with:
+          github_token: ${{ secrets.ONESS }}
