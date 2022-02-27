@@ -24,7 +24,13 @@
 
 # 实验性功能 | Experimental feature
 
+功能在不断测试，会有大改!!!
+
+[demo](https://oness.dzaaaaaa.com/exp)
+
 - [API (Under Construction)](/doc/exp/API.md)
+- [Music Index](/doc/exp/MusicIndex.md)
+- Video List[demo](https://oness.dzaaaaaa.com/exp/demo/videos)
 
 # To do
 

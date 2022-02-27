@@ -1,0 +1,63 @@
+# Music Index
+
+以 json 格式，专辑为单位返回所有用户的 Music 文件夹里的音乐索引
+
+- 专辑名
+  - coverImg 为文件夹内封面
+  - coverUrl 为音乐自带封面，在文件夹内没有封面图片文件而音乐自带使用
+  - tracks 为音乐列表
+    - name 为音乐名
+    - content 为流
+
+示例:
+
+```json
+{
+  "《格里格 皮尔金德》Grieg Peer Gynt": {
+    "coverImg": "",
+    "coverUrl": "https://southeastasia1-mediap.svc.ms/transform/thumbnail?provider=spo&inputFormat=m4a&cs=ODYyNDEwYjYtNTZkOC00ODczLWE2ZjYtZWRiMmNmMGIwYWI5fFNQTw&docid=https%3A%2F%2Fdzaaaaaa%2Dmy%2Esharepoint%2Ecom%2F%5Fapi%2Fv2%2E0%2Fdrives%2Fb%21aVRWngNXLEy8Vgt3qSqsihbuGbzcdq9Fh2vBVEFXBv87lLEhJ3BEQok4Xm6nc9aa%2Fitems%2F013EY5Y6FXTPQVV2YYFFEY5OBEBNCKL3CT%3Ftempauth%3DeyJ0eXAiOiJKV1QiLCJhbGciOiJub25lIn0%2EeyJhdWQiOiIwMDAwMDAwMy0wMDAwLTBmZjEtY2UwMC0wMDAwMDAwMDAwMDAvZHphYWFhYWEtbXkuc2hhcmVwb2ludC5jb21AYmRiNzA1NDgtZmY0NC00MDM0LWE1OWQtYjQ4MGUyNzhhOThiIiwiaXNzIjoiMDAwMDAwMDMtMDAwMC0wZmYxLWNlMDAtMDAwMDAwMDAwMDAwIiwibmJmIjoiMTY0NTkyMDAwMCIsImV4cCI6IjE2NDU5NDE2MDAiLCJlbmRwb2ludHVybCI6IlFtMlhPZzFTeG15QmVsOHppd1AxVklCa2l1NU9DVDdGMUpkVHl6VFR0d1U9IiwiZW5kcG9pbnR1cmxMZW5ndGgiOiIxNTkiLCJpc2xvb3BiYWNrIjoiVHJ1ZSIsInZlciI6Imhhc2hlZHByb29mdG9rZW4iLCJzaXRlaWQiOiJPV1UxTmpVME5qa3ROVGN3TXkwMFl6SmpMV0pqTlRZdE1HSTNOMkU1TW1GaFl6aGgiLCJhcHBfZGlzcGxheW5hbWUiOiJPbmVTUyIsIm5hbWVpZCI6Ijg2MjQxMGI2LTU2ZDgtNDg3My1hNmY2LWVkYjJjZjBiMGFiOUBiZGI3MDU0OC1mZjQ0LTQwMzQtYTU5ZC1iNDgwZTI3OGE5OGIiLCJyb2xlcyI6ImFsbGZpbGVzLnJlYWQgYWxscHJvZmlsZXMucmVhZCIsInR0IjoiMSIsInVzZVBlcnNpc3RlbnRDb29raWUiOm51bGwsImlwYWRkciI6IjIwLjE5MC4xMzUuNDQifQ%2EZXgxWHhtR3E1TlBLam96ZkRRNW8wcDZsUXZsY2N6VjlpZEJJN05oTDIvdz0%26version%3DPublished&width=800&height=800&cb=63739041064",
+    "tracks": [
+      {
+        "name": "Anitra's Dance, Op. 23, No. 16.m4a",
+        "content": "https://oness.dzaaaaaa.com/api/item/content?user=share@dzaaaaaa.com&id=013EY5Y6GBUCQDN6JE3JDJRSH525HYLKSQ"
+      },
+      {
+        "name": "Arab Dance, Op. 23, No. 15.m4a",
+        "content": "https://oness.dzaaaaaa.com/api/item/content?user=share@dzaaaaaa.com&id=013EY5Y6DA3GL35FVB4JH3SVDVCN3RHO4C"
+      },
+      {
+        "name": "Dance of the Mountain King's Daughter, Op. 23, No. 8.m4a",
+        "content": "https://oness.dzaaaaaa.com/api/item/content?user=share@dzaaaaaa.com&id=013EY5Y6DLXMYL3FWIPNDLPSGGV5ELFV2Q"
+      },
+      {
+        "name": "In the Hall of the Mountain King, Op. 23, No. 7.m4a",
+        "content": "https://oness.dzaaaaaa.com/api/item/content?user=share@dzaaaaaa.com&id=013EY5Y6CRU5BO63I2FFG337XYLYYWPZ67"
+      },
+      {
+        "name": "Ingrid's Abduction and Lament, Op. 23, No. 4.m4a",
+        "content": "https://oness.dzaaaaaa.com/api/item/content?user=share@dzaaaaaa.com&id=013EY5Y6HP7W3AIPIRTFCZYG7ZJ6RICN66"
+      },
+      {
+        "name": "Morning Mood, Op. 23, No. 13.m4a",
+        "content": "https://oness.dzaaaaaa.com/api/item/content?user=share@dzaaaaaa.com&id=013EY5Y6G7R4IEPB4Q3FDLBRDK5QRFNGUS"
+      },
+      {
+        "name": "Peer Gynt's Homecoming, Op. 23, No. 19.m4a",
+        "content": "https://oness.dzaaaaaa.com/api/item/content?user=share@dzaaaaaa.com&id=013EY5Y6CTYY6PXVZXQJGLGXI6SXHT4PZN"
+      },
+      {
+        "name": "Prelude, Op. 23, No. 1.m4a",
+        "content": "https://oness.dzaaaaaa.com/api/item/content?user=share@dzaaaaaa.com&id=013EY5Y6FAKVCRSYI6WZDKSEG7IS47EEC2"
+      },
+      {
+        "name": "Solvejg's Song, Op. 23, No. 11.m4a",
+        "content": "https://oness.dzaaaaaa.com/api/item/content?user=share@dzaaaaaa.com&id=013EY5Y6FD76PXUE4GMNB2QHKIFDQZJZZS"
+      },
+      {
+        "name": "The Death Of Ase, Op. 23, No. 12.m4a",
+        "content": "https://oness.dzaaaaaa.com/api/item/content?user=share@dzaaaaaa.com&id=013EY5Y6FXTPQVV2YYFFEY5OBEBNCKL3CT"
+      }
+    ]
+  }
+}
+```
