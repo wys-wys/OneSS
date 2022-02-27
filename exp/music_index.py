@@ -1,23 +1,20 @@
 import requests
 import datetime
-from urllib.parse import quote
+import json
 
-from xml.dom.minidom import Document
-
-doc = Document()
+ONESS_API = 'https://oness.dzaaaaaa.com/api'
 
 now = datetime.datetime.now()
 
-music_root = doc.createElement("MusicFromOneSS")
-music_root.setAttribute('RefreshTime', str(now))
-doc.appendChild(music_root)
-
-ONESS_API = 'https://oness.dzaaaaaa.com/api'
+dict = {}
 
 
 def s(user, route):
     print(route)
-    url = '%s/children?user=%s&route=%s' % (ONESS_API, user, quote(route))
+    album = route.split('/')[-1]
+    dict.update({album: {'coverImg': '', 'coverUrl': '', 'tracks': []}})
+
+    url = '%s/children?user=%s&route=%s' % (ONESS_API, user, route)
     r = requests.get(url).json()
     for i in r:
         try:
@@ -26,58 +23,32 @@ def s(user, route):
             try:
                 i['image']
             except:
-                is_music(user, i, route)
+                is_music(user, i, album)
             else:
-                is_img(user, i, route)
+                is_img(user, i, album)
         else:
             s(user, '%s/%s' % (route, i['name']))
 
 
-def is_img(user, i, route):
-    content = quote('%s/item/content?user=%s&id=%s' % (ONESS_API, user, i['id']))
-
-    cover = doc.createElement("Cover")
-    cover.setAttribute('Route', route)
-
-    content_cover = doc.createElement('Content')
-    content_cover_text = doc.createTextNode(content)
-    content_cover.appendChild(content_cover_text)
-    cover.appendChild(content_cover)
-
-    music_root.appendChild(cover)
+def is_img(user, i, album):
+    content = '%s/item/content?user=%s&id=%s' % (ONESS_API, user, i['id'])
+    dict[album]['coverImg'] = content
 
 
-def is_music(user, i, route):
-    name = quote(i['name'])
+def is_music(user, i, album):
+    name = i['name']
 
     try:
         i['thumbnails']
     except:
-        thumbnail_url = 'none'
+        thumbnail = 'none'
     else:
-        thumbnail_url = quote(i['thumbnails'][0]['large']['url'])
+        dict[album]['coverUrl'] = i['thumbnails'][0]['large']['url']
 
-    content = quote('%s/item/content?user=%s&id=%s' % (ONESS_API, user, i['id']))
+    content = '%s/item/content?user=%s&id=%s' % (ONESS_API, user, i['id'])
 
-    music = doc.createElement("Music")
-    music.setAttribute('Route', route)
-    # Name
-    name_music = doc.createElement('Name')
-    name_music_text = doc.createTextNode(name)
-    name_music.appendChild(name_music_text)
-    music.appendChild(name_music)
-    # Thumbnail
-    thumbnail_music = doc.createElement('Thumbnail')
-    thumbnail_music_text = doc.createTextNode(thumbnail_url)
-    thumbnail_music.appendChild(thumbnail_music_text)
-    music.appendChild(thumbnail_music)
-    # Content
-    content_music = doc.createElement('Content')
-    content_music_text = doc.createTextNode(content)
-    content_music.appendChild(content_music_text)
-    music.appendChild(content_music)
-
-    music_root.appendChild(music)
+    d_music = {'name': name, "content": content}
+    dict[album]['tracks'].append(d_music)
 
 
 if __name__ == '__main__':
@@ -85,5 +56,5 @@ if __name__ == '__main__':
     for user in userList:
         s(user, 'Music')
 
-    with open('./public/exp/music.xml', 'w', encoding='utf-8') as f:
-        doc.writexml(f, addindent='\t', newl='\n', encoding='utf-8')
+    with open('./public/exp/music.json', 'w', encoding='utf-8') as f:
+        f.write(json.dumps(dict))
