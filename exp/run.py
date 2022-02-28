@@ -8,4 +8,7 @@ from video_index import v_i
 
 if __name__ == '__main__':
     userList = requests.get('%s/users' % OneSSApi.api).json()
-    asyncio.run(v_i(userList))
+    loop = asyncio.get_event_loop()
+    loop.run_until_complete(m_i(userList))
+    loop.run_until_complete(v_i(userList))
+    loop.close()
