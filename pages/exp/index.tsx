@@ -10,7 +10,7 @@ export default function ApiList() {
     return (
         <div className={'text-4xl'}>
             <div>API</div>
-            <Link href={`https://github.com/Tualin14/OneSS/blob/main/doc/api.md`}>
+            <Link href={`https://github.com/Tualin14/OneSS/blob/main/doc/exp/API.md`}>
                 <a target="_blank">
                     <VscGithub className={"w-14 h-14 rounded hover:bg-ob dark:hover:bg-ow hover:bg-opacity-20 dark:hover:bg-opacity-20"}/></a>
             </Link>

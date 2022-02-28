@@ -1,5 +1,34 @@
 # Music Index
 
+- 此功能使用 Github Actions 定时构建索引
+
+- 每日更新一次,修改频率请自行修改 .github/workflows/auto.yml 文件的 schedule 部分
+
+## 部署
+
+1. 修改 .github/workflows/auto.yml 文件以下部分
+   [示例](https://github.com/Tualin14/OneSS/blob/main/.github/workflows/auto.yml)
+
+   ```sh
+   git config --global user.email 你的Github邮件
+   git config --global user.name 你的Github用户名
+   ```
+
+2. 修改 exp/music_index.py 文件以下部分
+   [示例](https://github.com/Tualin14/OneSS/blob/main/exp/music_index.py)
+3. 在自己的 Github 账户生成 GITHUB_SERCET 并以 OneSS 命名填入自己 OneSS 库的 settings>secrets>actions>New repository secret
+4. Actions>All workflows>Auto>Run workflow 启用 Action 服务
+
+```python
+ONESS_API = 'https://你的OneSS域名/api'
+```
+
+## Request:
+
+    你的OneSS域名/api/exp/music
+
+## Response:
+
 以 json 格式，专辑为单位返回所有用户的 Music 文件夹里的音乐索引
 
 - 专辑名

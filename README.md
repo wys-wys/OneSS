@@ -29,8 +29,10 @@
 [demo](https://oness.dzaaaaaa.com/exp)
 
 - [API (Under Construction)](/doc/exp/API.md)
-- [Music Index](/doc/exp/MusicIndex.md)
-- Video List[demo](https://oness.dzaaaaaa.com/exp/demo/videos)
+- 以 json 格式，专辑为单位返回所有用户的 Music 文件夹里的音乐索引
+  [MusicIndex.md](/doc/exp/MusicIndex.md)
+- 所有用户的 Video 文件夹里的 Video
+  [demo](https://oness.dzaaaaaa.com/exp/demo/videos)
 
 # To do
 
