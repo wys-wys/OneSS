@@ -23,16 +23,16 @@ jobs:
           python -m pip install --upgrade pip
           pip install requests
 
-      - name: Refresh Music Index
+      - name: Refresh Music/Video Index
         run: |
-          python ./exp/music_index.py
+          python ./exp/run.py
           
       - name: Commit
         run: |
           git config --global user.email t@dzaaaaaa.com
           git config --global user.name Tualin14
           git add .
-          git commit -m "Refresh Music Index" -a
+          git commit -m "Refresh Music/Video Index" -a
 
       - name: Push
         uses: ad-m/github-push-action@master

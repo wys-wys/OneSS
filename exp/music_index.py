@@ -1,20 +1,17 @@
 import requests
-import datetime
 import json
 
-ONESS_API = 'https://oness.dzaaaaaa.com/api'
-
-now = datetime.datetime.now()
+from setting import OneSSApi
 
 dict = {}
 
 
-def s(user, route):
+async def s_i(user, route):
     print(route)
     album = route.split('/')[-1]
     dict.update({album: {'coverImg': '', 'coverUrl': '', 'tracks': []}})
 
-    url = '%s/children?user=%s&route=%s' % (ONESS_API, user, route)
+    url = '%s/children?user=%s&route=%s' % (OneSSApi.api, user, route)
     r = requests.get(url).json()
     for i in r:
         try:
@@ -23,19 +20,19 @@ def s(user, route):
             try:
                 i['image']
             except:
-                is_music(user, i, album)
+                await is_music(user, i, album)
             else:
-                is_img(user, i, album)
+                await is_img(user, i, album)
         else:
-            s(user, '%s/%s' % (route, i['name']))
+            await s_i(user, '%s/%s' % (route, i['name']))
 
 
-def is_img(user, i, album):
-    content = '%s/item/content?user=%s&id=%s' % (ONESS_API, user, i['id'])
+async def is_img(user, i, album):
+    content = '%s/item/content?user=%s&id=%s' % (OneSSApi.api, user, i['id'])
     dict[album]['coverImg'] = content
 
 
-def is_music(user, i, album):
+async def is_music(user, i, album):
     name = i['name']
 
     try:
@@ -45,16 +42,15 @@ def is_music(user, i, album):
     else:
         dict[album]['coverUrl'] = i['thumbnails'][0]['large']['url']
 
-    content = '%s/item/content?user=%s&id=%s' % (ONESS_API, user, i['id'])
+    content = '%s/item/content?user=%s&id=%s' % (OneSSApi.api, user, i['id'])
 
     d_music = {'name': name, "content": content}
     dict[album]['tracks'].append(d_music)
 
 
-if __name__ == '__main__':
-    userList = requests.get('%s/users' % ONESS_API).json()
-    for user in userList:
-        s(user, 'Music')
+async def m_i(user_list):
+    for user in user_list:
+        await s_i(user, 'Music')
 
     with open('./public/exp/music.json', 'w', encoding='utf-8') as f:
         f.write(json.dumps(dict))

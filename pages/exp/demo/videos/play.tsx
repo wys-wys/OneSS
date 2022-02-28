@@ -3,13 +3,13 @@ import SetUserName from "@/components/SetUserName";
 
 
 export default function DemoVideoPlay() {
-    const {user, id} = useRouter().query
+    const {'content': content} = useRouter().query
 
-    SetUserName(user as string)
+    SetUserName('Video Play Demo')
 
     return (
         <div className={"h-full flex justify-center aspect-video p-8"}>
-            <video src={`/api/item/content?user=${user}&id=${id}`} controls/>
+            <video src={decodeURIComponent(content as string)} controls/>
         </div>
     )
 }

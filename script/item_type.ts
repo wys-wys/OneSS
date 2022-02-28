@@ -10,4 +10,5 @@ export type itemType = {
     lastModifiedDateTime: string
     createdBy: { user: { email: string } }
     thumbnails: { 0: { large: { width: number, height: number, url: string } } }
+    content:string
 }
