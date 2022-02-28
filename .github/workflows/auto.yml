@@ -1,4 +1,4 @@
-name: music_index
+name: Auto
 
 on:
   schedule:
@@ -23,11 +23,11 @@ jobs:
           python -m pip install --upgrade pip
           pip install requests
 
-      - name: Run
+      - name: Refresh Music Index
         run: |
           python ./exp/music_index.py
           
-      - name: commit
+      - name: Commit
         run: |
           git config --global user.email t@dzaaaaaa.com
           git config --global user.name Tualin14
