@@ -21,8 +21,8 @@ export default function ApiList() {
                     <VscDeviceCameraVideo className={"w-14 h-14 rounded hover:bg-ob dark:hover:bg-ow hover:bg-opacity-20 dark:hover:bg-opacity-20"}/></a>
             </Link>
 
-            <div>Music Index</div>
-            <Link href={`/api/exp/music`}>
+            <div>Music Demo</div>
+            <Link href={`/exp/demo/music`}>
                 <a target="_blank">
                     <VscUnmute className={"w-14 h-14 rounded hover:bg-ob dark:hover:bg-ow hover:bg-opacity-20 dark:hover:bg-opacity-20"}/></a>
             </Link>

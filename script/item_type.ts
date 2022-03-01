@@ -10,5 +10,25 @@ export type itemType = {
     lastModifiedDateTime: string
     createdBy: { user: { email: string } }
     thumbnails: { 0: { large: { width: number, height: number, url: string } } }
-    content:string
+    content: string
+}
+
+
+export type videoType = {
+    name: string,
+    thumbnail: string,
+    content: string
+}
+
+
+export type musicType = {
+    album: string
+    coverImg: string
+    coverUrl: string
+    tracks: tracksType[]
+}
+
+export type tracksType = {
+    name: string
+    content: string
 }

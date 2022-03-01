@@ -32,7 +32,7 @@
 - 以 json 格式，返回所有用户的 Music/Video 文件夹里的 音乐/视频 索引
   [Index.md](/doc/exp/Index.md)
   - 延伸实现:
-    - 音乐在线播放器
+    - 音乐在线播放器 [demo](https://oness.dzaaaaaa.com/exp/demo/music)
     - 视频在线播放器 [demo](https://oness.dzaaaaaa.com/exp/demo/videos)
 
 # To do
