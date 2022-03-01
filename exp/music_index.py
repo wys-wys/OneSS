@@ -3,13 +3,12 @@ import json
 
 from setting import OneSSApi
 
-dict = {}
+list = []
 
 
 async def s_i(user, route):
     print(route)
-    album = route.split('/')[-1]
-    dict.update({album: {'coverImg': '', 'coverUrl': '', 'tracks': []}})
+    album = {'album': route.split('/')[-1], 'coverImg': '', 'coverUrl': '', 'tracks': []}
 
     url = '%s/children?user=%s&route=%s' % (OneSSApi.api, user, route)
     r = requests.get(url).json()
@@ -26,10 +25,12 @@ async def s_i(user, route):
         else:
             await s_i(user, '%s/%s' % (route, i['name']))
 
+    list.append(album)
+
 
 async def is_img(user, i, album):
     content = '%s/item/content?user=%s&id=%s' % (OneSSApi.api, user, i['id'])
-    dict[album]['coverImg'] = content
+    album['coverImg'] = content
 
 
 async def is_music(user, i, album):
@@ -40,12 +41,12 @@ async def is_music(user, i, album):
     except:
         thumbnail = 'none'
     else:
-        dict[album]['coverUrl'] = i['thumbnails'][0]['large']['url']
+        album['coverUrl'] = i['thumbnails'][0]['large']['url']
 
     content = '%s/item/content?user=%s&id=%s' % (OneSSApi.api, user, i['id'])
 
     d_music = {'name': name, "content": content}
-    dict[album]['tracks'].append(d_music)
+    album['tracks'].append(d_music)
 
 
 async def m_i(user_list):
@@ -53,4 +54,4 @@ async def m_i(user_list):
         await s_i(user, 'Music')
 
     with open('./public/exp/music.json', 'w', encoding='utf-8') as f:
-        f.write(json.dumps(dict))
+        f.write(json.dumps(list))
