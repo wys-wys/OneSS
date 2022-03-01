@@ -28,12 +28,12 @@
 
 [demo](https://oness.dzaaaaaa.com/exp)
 
-- [API (Under Construction)](/doc/exp/API.md)
-- 以 json 格式，专辑为单位返回所有用户的 Music 文件夹里的音乐索引
-  [MusicIndex.md](/doc/exp/MusicIndex.md)
-- 所有用户的 Video 文件夹里的 Video
-  VideoIndex.md
-  [demo](https://oness.dzaaaaaa.com/exp/demo/videos)
+- [API](/doc/exp/API.md)
+- 以 json 格式，返回所有用户的 Music/Video 文件夹里的 音乐/视频 索引
+  [Index.md](/doc/exp/Index.md)
+  - 延伸实现:
+    - 视频在线播放器 [demo](https://oness.dzaaaaaa.com/exp/demo/videos)
+    - 音乐在线播放器 
 
 # To do
 
