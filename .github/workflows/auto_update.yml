@@ -1,4 +1,4 @@
-name: Auto
+name: Auto Update
 
 on:
   schedule:
@@ -23,7 +23,7 @@ jobs:
           python -m pip install --upgrade pip
           pip install requests
 
-      - name: Refresh Music/Video Index
+      - name: Update Music/Video Index
         run: |
           python ./exp/run.py
           
@@ -32,7 +32,7 @@ jobs:
           git config --global user.email t@dzaaaaaa.com
           git config --global user.name Tualin14
           git add .
-          git commit -m "Refresh Music/Video Index" -a
+          git commit -m "Update Music/Video Index" -a
 
       - name: Push
         uses: ad-m/github-push-action@master
