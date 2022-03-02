@@ -14,7 +14,7 @@
 - 预览功能 | Preview Support
 - 暗主题 | Dark Mode
 
-# start
+# 开始 | Start
 
 ## [部署](/doc/deploy_zh.md) | Deploy
 
