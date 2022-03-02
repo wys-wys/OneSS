@@ -21,8 +21,8 @@ export default function DemoMusic() {
         <div className={"h-screen p-4 pb-16 grid grid-cols-2 md:grid-cols-4 2xl:grid-cols-6 overflow-y-auto gap-6 text-ob dark:text-ow"}>
             {data.map(({album, coverImg, coverUrl, tracks}: musicType, index: number) => {
                 return (
-                    tracks[0] && <div key={index} className={"rounded-md hover:ring-2 ring-ob ring-opacity-20 dark:ring-ow dark:ring-opacity-20"}>
-                        <Link key={index} href={`/exp/demo/music/play?album=${album}`}>
+                    tracks[0] && <div key={index} className={"rounded-md h-fit hover:ring-2 ring-ob ring-opacity-20 dark:ring-ow dark:ring-opacity-20"}>
+                        <Link key={index} href={`/exp/demo/music/${index}`}>
                             <a target="_blank">
                                 <div className={"aspect-square bg-center bg-cover rounded-md"} style={{backgroundImage: `url(${coverImg ? coverImg : coverUrl})`}}/>
                                 <div className={"truncate text-xl"}>{album}</div>

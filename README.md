@@ -33,7 +33,7 @@
   [Index.md](/doc/exp/Index.md)
   - 延伸实现:
     - 音乐在线播放器 [demo](https://oness.dzaaaaaa.com/exp/demo/music)
-    - 视频在线播放器 [demo](https://oness.dzaaaaaa.com/exp/demo/videos)
+    - 视频在线播放器 [demo](https://oness.dzaaaaaa.com/exp/demo/video)
 
 # To do
 

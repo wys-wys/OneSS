@@ -16,7 +16,7 @@ export default function ApiList() {
             </Link>
 
             <div>Videos Demo</div>
-            <Link href={`/exp/demo/videos`}>
+            <Link href={`/exp/demo/video`}>
                 <a target="_blank">
                     <VscDeviceCameraVideo className={"w-14 h-14 rounded hover:bg-ob dark:hover:bg-ow hover:bg-opacity-20 dark:hover:bg-opacity-20"}/></a>
             </Link>

@@ -21,8 +21,8 @@ export default function DemoVideos() {
         <div className={"h-screen p-4 pb-16 grid grid-cols-2 md:grid-cols-4 2xl:grid-cols-6 overflow-y-auto gap-6 text-ob dark:text-ow"}>
             {data.map(({name, thumbnail, content}: videoType, index: number) => {
                 return (
-                    <div key={index} className={"rounded-md hover:ring-2 ring-ob ring-opacity-20 dark:ring-ow dark:ring-opacity-20"}>
-                        <Link key={index} href={`/exp/demo/videos/play?content=${encodeURIComponent(content)}`}>
+                    <div key={index} className={"rounded-md h-fit hover:ring-2 ring-ob ring-opacity-20 dark:ring-ow dark:ring-opacity-20"}>
+                        <Link href={`/exp/demo/video/${index}`}>
                             <a target="_blank">
                                 <div className={"aspect-video bg-center bg-cover rounded-md"} style={{backgroundImage: `url(${thumbnail})`}}/>
                                 <div className={"truncate text-xl"}>{name}</div>
