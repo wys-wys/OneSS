@@ -24,8 +24,6 @@
 
 # 实验性功能 | Experimental feature
 
-功能在不断测试，会有大改!!!
-
 [demo](https://oness.dzaaaaaa.com/exp)
 
 - [API](/doc/exp/API.md)
