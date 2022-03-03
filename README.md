@@ -26,7 +26,7 @@
 
 [demo](https://oness.dzaaaaaa.com/exp)
 
-- [API](/doc/exp/API.md)
+- [Basic API](/doc/exp/API.md)
 - 以 json 格式，返回所有用户的 Music/Video 文件夹里的 音乐/视频 索引
   [Index.md](/doc/exp/Index.md)
   - 延伸实现:
