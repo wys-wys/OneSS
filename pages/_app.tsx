@@ -19,11 +19,12 @@ export default function MyApp({Component, pageProps}: AppProps,) {
                 <link rel="mask-icon" href="/favicons/safari-pinned-tab.svg" color="#5bbad5"/>
                 <meta name="msapplication-TileColor" content="#da532c"/>
                 <meta name="theme-color" content="#ffffff"/>
+                <script/>
             </Head>
 
             <Menu/>
 
-            <div className={"h-screen pt-12 overflow-hidden transition ease-in duration-500 bg-ow dark:bg-ob"}>
+            <div className={"h-screen pt-12 overflow-hidden transition ease-in duration-500 bg-ow dark:bg-ob text-ob dark:text-ow"}>
                 <Component {...pageProps}/>
             </div>
 

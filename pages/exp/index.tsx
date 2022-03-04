@@ -1,5 +1,8 @@
-import {VscDeviceCameraVideo, VscGithub, VscUnmute} from "react-icons/vsc";
 import Link from "next/link";
+
+import {VscDeviceCameraVideo, VscGithub} from "react-icons/vsc";
+import {BsMusicNoteBeamed} from "react-icons/bs";
+
 import SetUserName from "@/components/SetUserName";
 
 
@@ -24,7 +27,7 @@ export default function ApiList() {
             <div>Music Demo</div>
             <Link href={`/exp/demo/music`}>
                 <a target="_blank">
-                    <VscUnmute className={"w-14 h-14 rounded hover:bg-ob dark:hover:bg-ow hover:bg-opacity-20 dark:hover:bg-opacity-20"}/></a>
+                    <BsMusicNoteBeamed className={"w-14 h-14 rounded hover:bg-ob dark:hover:bg-ow hover:bg-opacity-20 dark:hover:bg-opacity-20"}/></a>
             </Link>
         </div>
     )
