@@ -5,11 +5,12 @@ import getToken from "@/script/get_token";
 import baseSetting from "@/setting/baseSetting";
 
 
-export default async (req: { query: { user: string, id: string } }, res: NextApiResponse) => {
+const content = async (req: { query: { user: string, id: string } }, res: NextApiResponse) => {
     const {'user': user, 'id': id} = req.query
     const url = await getContent(user, id)
     res.redirect(307, url)
 }
+export default content
 
 async function getContent(user: string, id: string) {
     const accessToken = await getToken()

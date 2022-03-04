@@ -6,11 +6,12 @@ import getToken from "@/script/get_token";
 import baseSetting from "@/setting/baseSetting";
 
 
-export default async (req: { query: { user: string, id: string } }, res: NextApiResponse<itemType[]>) => {
+const item = async (req: { query: { user: string, id: string } }, res: NextApiResponse<itemType[]>) => {
     const {'user': user, 'id': id} = req.query
     const data = await getItemById(user, id)
     res.status(200).json(data)
 }
+export default item
 
 async function getItemById(user: string, id: string) {
     const accessToken = await getToken()

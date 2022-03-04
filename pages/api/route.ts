@@ -1,5 +1,5 @@
 import axios from "axios";
-import type {NextApiRequest, NextApiResponse} from 'next'
+import type {NextApiResponse} from 'next'
 
 import {itemType} from "@/script/item_type";
 import getToken from "@/script/get_token";
@@ -7,7 +7,7 @@ import baseSetting from "@/setting/baseSetting";
 import userList from "@/setting/userList";
 
 
-export default async (req: { query: { p: string } }, res: NextApiResponse<itemType[]>) => {
+const route = async (req: { query: { p: string } }, res: NextApiResponse<itemType[]>) => {
     const {'p': route} = req.query
     let data: itemType[] = []
     for (let user of userList) {
@@ -16,6 +16,7 @@ export default async (req: { query: { p: string } }, res: NextApiResponse<itemTy
     }
     res.status(200).json(data)
 }
+export default route
 
 async function getByRoute(user: string, route: string) {
     const accessToken = await getToken()
