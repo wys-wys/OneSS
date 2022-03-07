@@ -15,9 +15,9 @@ export default function DemoMusicAlbum() {
 
     const {data, error} = useSWR(`/api/exp/music`, fetcher)
 
-    if (!data) return <VscSync className={"animate-spin text-ob dark:text-ow w-1/3 h-1/3"}/>
+    if (!data) return <VscSync className={"animate-spin w-1/3 h-1/3"}/>
 
-    if (error) return <div className={"flex justify-center items-center h-full text-2xl text-ob dark:text-ow"}>failed to load or not found.</div>
+    if (error) return <div className={"flex justify-center items-center h-full text-2xl"}>failed to load or not found.</div>
 
     const tracks = data[id as string] && data[id as string]['tracks']
 
@@ -27,7 +27,7 @@ export default function DemoMusicAlbum() {
         <div className={"w-1/2 p-4 flex flex-col justify-center space-y-4"}>
             {tracks && tracks.map(({name, content}: tracksType, index: number) => {
                 return (
-                    <div key={index} className={'w-full flex flex-row item-center justify-center rounded-md border border-ow border-opacity-20'}>
+                    <div key={index} className={'w-full flex flex-row item-center justify-center rounded-md border border-oPrimaryVariants border-opacity-20'}>
                         <div className={'text-2xl text-center'}>{name}</div>
                         <audio src={content} controls/>
                     </div>

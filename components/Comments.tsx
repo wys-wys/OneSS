@@ -46,9 +46,9 @@ export default function Comments() {
     }, [LoadComments])
 
     return (
-        <div className="w-full p-4 text-center text-xl text-ob dark:text-ow">
+        <div className="w-full p-14 text-center text-2xl">
             {enableLoadComments &&
-                <button className={'px-2 rounded hover:bg-ob dark:hover:bg-ow hover:bg-opacity-20 dark:hover:bg-opacity-20'} onClick={LoadComments}>Load Comments...</button>}
+                <button className={'px-2 rounded hover:bg-oBlack dark:hover:bg-oWhite hover:bg-opacity-20 dark:hover:bg-opacity-20'} onClick={LoadComments}>Load Comments...</button>}
             <div className="giscus" id={COMMENTS_ID}/>
         </div>
     )

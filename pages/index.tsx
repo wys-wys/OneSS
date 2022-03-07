@@ -13,7 +13,7 @@ export default function Home() {
     SetUserName('OneSS')
 
     return (
-        <div className={'h-screen flex flex-col md:flex-row items-center md:items-start overflow-y-auto'}>
+        <div className={'flex flex-col md:flex-row items-center md:items-start'}>
             <Logo/>
             {giscusSetting.enabled && <Comments/>}
         </div>

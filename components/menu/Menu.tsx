@@ -17,9 +17,13 @@ export default function Menu() {
 
     return (
         <>
-            <div className={"fixed top-0 w-full h-12 px-2 flow flex flex-row items-center justify-end bg-opv text-ob dark:text-ow bg-opacity-90 dark:bg-opacity-40"}>
+            <div className={`fixed top-0 w-full h-12 
+            px-2 
+            bg-oPrimary bg-opacity-90 dark:bg-opacity-40
+            flex flex-row items-center justify-end 
+            border-b border-oPrimaryVariants border-opacity-40`}>
                 <div className={"w-full text-2xl"}>
-                    <button onClick={onToggle} className={'w-fit p-1 flex flex-row items-center space-x-2 rounded hover:bg-ow hover:bg-opacity-20'}>
+                    <button onClick={onToggle} className={'w-fit p-1 flex flex-row items-center space-x-2 rounded hover:bg-oWhite hover:bg-opacity-20'}>
                         <VscAccount className={'w-8 h-8'}/>
                         <div className={'hidden md:block'} id={'userName'}>OneSS</div>
                     </button>

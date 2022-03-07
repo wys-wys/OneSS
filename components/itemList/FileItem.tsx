@@ -11,25 +11,25 @@ export default function FileItem({user, name, size, id, index}: { user: string, 
     return (
         <div key={index}
              className={`h-9 group flex flex-row items-center space-x-2 rounded 
-             hover:bg-ob dark:hover:bg-ow hover:bg-opacity-20 dark:hover:bg-opacity-20`}>
+             hover:bg-oBlack dark:hover:bg-oWhite hover:bg-opacity-20 dark:hover:bg-opacity-20`}>
 
             {/*Icon*/}
-            <Image className={'bg-ob dark:bg-ow bg-opacity-20 dark:bg-opacity-20 rounded'} src={'/VscIcons/' + getIconForFile(name)} width={32} height={32} layout={"fixed"}
+            <Image className={'bg-oBlack dark:bg-oWhite bg-opacity-20 dark:bg-opacity-20 rounded'} src={'/VscIcons/' + getIconForFile(name)} width={32} height={32} layout={"fixed"}
                    alt={name}/>
 
             {/*Name*/}
             <Link href={`/item/${user}/${id}`}>
                 <a target="_blank"
-                   className={"basis-5/6 px-2 text-xl flex items-center hover:bg-ob dark:hover:bg-ow hover:bg-opacity-20 dark:hover:bg-opacity-20 rounded truncate"}>{name}</a>
+                   className={"basis-5/6 px-2 text-xl flex items-center hover:bg-oBlack dark:hover:bg-oWhite hover:bg-opacity-20 dark:hover:bg-opacity-20 rounded truncate"}>{name}</a>
             </Link>
 
             {/*Size*/}
-            <div className={"basis-1/12 flex items-center text-center hidden md:block"}>{convertB(size)}</div>
+            <div className={"basis-1/12 flex items-center hover:bg-oBlack dark:hover:bg-oWhite hover:bg-opacity-20 dark:hover:bg-opacity-20 rounded text-center hidden md:block"}>{convertB(size)}</div>
 
             {/*Action*/}
             <div className={"basis-1/12 flex flex-row justify-center items-center space-x-1 md:invisible group-hover:visible"}>
                 <Link href={`/api/preview?user=${user}&id=${id}`}>
-                    <a target="_blank"><VscOpenPreview className={"w-7 h-7 rounded hover:bg-ob dark:hover:bg-ow hover:bg-opacity-20 dark:hover:bg-opacity-20"}/></a>
+                    <a target="_blank"><VscOpenPreview className={"w-7 h-7 rounded hover:bg-oBlack dark:hover:bg-oWhite hover:bg-opacity-20 dark:hover:bg-opacity-20"}/></a>
                 </Link>
 
                 <button onClick={() => {
@@ -40,7 +40,7 @@ export default function FileItem({user, name, size, id, index}: { user: string, 
                         alert('Failed to copy!')
                     }
                 }}>
-                    <VscLiveShare className={'w-7 h-7 rounded hover:bg-ob dark:hover:bg-ow hover:bg-opacity-20 dark:hover:bg-opacity-20'}/></button>
+                    <VscLiveShare className={'w-7 h-7 rounded hover:bg-oBlack dark:hover:bg-oWhite hover:bg-opacity-20 dark:hover:bg-opacity-20'}/></button>
 
                 <button onClick={() => {
                     try {
@@ -50,10 +50,10 @@ export default function FileItem({user, name, size, id, index}: { user: string, 
                         alert('Failed to copy!')
                     }
                 }}>
-                    <VscCopy className={"w-7 h-7 rounded hover:bg-ob dark:hover:bg-ow hover:bg-opacity-20 dark:hover:bg-opacity-20"}/></button>
+                    <VscCopy className={"w-7 h-7 rounded hover:bg-oBlack dark:hover:bg-oWhite hover:bg-opacity-20 dark:hover:bg-opacity-20"}/></button>
 
                 <Link href={`/api/item/content?user=${user}&id=${id}`}>
-                    <a target="_blank"><VscCloudDownload className={"w-7 h-7 rounded hover:bg-ob dark:hover:bg-ow hover:bg-opacity-20 dark:hover:bg-opacity-20"}/></a>
+                    <a target="_blank"><VscCloudDownload className={"w-7 h-7 rounded hover:bg-oBlack dark:hover:bg-oWhite hover:bg-opacity-20 dark:hover:bg-opacity-20"}/></a>
                 </Link>
             </div>
         </div>

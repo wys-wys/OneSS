@@ -12,9 +12,9 @@ export default function DemoVideoPlay() {
 
     const {data, error} = useSWR(`/api/exp/video`, fetcher)
 
-    if (!data) return <VscSync className={"animate-spin text-ob dark:text-ow w-1/3 h-1/3"}/>
+    if (!data) return <VscSync className={"animate-spin w-1/3 h-1/3"}/>
 
-    if (error) return <div className={"flex justify-center items-center h-full text-2xl text-ob dark:text-ow"}>failed to load or not found.</div>
+    if (error) return <div className={"flex justify-center items-center h-full text-2xl"}>failed to load or not found.</div>
 
     return (
         <div className={"h-full flex justify-center aspect-video p-8"}>
