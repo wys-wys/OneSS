@@ -16,7 +16,9 @@
 
 # 开始 | Start
 
-## [部署](/doc/deploy_zh.md) | Deploy
+## 部署 | Deploy
+
+- [zh](/doc/deploy_zh.md) | en
 
 ## 使用 | How to use
 
@@ -29,9 +31,9 @@
 - [Basic API](/doc/exp/API.md)
 - 以 json 格式，返回所有用户的 Music/Video 文件夹里的 音乐/视频 索引
   [Index.md](/doc/exp/Index.md)
-  - 延伸实现:
-    - 音乐在线播放器 [demo](https://oness.dzaaaaaa.com/exp/demo/music)
-    - 视频在线播放器 [demo](https://oness.dzaaaaaa.com/exp/demo/video)
+    - 延伸实现:
+        - 音乐在线播放器 [demo](https://oness.dzaaaaaa.com/exp/demo/music)
+        - 视频在线播放器 [demo](https://oness.dzaaaaaa.com/exp/demo/video)
 
 # To do
 
@@ -50,26 +52,9 @@
 
 - 情景假设 | Scenario Analysis
 
-  - 个人博客需要插入图片，音频或者视频，但是无法负担昂贵的存储费用，或者一些云存储服务并不理想。需要一个方便上传，调用的空间。
+    - 个人博客需要插入图片，音频或者视频，但是无法负担昂贵的存储费用，或者一些云存储服务并不理想。需要一个方便上传，调用的空间。
 
-  - 存在一个字幕组或者汉化组，把完成的合法，合规作品传到适当网站，但因为莫须有的原因被审核删除，那么就需要一个更好地分享位置，最好是不会受到他人干涉的地方。
-
-# [FAQ(随时补充)](/doc/FAQ.md)
-
-# Credit
-
-本项目使用 [Next.js](https://github.com/vercel/next.js) 框架所建
-
-数据请求使用了 [swr](https://github.com/vercel/swr) 与 [axios](https://github.com/axios/axios)
-
-样式借助了 [tailwindcss](https://github.com/tailwindlabs/tailwindcss)
-
-主题借助 [next-themes](https://github.com/pacocoursey/next-themes) 实现
-
-Icon 使用 [React Icons](https://github.com/react-icons/react-icons) 并借助
-[vscode-icons-js](https://github.com/dderevjanik/vscode-icons-js) 实现 Icon 自动选择
-
-评论区使用 [Giscus](https://github.com/giscus/giscus)
+    - 存在一个字幕组或者汉化组，把完成的合法，合规作品传到适当网站，但因为莫须有的原因被审核删除，那么就需要一个更好地分享位置，最好是不会受到他人干涉的地方。
 
 # Licence
 

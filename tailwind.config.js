@@ -4,15 +4,8 @@ module.exports = {
         "./components/**/*.{js,ts,jsx,tsx}",
     ],
     darkMode: 'class',
-    theme: {
-        extend: {
-            colors: {
-                'oPrimary': '#0360E4',
-                'oPrimaryVariants': '#1F7EFE',
-                'oBlack': '#161A1C',
-                'oWhite': '#F1F2F4',
-            },
-        }
+    plugins: [require("daisyui")],
+    daisyui: {
+        themes: ["light", "dark", "corporate", "aqua", "night", "coffee", "winter"],
     },
-    plugins: [],
 }

@@ -17,22 +17,45 @@ export default function ItemList({user, route}: { user: string, route?: string[]
     if (error || data.status == 233) return <div className={"flex justify-center items-center text-2xl"}>failed to load or not found.</div>
 
     return (
-        <div className={'space-y-4'}>
-            <div className={'flex justify-center'}>
+        <div className={'flex justify-center mb-14'}>
+            <div className={"w-full lg:max-w-7xl px-2 flex flex-col"}>
                 <ListHeader user={user} route={route}/>
-            </div>
-            <div className={'flex justify-center'}>
-                <div className={"w-full max-w-7xl px-2 flex flex-col divide-y divide-oPrimaryVariants divide-opacity-20"}>
-                    {data.map(({name, size, id, folder, image, video}: itemType, index: number) => {
-                        return (
-                            folder
-                                ?
-                                <FolderItem user={user} route={route} name={name} size={size} index={index}/>
-                                :
-                                <FileItem user={user} name={name} size={size} id={id} index={index}/>
-                        )
-                    })}
+
+                <div className="overflow-x-auto w-full">
+                    <table className="table w-full">
+                        <thead>
+                        <tr>
+                            <th><label className={'flex items-center justify-end gap-2'}>N<input type="checkbox" className="checkbox"/></label></th>
+                            <th className={'text-xl capitalize'}>name</th>
+                            <th className={'text-xl capitalize'}>size</th>
+                            <th className={'text-xl capitalize'}>action</th>
+                        </tr>
+                        </thead>
+
+                        <tbody>
+                        {data.map(({name, size, id, folder, image, video}: itemType, index: number) => {
+                            return (
+                                folder
+                                    ?
+                                    <FolderItem user={user} route={route} name={name} size={size} index={index}/>
+                                    :
+                                    <FileItem user={user} name={name} size={size} id={id} index={index}/>
+                            )
+                        })}
+                        </tbody>
+
+                        <tfoot>
+                        <tr>
+                            <th><label className={'flex items-center justify-end gap-2'}>N<input type="checkbox" className="checkbox"/></label></th>
+                            <th className={'text-xl capitalize'}>name</th>
+                            <th className={'text-xl capitalize'}>size</th>
+                            <th className={'text-xl capitalize'}>action</th>
+                        </tr>
+                        </tfoot>
+                    </table>
                 </div>
+
+
             </div>
         </div>
     )

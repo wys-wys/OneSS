@@ -1,4 +1,3 @@
-import {useTheme} from "next-themes";
 import {useCallback, useEffect, useState} from "react";
 
 import giscus from "@/setting/giscusSetting";
@@ -6,8 +5,7 @@ import giscus from "@/setting/giscusSetting";
 
 export default function Comments() {
     const [enableLoadComments, setEnabledLoadComments] = useState(true)
-    const {theme, resolvedTheme} = useTheme()
-    const commentsTheme = theme === 'dark' || resolvedTheme === 'dark' ? "dark_high_contrast" : "light_high_contrast"
+    // const commentsTheme = theme === 'dark' || resolvedTheme === 'dark' ? "dark_high_contrast" : "light_high_contrast"
 
     const COMMENTS_ID = 'comments-container'
 
@@ -24,7 +22,7 @@ export default function Comments() {
         script.setAttribute('data-reactions-enabled', '1')
         script.setAttribute('data-emit-metadata', '0')
         script.setAttribute('data-input-position', 'top')
-        script.setAttribute('data-theme', commentsTheme)
+        script.setAttribute('data-theme', 'dark')
         script.setAttribute('data-lang', 'en')
         script.setAttribute('crossOrigin', 'anonymous')
         script.async = true
@@ -36,7 +34,7 @@ export default function Comments() {
             const comments = document.getElementById(COMMENTS_ID)
             if (comments) comments.innerHTML = ''
         }
-    }, [commentsTheme])
+    }, ['dark'])
 
     // Reload on theme change
     useEffect(() => {
