@@ -5,7 +5,7 @@ import {VscSync} from "react-icons/vsc";
 
 import {fetcher} from "@/script/swr_get";
 import SetUserName from "@/components/SetUserName";
-import {tracksType} from "@/script/item_type";
+import {tracksType} from "@/script/data_type";
 
 
 export default function DemoMusicAlbum() {

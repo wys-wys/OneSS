@@ -1,24 +1,25 @@
 import Link from "next/link"
-import Image from "next/image";
 
 import userList from "@/setting/userList";
+import {VscAccount} from "react-icons/vsc";
 
 
-export default function UserList({userShow}: { userShow: boolean }) {
+export default function UserList() {
     return (
-        <div className={`fixed bottom-0 w-full p-2 transition ease-in-out duration-[400ms] ${userShow ? "translate-y-0" : "translate-y-full"}`}>
-            <div className={`w-full h-[100px] px-4 border border-oPrimaryVariants border-opacity-40 
-            flex overflow-x-auto items-center space-x-2 bg-oPrimary rounded-xl backdrop-blur bg-opacity-90 dark:bg-opacity-40`}>
+        <div className="dropdown">
+            <label tabIndex={0} className="btn btn-ghost gap-2 normal-case">
+                <VscAccount className={'w-8 h-8'}/>
+                <div className={'hidden md:block text-2xl'} id={'userName'}/>
+            </label>
+            <ul tabIndex={0} className="dropdown-content bg-base-200 text-base-content rounded-box shadow-2xl menu menu-compact p-4 w-64">
                 {userList.map((userName, index) => {
                     return (
-                        <Link key={index} href={`/${userName}`}><a>
-                            <div className={"w-20 h-20 flex items-center justify-center rounded hover:bg-oWhite hover:bg-opacity-20"}>
-                                <Image className={"rounded-2xl"} src={`/UserPhoto/${userName}.jpg`} width={64} height={64} layout={"fixed"} alt={userName}/>
-                            </div>
-                        </a></Link>
+                        <li key={index} className={'hover-bordered'}>
+                            <Link href={`/${userName}`}><a>👤 {userName}</a></Link>
+                        </li>
                     )
                 })}
-            </div>
+            </ul>
         </div>
     )
 }

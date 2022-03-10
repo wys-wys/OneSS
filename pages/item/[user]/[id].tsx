@@ -5,7 +5,7 @@ import {VscCloudDownload, VscCopy, VscLiveShare, VscOpenPreview, VscSync} from "
 
 import convertB from "@/script/convert_bit";
 import {fetcher} from "@/script/swr_get";
-import {itemType} from "@/script/item_type";
+import {itemType} from "@/script/data_type";
 import SetUserName from "@/components/SetUserName";
 
 
