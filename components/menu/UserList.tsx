@@ -11,10 +11,10 @@ export default function UserList() {
                 <VscAccount className={'w-8 h-8'}/>
                 <div className={'hidden md:block text-2xl'} id={'userName'}/>
             </label>
-            <ul className="dropdown-content bg-base-200 text-base-content rounded-box shadow-2xl menu menu-compact p-4">
+            <ul className="dropdown-content bg-base-200 text-base-content rounded-box shadow-2xl menu menu-compact p-4 w-64">
                 {userList.map((userName, index) => {
                     return (
-                        <li key={index} className={'w-64'}>
+                        <li key={index}>
                             <Link href={`/${userName}`}><a>👤 {userName}</a></Link>
                         </li>
                     )
