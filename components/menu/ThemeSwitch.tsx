@@ -17,7 +17,7 @@ export default function ThemeSwitch() {
                 <span className="hidden md:inline">Change Theme</span>
                 <VscChevronDown className={'w-6 h-6'}/>
             </label>
-            <ul className="dropdown-content bg-base-200 text-base-content rounded-box shadow-2xl menu p-4 w-36">
+            <ul tabIndex={0} className="dropdown-content bg-base-200 text-base-content rounded-box shadow-2xl menu p-4 w-36">
                 <li>
                     <button data-set-theme={"winter"}>⚪ Light</button>
                 </li>
