@@ -30,7 +30,7 @@ export default function FolderItem({user, route, name, size, index}: { user: str
 
             {/*Action*/}
             <td>
-                <div className={"btn-group"}>
+                <div className={"btn-group inline"}>
                     <button className={'btn invisible'}>
                         <VscOpenPreview className={"w-6 h-6"}/>
                     </button>

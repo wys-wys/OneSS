@@ -9,5 +9,9 @@ export default function UserRoute() {
 
     SetUserName(user as string)
 
-    return <ItemList user={user as string} route={route as string[]}/>
+    return (
+        <div className={'flex justify-center mb-14'}>
+            <ItemList user={user as string} route={route as string[]}/>
+        </div>
+    )
 }

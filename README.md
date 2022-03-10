@@ -18,7 +18,7 @@
 
 ## 部署 | Deploy
 
-- [zh](/doc/deploy_zh.md) | en
+- [中文](/doc/deploy_zh.md) | en
 
 ## 使用 | How to use
 

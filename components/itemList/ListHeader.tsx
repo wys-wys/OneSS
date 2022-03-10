@@ -1,5 +1,5 @@
 import Link from "next/link";
-import {VscFolder} from "react-icons/vsc";
+import {VscFolder, VscFolderOpened, VscRootFolderOpened} from "react-icons/vsc";
 
 
 export default function ListHeader({user, route}: { user: string, route?: string[] }) {
@@ -7,13 +7,13 @@ export default function ListHeader({user, route}: { user: string, route?: string
         <div className="text-xl breadcrumbs">
             <ul>
                 <li><Link href={`/${user}`}>
-                    <a>{user.split('@')[0].toUpperCase()}</a>
+                    <a><VscRootFolderOpened className={'mr-2'}/>Root</a>
                 </Link></li>
                 {route && route.map((item, index) => {
                     return (
                         <li key={index}>
                             <Link key={index} href={`/${user}/${route.slice(0, index + 1).join('/')}`}>
-                                <a><VscFolder className={'mr-2'}/>{item}</a>
+                                <a><VscFolderOpened className={'mr-2'}/>{item}</a>
                             </Link>
                         </li>
                     )

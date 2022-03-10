@@ -30,7 +30,7 @@ export default function FileItem({user, name, size, id, index}: { user: string, 
 
             {/*Action*/}
             <td>
-                <div className={"btn-group"}>
+                <div className={"btn-group inline"}>
                     <button className={'btn btn-ghost'}>
                         <Link href={`/api/preview?user=${user}&id=${id}`}><a target="_blank"><VscOpenPreview className={"w-6 h-6"}/></a></Link>
                     </button>
@@ -57,7 +57,7 @@ export default function FileItem({user, name, size, id, index}: { user: string, 
 
                     <button className={'btn btn-ghost'}>
                         <Link href={`/api/item/content?user=${user}&id=${id}`}>
-                            <a target="_blank"><VscCloudDownload
+                            <a><VscCloudDownload
                                 className={"w-6 h-6"}/></a>
                         </Link>
                     </button>

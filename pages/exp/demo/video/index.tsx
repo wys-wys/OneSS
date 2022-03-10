@@ -5,7 +5,7 @@ import {VscSync} from "react-icons/vsc";
 
 import {fetcher} from "@/script/swr_get";
 import SetUserName from "@/components/SetUserName";
-import {videoType} from "@/script/item_type";
+import {videoType} from "@/script/data_type";
 
 
 export default function DemoVideos() {
