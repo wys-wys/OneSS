@@ -24,7 +24,7 @@ export default function ItemList({user, route}: { user: string, route?: string[]
             {user && <ListHeader user={user} route={route}/>}
             <div className={"flex justify-center items-center text-2xl"}>failed to load or not found.</div>
         </div>
-        )
+    )
 
     return (
         <div className={"w-full lg:max-w-7xl px-2 flex flex-col"}>

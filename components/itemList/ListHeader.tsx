@@ -4,7 +4,7 @@ import {VscFolder, VscFolderOpened, VscRootFolderOpened} from "react-icons/vsc";
 
 export default function ListHeader({user, route}: { user: string, route?: string[] }) {
     return (
-        <div className="text-xl breadcrumbs">
+        <div className="text-xl breadcrumbs px-4">
             <ul>
                 <li><Link href={`/${user}`}>
                     <a><VscRootFolderOpened className={'mr-2'}/>Root</a>

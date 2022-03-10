@@ -12,7 +12,7 @@
 - 多用户支持 | Multi-user Support
 - 评论支持 | Comment Support
 - 预览功能 | Preview Support
-- 暗主题 | Dark Mode
+- 多主题 | Multiple Themes
 
 # 开始 | Start
 
