@@ -1,5 +1,5 @@
 import Link from "next/link";
-import {VscFolder, VscFolderOpened, VscRootFolderOpened} from "react-icons/vsc";
+import {VscFolderOpened, VscRootFolderOpened} from "react-icons/vsc";
 
 
 export default function ListHeader({user, route}: { user: string, route?: string[] }) {

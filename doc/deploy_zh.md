@@ -16,8 +16,9 @@
    1. fork [OneSS 库](https://github.com/Tualin14/OneSS)
    2. 打开 setting 文件夹里的 userList，输入要分享的账户，如图
       ![5](https://oness.dzaaaaaa.com/DeployImage/5.png)
-3. 评论区设置(若不需要，enabled 的 true 改 false 即可)
-   1. 借助[giscus](https://giscus.app) 配置 giscusSetting 文件，那个网页很详细，记得 discussion 映射关系选 Comments 的标题包含特定字符串
+3. 已删除评论区功能
+   ~~评论区设置(若不需要，enabled 的 true 改 false 即可)~~
+   ~~1. 借助[giscus](https://giscus.app) 配置 giscusSetting 文件，那个网页很详细，记得 discussion 映射关系选 Comments 的标题包含特定字符串~~
 4. vercel 部分
    1. 在[vercel](https://vercel.com/new) 注册登录选择新项目。导入自己的 OneSS 库。
    2. 在环境变量处填入之前获取的 CLIENT_ID，TENANT_ID，CLIENT_SECRET

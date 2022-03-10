@@ -2,7 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import {getIconForFolder} from "vscode-icons-js";
 
-import {VscCloud, VscCloudDownload, VscCopy, VscLiveShare, VscOpenPreview} from "react-icons/vsc";
+import {VscCloudDownload, VscCopy, VscLiveShare, VscOpenPreview} from "react-icons/vsc";
 
 import convertB from "@/script/convert_bit";
 

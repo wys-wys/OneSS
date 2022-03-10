@@ -27,14 +27,14 @@ export default function ItemList({user, route}: { user: string, route?: string[]
     )
 
     return (
-        <div className={"w-full lg:max-w-7xl px-2 flex flex-col"}>
+        <div className={"w-full lg:max-w-7xl px-2 pb-14 flex flex-col"}>
             <ListHeader user={user} route={route}/>
 
             <div className="overflow-x-auto w-full">
                 <table className="table w-full">
                     <thead>
                     <tr>
-                        <th><label className={'flex items-center justify-end gap-2'}>N<input type="checkbox" className="checkbox"/></label></th>
+                        <th><label className={'flex items-center justify-end gap-2 text-xl'}>N<input type="checkbox" className="checkbox"/></label></th>
                         <th className={'text-xl capitalize'}>name</th>
                         <th className={'text-xl capitalize'}>size</th>
                         <th className={'text-xl capitalize'}>action</th>
@@ -53,14 +53,14 @@ export default function ItemList({user, route}: { user: string, route?: string[]
                     })}
                     </tbody>
 
-                    <tfoot>
-                    <tr>
-                        <th><label className={'flex items-center justify-end gap-2'}>N<input type="checkbox" className="checkbox"/></label></th>
-                        <th className={'text-xl capitalize'}>name</th>
-                        <th className={'text-xl capitalize'}>size</th>
-                        <th className={'text-xl capitalize'}>action</th>
-                    </tr>
-                    </tfoot>
+                    {/*<tfoot>*/}
+                    {/*<tr>*/}
+                    {/*    <th><label className={'flex items-center justify-end gap-2'}>N<input type="checkbox" className="checkbox"/></label></th>*/}
+                    {/*    <th className={'text-xl capitalize'}>name</th>*/}
+                    {/*    <th className={'text-xl capitalize'}>size</th>*/}
+                    {/*    <th className={'text-xl capitalize'}>action</th>*/}
+                    {/*</tr>*/}
+                    {/*</tfoot>*/}
                 </table>
             </div>
         </div>

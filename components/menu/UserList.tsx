@@ -14,13 +14,12 @@ export default function UserList() {
             <ul tabIndex={0} className="dropdown-content bg-base-200 text-base-content rounded-box shadow-2xl menu menu-compact p-4 w-64">
                 {userList.map((userName, index) => {
                     return (
-                        <li key={index}>
-                            <Link href={`/${userName}`}><a>{index + 1} 👤 {userName}</a></Link>
+                        <li key={index} className={'hover-bordered'}>
+                            <Link href={`/${userName}`}><a>👤 {userName}</a></Link>
                         </li>
                     )
                 })}
             </ul>
-
         </div>
     )
 }

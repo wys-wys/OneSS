@@ -3,6 +3,7 @@ import type {AppProps} from 'next/app'
 import Head from "next/head";
 
 import Menu from "@/components/menu/Menu";
+import Footer from "@/components/Footer";
 
 
 export default function MyApp({Component, pageProps}: AppProps,) {
@@ -21,6 +22,7 @@ export default function MyApp({Component, pageProps}: AppProps,) {
 
             <Menu/>
             <Component {...pageProps}/>
+            <Footer/>
         </>
     );
 }

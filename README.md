@@ -10,9 +10,9 @@
 - 文件下载 | File Download
 - 可以做图床，视频云 | Cloud Storage Services for Photos and Video[(demo)](https://www.dzaaaaaa.com/blog/LSW/OneSS)
 - 多用户支持 | Multi-user Support
-- 评论支持 | Comment Support
 - 预览功能 | Preview Support
 - 多主题 | Multiple Themes
+- 必应每日一图 | Bing's photo of the day
 
 # 开始 | Start
 
@@ -31,9 +31,9 @@
 - [Basic API](/doc/exp/API.md)
 - 以 json 格式，返回所有用户的 Music/Video 文件夹里的 音乐/视频 索引
   [Index.md](/doc/exp/Index.md)
-    - 延伸实现:
-        - 音乐在线播放器 [demo](https://oness.dzaaaaaa.com/exp/demo/music)
-        - 视频在线播放器 [demo](https://oness.dzaaaaaa.com/exp/demo/video)
+  - 延伸实现:
+    - 音乐在线播放器 [demo](https://oness.dzaaaaaa.com/exp/demo/music)
+    - 视频在线播放器 [demo](https://oness.dzaaaaaa.com/exp/demo/video)
 
 # To do
 
@@ -52,9 +52,9 @@
 
 - 情景假设 | Scenario Analysis
 
-    - 个人博客需要插入图片，音频或者视频，但是无法负担昂贵的存储费用，或者一些云存储服务并不理想。需要一个方便上传，调用的空间。
+  - 个人博客需要插入图片，音频或者视频，但是无法负担昂贵的存储费用，或者一些云存储服务并不理想。需要一个方便上传，调用的空间。
 
-    - 存在一个字幕组或者汉化组，把完成的合法，合规作品传到适当网站，但因为莫须有的原因被审核删除，那么就需要一个更好地分享位置，最好是不会受到他人干涉的地方。
+  - 存在一个字幕组或者汉化组，把完成的合法，合规作品传到适当网站，但因为莫须有的原因被审核删除，那么就需要一个更好地分享位置，最好是不会受到他人干涉的地方。
 
 # Licence
 
