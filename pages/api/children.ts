@@ -24,7 +24,7 @@ async function getChildrenByRoute(user: string, route: string = '') {
             },
             params: {
                 expand: 'thumbnails',
-                select: 'name,size,id,folder,file,image,video,createdBy'
+                select: 'name,size,id,folder,file,image,video'
             },
         })
         return res.data.value

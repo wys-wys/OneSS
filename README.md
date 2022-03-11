@@ -12,25 +12,29 @@
 - 多用户支持 | Multi-user Support
 - 预览功能 | Preview Support
 - 多主题 | Multiple Themes
-- 必应每日一图 | Bing's photo of the day
+- 必应每日一图 Api | Bing's photo of the day
+- Api
 
 # 开始 | Start
 
-## 部署 | Deploy
+- 部署 | Deploy
 
-- [中文](/doc/deploy_zh.md) | en
+  [中文](/doc/deploy_zh.md) | en
 
-## 使用 | How to use
+- 使用 | How to use
 
-在自己 OneDrive 的根目录建立名为 OneSS 的文件夹 | Create a folder named OneSS in the root directory of your OneDrive
+  在自己 OneDrive 的根目录建立名为 OneSS 的文件夹 | Create a folder named OneSS in the root directory of your OneDrive
+
+- 个性化设置 |
+
+  [中文](/doc/PersonaliseDefinition_zh.md) | en
+
+# [API](/doc/adv/api/api.md)
 
 # 实验性功能 | Experimental feature
 
-[demo](https://oness.dzaaaaaa.com/exp)
-
-- [Basic API](/doc/exp/API.md)
 - 以 json 格式，返回所有用户的 Music/Video 文件夹里的 音乐/视频 索引
-  [Index.md](/doc/exp/Index.md)
+  [Index.md](/doc/adv/Index.md)
   - 延伸实现:
     - 音乐在线播放器 [demo](https://oness.dzaaaaaa.com/exp/demo/music)
     - 视频在线播放器 [demo](https://oness.dzaaaaaa.com/exp/demo/video)
@@ -42,9 +46,9 @@
 
 # Issues
 
-优先关注 **错误 | bug** 等问题，请详细描述问题
-
-欢迎提建议和意见
+- 欢迎提建议与意见
+- 错误或者 Bug 之类的请详细描述，尽量有截图或者报错信息
+- 莫名其妙的话会予以删除
 
 # Motivation
 
