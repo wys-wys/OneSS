@@ -31,7 +31,7 @@ export default function ItemList({user, route}: { user: string, route?: string[]
             <ListHeader user={user} route={route}/>
 
             <div className="overflow-x-auto w-full">
-                <table className="table w-full">
+                <table className="table table-compact w-full">
                     <thead>
                     <tr>
                         <th><label className={'flex items-center justify-end gap-2 text-xl'}>N<input type="checkbox" className="checkbox"/></label></th>
