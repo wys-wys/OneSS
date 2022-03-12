@@ -6,7 +6,8 @@ const personalisedDefinition = {
     },
     footer:{
         name:'Tualin14',
-        link:'https://github.com/Tualin14'
+        link:'https://github.com/Tualin14',
+        bilibili:'https://space.bilibili.com/403504801'
     }
 }
 
