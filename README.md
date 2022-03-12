@@ -12,7 +12,7 @@
 - 多用户支持 | Multi-user Support
 - 预览功能 | Preview Support
 - 多主题 | Multiple Themes
-- 必应每日一图 Api | Bing's photo of the day
+- 必应每日一图 api | Bing's photo of the day
 - API
 
 # 开始 | Start
@@ -58,10 +58,20 @@
 
     - 个人博客需要插入图片，音频或者视频，但是无法负担昂贵的存储费用，或者一些云存储服务并不理想。需要一个方便上传，调用的空间。
 
+<<<<<<< HEAD
     - 存在一个字幕组或者汉化组，把完成的合法，合规作品传到适当网站，但因为莫须有的原因(平台间竞争，原作者被盗窃者举报......)被审核删除，那么就需要一个更好地分享位置，最好是不会受到他人恶意干涉的地方。
+=======
+  - 一个作者，把完成的合法，优秀的作品传到适当网站，但因为莫须有的原因(平台间竞争，原作者被盗窃者举报......)被审核删除，那么就需要一个更好地分享位置，最好是不会受到他人恶意干涉的地方。
+>>>>>>> e69713ebd2fd2764d293a863f1f1a818305f8c02
 
 - 是的，当我们都可以自己储存并共享自己的文件的时候，我们可以建立我们自己的平台。
 
 # Licence
 
 [GPL-3.0](LICENSE) © [Tualin14](https://github.com/Tualin14)
+
+# 个人用快捷链接
+
+- [Production](https://oness.dzaaaaaa.com/)
+- [Dev](https://oness-dev.dzaaaaaa.com/)
+- [在 Microsoft Graph 中使用文件](https://docs.microsoft.com/zh-cn/graph/api/resources/onedrive?view=graph-rest-1.0)
