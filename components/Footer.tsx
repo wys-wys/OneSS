@@ -1,5 +1,7 @@
 import Link from "next/link";
 
+import personalisedDefinition from "@/setting/personalisedDefinition";
+
 
 export default function Footer() {
     return (
@@ -14,8 +16,8 @@ export default function Footer() {
                         <path d="M0 312C0 201.543 89.5431 112 200 112C310.457 112 400 201.543 400 312V512H200C89.5431 512 0 422.457 0 312Z" fill="#0360E4" fillOpacity="0.8"/>
                     </svg>
                 </div>
-                <p>Copyright © {new Date().getFullYear()} - All right reserved by <Link href={'https://github.com/Tualin14/OneSS'}>
-                    <a target="_blank" className={'link link-hover'}>Tualin14</a></Link>
+                <p> © {new Date().getFullYear()} • <Link href={personalisedDefinition.footer.link}>
+                    <a target="_blank" className={'link link-hover'}>{personalisedDefinition.footer.name}</a></Link>
                 </p>
             </div>
         </footer>
