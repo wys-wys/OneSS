@@ -13,7 +13,7 @@
 - 预览功能 | Preview Support
 - 多主题 | Multiple Themes
 - 必应每日一图 Api | Bing's photo of the day
-- Api
+- API
 
 # 开始 | Start
 
