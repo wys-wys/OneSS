@@ -2,16 +2,16 @@
 
 ```ts
 export type itemType = {
-    id: string;
-    name: string;
-    size: number;
-    folder: { childCount: number };
-    file: { mimeType: string; hashes: object };
-    image: { height: number; width: number };
-    video: { bitrate: number; height: number; width: number };
-    createdDateTime: string;
-    lastModifiedDateTime: string;
-    thumbnails: { 0: { large: { width: number; height: number; url: string } } };
+  id: string;
+  name: string;
+  size: number;
+  folder: { childCount: number };
+  file: { mimeType: string; hashes: object };
+  image: { height: number; width: number };
+  video: { bitrate: number; height: number; width: number };
+  createdDateTime: string;
+  lastModifiedDateTime: string;
+  thumbnails: { 0: { large: { width: number; height: number; url: string } } };
 };
 ```
 
@@ -19,21 +19,12 @@ export type itemType = {
 
 - [children?user={user}&route={rout}](./children.md)
 
+- [item/content?user={user}&id={id}](./content.md)
 
-- item/content?user={user}&id={id}
+- [item?user={user}&id={id}](./item.md)
 
-`redirect: downloadUrl`
+- [preview?user={user}&id={id}](./preview.md)
 
-- item?user={user}&id={id}
+- [users](./users.md)
 
-`response: name,size,id,createdDateTime,lastModifiedDateTime`
-
-- preview?user={user}&id={id}
-
-`redirect: previewUrl`
-
-- user
-
-`response: userList`
-
-```
+- [bingPic](./bingPic.md)

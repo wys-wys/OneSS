@@ -1,8 +1,10 @@
 # children?user={user}&route={rout}
 
-`response: name,size,id,folder,file,image,video`
+- Response:
 
-like:
+  `name,size,id,folder,file,image,video,thumbnails`
+
+- Example:
 
 ```json
 [

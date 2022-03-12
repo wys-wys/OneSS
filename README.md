@@ -19,7 +19,7 @@
 
 - 部署 | Deploy
 
-  [中文](/doc/deploy_zh.md) | en
+  [中文](./doc/zh/deploy_zh.md) | en
 
 - 使用 | How to use
 
@@ -27,14 +27,14 @@
 
 - 个性化设置 |
 
-  [中文](/doc/PersonaliseDefinition_zh.md) | en
+  [中文](./doc/zh/PersonaliseDefinition_zh.md) | en
 
-# [API](/doc/adv/api/api.md)
+# [API](./doc/adv/api/api.md)
 
 # 实验性功能 | Experimental feature
 
 - 以 json 格式，返回所有用户的 Music/Video 文件夹里的 音乐/视频 索引
-  [Index.md](/doc/adv/Index.md)
+  [Index.md](./doc/adv/Index.md)
   - 延伸实现:
     - 音乐在线播放器 [demo](https://oness.dzaaaaaa.com/exp/demo/music)
     - 视频在线播放器 [demo](https://oness.dzaaaaaa.com/exp/demo/video)
