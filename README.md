@@ -29,15 +29,15 @@
 
   [中文](./doc/zh/PersonaliseDefinition_zh.md) | en
 
-# [API](./doc/adv/api/api.md)
+# [API](./doc/exp/api/api.md)
 
 # 实验性功能 | Experimental feature
 
 - 以 json 格式，返回所有用户的 Music/Video 文件夹里的 音乐/视频 索引
-  [Index.md](./doc/adv/Index.md)
-  - 延伸实现:
-    - 音乐在线播放器 [demo](https://oness.dzaaaaaa.com/exp/demo/music)
-    - 视频在线播放器 [demo](https://oness.dzaaaaaa.com/exp/demo/video)
+  [Index.md](./doc/exp/Index.md)
+    - 延伸实现:
+        - 音乐在线播放器 [demo](https://oness.dzaaaaaa.com/exp/demo/music)
+        - 视频在线播放器 [demo](https://oness.dzaaaaaa.com/exp/demo/video)
 
 # To do
 
@@ -56,9 +56,9 @@
 
 - 情景假设 | Scenario Analysis
 
-  - 个人博客需要插入图片，音频或者视频，但是无法负担昂贵的存储费用，或者一些云存储服务并不理想。需要一个方便上传，调用的空间。
+    - 个人博客需要插入图片，音频或者视频，但是无法负担昂贵的存储费用，或者一些云存储服务并不理想。需要一个方便上传，调用的空间。
 
-  - 存在一个字幕组或者汉化组，把完成的合法，合规作品传到适当网站，但因为莫须有的原因(平台间竞争，原作者被盗窃者举报......)被审核删除，那么就需要一个更好地分享位置，最好是不会受到他人恶意干涉的地方。
+    - 存在一个字幕组或者汉化组，把完成的合法，合规作品传到适当网站，但因为莫须有的原因(平台间竞争，原作者被盗窃者举报......)被审核删除，那么就需要一个更好地分享位置，最好是不会受到他人恶意干涉的地方。
 
 - 是的，当我们都可以自己储存并共享自己的文件的时候，我们可以建立我们自己的平台。
 

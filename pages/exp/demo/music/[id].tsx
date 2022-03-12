@@ -15,24 +15,36 @@ export default function DemoMusicAlbum() {
 
     const {data, error} = useSWR(`/api/exp/music`, fetcher)
 
-    if (!data) return <VscSync className={"animate-spin w-1/3 h-1/3"}/>
+    if (!data) return <VscSync className={"animate-spin w-72 h-72"}/>
 
-    if (error) return <div className={"flex justify-center items-center h-full text-2xl"}>failed to load or not found.</div>
+    if (error || data.status == 233) return <div className={"flex justify-center items-center text-2xl"}>failed to load or not found.</div>
 
     const tracks = data[id as string] && data[id as string]['tracks']
 
     console.log(tracks)
 
     return (
-        <div className={"w-1/2 p-4 flex flex-col justify-center space-y-4"}>
-            {tracks && tracks.map(({name, content}: tracksType, index: number) => {
-                return (
-                    <div key={index} className={'w-full flex flex-row item-center justify-center rounded-md border border-oPrimaryVariants border-opacity-20'}>
-                        <div className={'text-2xl text-center'}>{name}</div>
-                        <audio src={content} controls/>
-                    </div>
-                )
-            })}
+        <div className="overflow-x-auto p-4">
+            <table className="table w-full">
+                <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Play</th>
+                </tr>
+                </thead>
+                <tbody>
+                {tracks && tracks.map(({name, content}: tracksType, index: number) => {
+                    return (
+                        <tr key={index}>
+                            <td>{name}</td>
+                            <td>
+                                <audio src={content} controls/>
+                            </td>
+                        </tr>
+                    )
+                })}
+                </tbody>
+            </table>
         </div>
     )
 }

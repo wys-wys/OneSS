@@ -11,24 +11,31 @@ export default function ApiList() {
     SetUserName('Experimental Feature')
 
     return (
-        <div className={'text-4xl'}>
-            <div>实验性功能--experimental-feature</div>
-            <Link href={`https://github.com/Tualin14/OneSS#实验性功能--experimental-feature`}>
-                <a target="_blank">
-                    <VscGithub className={"w-14 h-14 rounded hover:bg-oBlack dark:hover:bg-oWhite hover:bg-opacity-20 dark:hover:bg-opacity-20"}/></a>
-            </Link>
-
-            <div>Videos Demo</div>
-            <Link href={`/exp/demo/video`}>
-                <a target="_blank">
-                    <VscDeviceCameraVideo className={"w-14 h-14 rounded hover:bg-oBlack dark:hover:bg-oWhite hover:bg-opacity-20 dark:hover:bg-opacity-20"}/></a>
-            </Link>
-
-            <div>Music Demo</div>
-            <Link href={`/exp/demo/music`}>
-                <a target="_blank">
-                    <BsMusicNoteBeamed className={"w-14 h-14 rounded hover:bg-oBlack dark:hover:bg-oWhite hover:bg-opacity-20 dark:hover:bg-opacity-20"}/></a>
-            </Link>
-        </div>
+        <ul className="menu bg-base-100 w-fit p-2 rounded-box text-7xl">
+            <li>
+                <Link href={'https://github.com/Tualin14/OneSS/blob/main/doc/adv/api/api.md'}>
+                    <a target={'_blank'}>
+                        <VscGithub className={'w-14 h-14'}/>
+                        api.md
+                    </a>
+                </Link>
+            </li>
+            <li>
+                <Link href={'/exp/demo/video'}>
+                    <a target={'_blank'}>
+                        <VscDeviceCameraVideo className={'w-14 h-14'}/>
+                        Videos Demo
+                    </a>
+                </Link>
+            </li>
+            <li>
+                <Link href={'/exp/demo/music'}>
+                    <a target={'_blank'}>
+                        <BsMusicNoteBeamed className={'w-14 h-14'}/>
+                        Music Demo
+                    </a>
+                </Link>
+            </li>
+        </ul>
     )
 }

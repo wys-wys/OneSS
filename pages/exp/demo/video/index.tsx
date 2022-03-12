@@ -13,19 +13,21 @@ export default function DemoVideos() {
 
     const {data, error} = useSWR(`/api/exp/video`, fetcher)
 
-    if (!data) return <VscSync className={"animate-spin w-1/3 h-1/3"}/>
+    if (!data) return <VscSync className={"animate-spin w-72 h-72"}/>
 
-    if (error) return <div className={"flex justify-center items-center h-full text-2xl"}>failed to load or not found.</div>
+    if (error || data.status == 233) return <div className={"flex justify-center items-center text-2xl"}>failed to load or not found.</div>
 
     return (
-        <div className={"p-4 grid grid-cols-2 md:grid-cols-4 2xl:grid-cols-6 gap-6"}>
+        <div className={"p-4 grid grid-cols-2 md:grid-cols-4 2xl:grid-cols-6 gap-2"}>
             {data.map(({name, thumbnail, content}: videoType, index: number) => {
                 return (
-                    <div key={index} className={"rounded-md h-fit hover:ring-2 ring-oPrimaryVariants ring-opacity-40"}>
-                        <Link href={`/exp/demo/video/${index}`}>
+                    <div key={index} className="card card-compact w-fit bg-base-100 shadow-xl hover:bg-base-300">
+                        <Link href={`/exp/demo/video/${encodeURIComponent(content)}`}>
                             <a target="_blank">
-                                <div className={"aspect-video bg-center bg-cover rounded-md"} style={{backgroundImage: `url(${thumbnail})`}}/>
-                                <div className={"truncate text-xl"}>{name}</div>
+                                <figure><img src={thumbnail} alt="thumbnail" className={'aspect-video'}/></figure>
+                                <div className="card-body">
+                                    <h2 className="card-title">{name}</h2>
+                                </div>
                             </a>
                         </Link>
                     </div>
