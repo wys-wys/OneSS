@@ -65,3 +65,9 @@
 # Licence
 
 [GPL-3.0](LICENSE) © [Tualin14](https://github.com/Tualin14)
+
+# 个人用快捷链接
+
+- [Production](https://oness.dzaaaaaa.com/)
+- [Dev](https://oness-dev.dzaaaaaa.com/)
+- [在 Microsoft Graph 中使用文件](https://docs.microsoft.com/zh-cn/graph/api/resources/onedrive?view=graph-rest-1.0)
