@@ -1,4 +1,4 @@
-const personaliseDefinition = {
+const personalisedDefinition = {
     index: {
         backgroundImage: '/api/bingPic',
         title: 'OneSS',
@@ -6,4 +6,4 @@ const personaliseDefinition = {
     },
 }
 
-export default personaliseDefinition
+export default personalisedDefinition

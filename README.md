@@ -12,25 +12,29 @@
 - 多用户支持 | Multi-user Support
 - 预览功能 | Preview Support
 - 多主题 | Multiple Themes
-- 必应每日一图 | Bing's photo of the day
+- 必应每日一图 Api | Bing's photo of the day
+- Api
 
 # 开始 | Start
 
-## 部署 | Deploy
+- 部署 | Deploy
 
-- [中文](/doc/deploy_zh.md) | en
+  [中文](./doc/zh/deploy_zh.md) | en
 
-## 使用 | How to use
+- 使用 | How to use
 
-在自己 OneDrive 的根目录建立名为 OneSS 的文件夹 | Create a folder named OneSS in the root directory of your OneDrive
+  在自己 OneDrive 的根目录建立名为 OneSS 的文件夹 | Create a folder named OneSS in the root directory of your OneDrive
+
+- 个性化设置 |
+
+  [中文](./doc/zh/PersonaliseDefinition_zh.md) | en
+
+# [API](./doc/adv/api/api.md)
 
 # 实验性功能 | Experimental feature
 
-[demo](https://oness.dzaaaaaa.com/exp)
-
-- [Basic API](/doc/exp/API.md)
 - 以 json 格式，返回所有用户的 Music/Video 文件夹里的 音乐/视频 索引
-  [Index.md](/doc/exp/Index.md)
+  [Index.md](./doc/adv/Index.md)
   - 延伸实现:
     - 音乐在线播放器 [demo](https://oness.dzaaaaaa.com/exp/demo/music)
     - 视频在线播放器 [demo](https://oness.dzaaaaaa.com/exp/demo/video)
@@ -42,9 +46,9 @@
 
 # Issues
 
-优先关注 **错误 | bug** 等问题，请详细描述问题
-
-欢迎提建议和意见
+- 欢迎提建议与意见
+- 错误或者 Bug 之类的请详细描述，尽量有截图或者报错信息
+- 莫名其妙的话会予以删除
 
 # Motivation
 
@@ -54,7 +58,9 @@
 
   - 个人博客需要插入图片，音频或者视频，但是无法负担昂贵的存储费用，或者一些云存储服务并不理想。需要一个方便上传，调用的空间。
 
-  - 存在一个字幕组或者汉化组，把完成的合法，合规作品传到适当网站，但因为莫须有的原因被审核删除，那么就需要一个更好地分享位置，最好是不会受到他人干涉的地方。
+  - 存在一个字幕组或者汉化组，把完成的合法，合规作品传到适当网站，但因为莫须有的原因(平台间竞争，原作者被盗窃者举报......)被审核删除，那么就需要一个更好地分享位置，最好是不会受到他人恶意干涉的地方。
+
+- 是的，当我们都可以自己储存并共享自己的文件的时候，我们可以建立我们自己的平台。
 
 # Licence
 

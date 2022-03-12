@@ -21,7 +21,7 @@ export default function MyApp({Component, pageProps}: AppProps,) {
             </Head>
 
             <Menu/>
-            <div className={'min-h-screen'}>
+            <div className={'min-h-screen w-full'}>
                 <Component {...pageProps}/>
             </div>
             <Footer/>

@@ -12,7 +12,7 @@ export default function FileItem({user, name, size, id, index}: { user: string, 
         <tr key={index}>
 
             {/*CheckBox*/}
-            <th><label className={'flex items-center justify-end gap-2'}>{index}<input type="checkbox" className="checkbox"/></label></th>
+            <th><label className={'flex items-center justify-end gap-2'}>{index+1}<input type="checkbox" className="checkbox"/></label></th>
 
             {/*Name*/}
             <td>

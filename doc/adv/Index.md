@@ -9,7 +9,7 @@
 1. 修改 .github/workflows/auto.yml 文件以下部分
    [示例](https://github.com/Tualin14/OneSS/blob/main/.github/workflows/auto.yml)
 
-   ```sh
+   ```shell
    git config --global user.email 你的Github邮件
    git config --global user.name 你的Github用户名
    ```

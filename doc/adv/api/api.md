@@ -1,6 +1,6 @@
-# API (Under Construction)
+# API
 
-```typescript
+```ts
 export type itemType = {
   id: string;
   name: string;
@@ -11,29 +11,20 @@ export type itemType = {
   video: { bitrate: number; height: number; width: number };
   createdDateTime: string;
   lastModifiedDateTime: string;
-  createdBy: { user: { email: string } };
   thumbnails: { 0: { large: { width: number; height: number; url: string } } };
 };
 ```
 
 # GET: you.domain.com/api/
 
-- children?user={user}&route={rout}
+- [children?user={user}&route={rout}](./children.md)
 
-  `response: name,size,id,folder,file,image,video`
+- [item/content?user={user}&id={id}](./content.md)
 
-- item/content?user={user}&id={id}
+- [item?user={user}&id={id}](./item.md)
 
-  `redirect: downloadUrl`
+- [preview?user={user}&id={id}](./preview.md)
 
-- item?user={user}&id={id}
+- [users](./users.md)
 
-  `response: name,size,id,createdDateTime,lastModifiedDateTime`
-
-- preview?user={user}&id={id}
-
-  `redirect: previewUrl`
-
-- user
-
-  `response: userList`
+- [bingPic](./bingPic.md)
