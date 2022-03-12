@@ -13,7 +13,7 @@
    5. 选择 API 权限>添加权限>Microsoft Graph>应用程序权限，添加 Files.Read.All,User.Read.All 权限并代表管理员同意权限
       ![4](https://oness.dzaaaaaa.com/docImage/deploy/4.png)
 2. github 部分
-   1. fork [OneSS 库](https://github.com/Tualin14/OneSS)
+   1. fork [OneSS 库](https://github.com/Tualin14/OneSS),或者你可以复制一份传到自己私有库。
    2. 打开 setting 文件夹里的 userList，输入要分享的账户，如图
       ![5](https://oness.dzaaaaaa.com/docImage/deploy/5.png)
 3. vercel 部分
