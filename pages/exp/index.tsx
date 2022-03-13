@@ -13,7 +13,7 @@ export default function ApiList() {
     return (
         <ul className="menu bg-base-100 w-fit p-2 rounded-box text-7xl">
             <li>
-                <Link href={'https://github.com/Tualin14/OneSS/blob/main/doc/adv/api/api.md'}>
+                <Link href={'https://github.com/Tualin14/OneSS/blob/main/doc/exp/api/api.md'}>
                     <a target={'_blank'}>
                         <VscGithub className={'w-14 h-14'}/>
                         api.md
