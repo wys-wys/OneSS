@@ -1,6 +1,5 @@
 import Link from "next/link";
 import {VscFolderOpened, VscRootFolderOpened} from "react-icons/vsc";
-import Quota from "@/components/quota";
 
 
 export default function ListHeader({user, route}: { user: string, route?: string[] }) {
@@ -10,17 +9,15 @@ export default function ListHeader({user, route}: { user: string, route?: string
                 <li><Link href={`/${user}`}>
                     <a><VscRootFolderOpened className={'mr-2'}/>Root</a>
                 </Link></li>
-                {route ? route.map((item, index) => {
-                        return (
-                            <li key={index}>
-                                <Link key={index} href={`/${user}/${route.slice(0, index + 1).join('/')}`}>
-                                    <a><VscFolderOpened className={'mr-2'}/>{item}</a>
-                                </Link>
-                            </li>
-                        )
-                    }) :
-                    <li><Quota user={user as string}/></li>
-                }
+                {route && route.map((item, index) => {
+                    return (
+                        <li key={index}>
+                            <Link key={index} href={`/${user}/${route.slice(0, index + 1).join('/')}`}>
+                                <a><VscFolderOpened className={'mr-2'}/>{item}</a>
+                            </Link>
+                        </li>
+                    )
+                })}
             </ul>
         </div>
     )

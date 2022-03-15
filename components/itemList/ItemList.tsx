@@ -7,6 +7,7 @@ import {itemType} from "@/script/data_type";
 import FolderItem from "@/components/itemList/FolderItem";
 import FileItem from "@/components/itemList/FileItem";
 import ListHeader from "@/components/itemList/ListHeader";
+import Quota from "@/components/Quota";
 
 
 export default function ItemList({user, route}: { user: string, route?: string[] }) {
@@ -29,6 +30,7 @@ export default function ItemList({user, route}: { user: string, route?: string[]
     return (
         <div className={"w-full lg:max-w-7xl px-2 pb-14 flex flex-col"}>
             <ListHeader user={user} route={route}/>
+            {!route && <Quota user={user}/>}
 
             <div className="overflow-x-auto w-full">
                 <table className="table table-compact w-full">

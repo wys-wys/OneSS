@@ -16,7 +16,7 @@ export default function Quota({user}: { user: string }) {
     const {total, used, remaining, deleted} = data
 
     return (
-        <div className="stats stats-horizontal shadow">
+        <div className="stats stats-horizontal">
 
             <div className="stat">
                 <div className="stat-title">Used</div>
