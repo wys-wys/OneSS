@@ -1,3 +1,3 @@
-const userList = ["share@dzaaaaaa.com"]
+const userList = ["share@dzaaaaaa.com", "oness@dzaaaaaa.com"];
 
-export default userList
+export default userList;
