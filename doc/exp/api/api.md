@@ -28,3 +28,5 @@ export type itemType = {
 - [users](./users.md)
 
 - [bingPic](./bingPic.md)
+
+- [quota](./quota.md)
