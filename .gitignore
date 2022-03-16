@@ -38,5 +38,5 @@ yarn-error.log*
 
 # typescript
 *.tsbuildinfo
-exp/public/
-exp/__pycache__/
+auto/public/
+auto/__pycache__/

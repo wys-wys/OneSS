@@ -25,7 +25,7 @@ jobs:
 
       - name: Update Music/Video Index
         run: |
-          python ./exp/run.py
+          python ./auto/run.py
           
       - name: Commit
         run: |

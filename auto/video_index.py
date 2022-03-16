@@ -12,6 +12,16 @@ async def s_i(user, route):
     url = '%s/children?user=%s&route=%s' % (OneSSApi.api, user, route)
 
     r = requests.get(url).json()
+    try:
+        r['status']
+    except:
+        status = 1
+    else:
+        status = r['status']
+
+    if status == 233:
+        return
+
     for i in r:
         try:
             i['video']
