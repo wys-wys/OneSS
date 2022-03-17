@@ -7,7 +7,7 @@ import {itemType} from "@/script/data_type";
 import FolderItem from "@/components/itemList/FolderItem";
 import FileItem from "@/components/itemList/FileItem";
 import ListHeader from "@/components/itemList/ListHeader";
-import Quota from "@/components/Quota";
+import Quota from "@/components/itemList/Quota";
 
 
 export default function ItemList({user, route}: { user: string, route?: string[] }) {

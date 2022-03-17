@@ -6,6 +6,7 @@ import {VscCloudDownload, VscCopy, VscLiveShare, VscOpenPreview, VscSync} from "
 import {fetcher} from "@/script/swr_get";
 import {itemType} from "@/script/data_type";
 import convertB from "@/script/convert_bit";
+import CopyButton from "@/components/CopyModal/CopyButton";
 
 
 export default function Item({user, id}: { user: string, id: string }) {
@@ -35,25 +36,13 @@ export default function Item({user, id}: { user: string, id: string }) {
                             <Link href={`/api/preview?user=${user}&id=${id}`}><a target="_blank"><VscOpenPreview className={"w-6 h-6"}/></a></Link>
                         </button>
 
-                        <button className={'btn'} onClick={() => {
-                            try {
-                                navigator.clipboard.writeText(`https://${window.location.host}/item/${user}/${id}`)
-                                alert(`Copied: https://${window.location.host}/item/${user}/${id}`)
-                            } catch (e) {
-                                alert('Failed to copy!')
-                            }
-                        }}>
-                            <VscLiveShare className={'w-6 h-6'}/></button>
+                        <CopyButton className={'btn'} name={name} text={`https://${window.location.host}/item/${user}/${id}`}>
+                            <VscLiveShare className={'w-6 h-6'}/>
+                        </CopyButton>
 
-                        <button className={'btn'} onClick={() => {
-                            try {
-                                navigator.clipboard.writeText(`https://${window.location.host}/api/item/content?user=${user}&id=${id}`)
-                                alert(`Copied: https://${window.location.host}/api/item/content?user=${user}&id=${id}`)
-                            } catch (e) {
-                                alert('Failed to copy!')
-                            }
-                        }}>
-                            <VscCopy className={"w-6 h-6"}/></button>
+                        <CopyButton className={'btn'} name={name} text={`https://${window.location.host}/api/item/content?user=${user}&id=${id}`}>
+                            <VscCopy className={"w-6 h-6"}/>
+                        </CopyButton>
 
                         <button className={'btn'}>
                             <a href={`/api/item/content?user=${user}&id=${id}`} download><VscCloudDownload className={"w-6 h-6"}/></a>

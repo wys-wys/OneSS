@@ -4,6 +4,7 @@ import Head from "next/head";
 
 import Menu from "@/components/menu/Menu";
 import Footer from "@/components/Footer";
+import CopyDialog from "@/components/CopyModal/CopyDialog";
 
 
 export default function MyApp({Component, pageProps}: AppProps,) {
@@ -24,6 +25,9 @@ export default function MyApp({Component, pageProps}: AppProps,) {
             <div className={'min-h-screen w-full'}>
                 <Component {...pageProps}/>
             </div>
+
+            <CopyDialog/>
+
             <Footer/>
         </>
     );

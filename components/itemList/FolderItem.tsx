@@ -5,6 +5,7 @@ import {getIconForFolder} from "vscode-icons-js";
 import {VscCloudDownload, VscCopy, VscLiveShare, VscOpenPreview} from "react-icons/vsc";
 
 import convertB from "@/script/convert_bit";
+import CopyButton from "@/components/CopyModal/CopyButton";
 
 
 export default function FolderItem({user, route, name, size, index}: { user: string, route?: string[], name: string, size: number, index: number }) {
@@ -35,15 +36,9 @@ export default function FolderItem({user, route, name, size, index}: { user: str
                         <VscOpenPreview className={"w-6 h-6"}/>
                     </button>
 
-                    <button className={'btn btn-ghost'} onClick={() => {
-                        try {
-                            navigator.clipboard.writeText(`https://${window.location.host}/${user}/${route ? route.join('/') + '/' : ''}${name}`)
-                            alert(`Copied: https://${window.location.host}/${user}/${route ? route.join('/') + '/' : ''}${name}`)
-                        } catch (e) {
-                            alert('Failed to copy!')
-                        }
-                    }}>
-                        <VscLiveShare className={'w-6 h-6'}/></button>
+                    <CopyButton className={'btn btn-ghost'} name={name} text={`https://${window.location.host}/${user}/${route ? route.join('/') + '/' : ''}${name}`}>
+                        <VscLiveShare className={'w-6 h-6'}/>
+                    </CopyButton>
 
                     <button className={'btn invisible'}><VscCopy className={"w-6 h-6"}/></button>
 
