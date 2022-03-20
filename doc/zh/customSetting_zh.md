@@ -1,4 +1,4 @@
-# 个性化设置
+# 自定义设置
 
 ## 目前在逐步添加可自定义的部分
 
@@ -8,7 +8,7 @@
 
 2. 主页部分
 
-   修改 setting 文件夹内 personalisedDefinition.ts 文件的 index 部分
+   修改 setting 文件夹内 customSetting.ts 文件的 index 部分
 
 - backgroundImage 背景图片
 
@@ -18,7 +18,7 @@
   backgroundImage: "/api/bingPic";
   ```
 
-    - 若要自定义图片背景，请将图片放入 Public 文件夹并修改路径，如
+    - 若要自定义图片背景，请将图片放入 Public 文件夹并修改路径，例
 
   ```ts
   backgroundImage: "/bg.jpg";
@@ -29,7 +29,7 @@
     - 完整示例:
 
   ```ts
-  const personalisedDefinition = {
+  const customSetting = {
     index: {
       backgroundImage: "/api/bingPic",
       title: "OneSS",
@@ -41,4 +41,5 @@
 3. 页脚部分
     - name 名字
     - link 链接
+    - mail 邮件
     - bilibili b站链接 

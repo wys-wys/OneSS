@@ -1,11 +1,11 @@
 import axios from "axios";
-import {NextApiRequest, NextApiResponse} from "next";
+import {NextApiResponse} from "next";
 
 import getToken from "@/script/get_token";
 import baseSetting from "@/setting/baseSetting";
 
 
-const quota = async (req: NextApiRequest, res: NextApiResponse) => {
+const quota = async (req: { query: { user: string } }, res: NextApiResponse) => {
     const {'user': user} = req.query
     const data = await getDriveQuota(user as string)
     res.status(200).json(data)

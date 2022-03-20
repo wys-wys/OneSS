@@ -4,6 +4,12 @@
 
 - 每日更新一次,修改频率请自行修改 .github/workflows/auto.yml 文件的 schedule 部分
 
+- 其实以这思路可以做其他东西，并且还能增加活跃度
+
+- 以此为基础的延伸实现:
+    - 音乐在线播放器 [demo](https://oness.dzaaaaaa.com/exp/demo/music)
+    - 视频在线播放器 [demo](https://oness.dzaaaaaa.com/exp/demo/video)
+
 ## 部署
 
 1. 修改 .github/workflows/auto.yml 文件以下部分
@@ -60,8 +66,8 @@
 - coverImg 文件夹内封面
 - coverUrl 音乐自带封面，在文件夹内没有封面图片文件而音乐自带使用
 - tracks 音乐列表
-  - name 音乐名
-  - content 流
+    - name 音乐名
+    - content 流
 
 示例:
 

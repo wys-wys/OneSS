@@ -46,7 +46,7 @@ export default function FileItem({user, name, size, id, index}: { user: string, 
 
 
                     <button className={'btn btn-ghost'}>
-                        <a href={`/api/item/content?user=${user}&id=${id}`} download><VscCloudDownload className={"w-6 h-6"}/></a>
+                        <a target={'_blank'} href={`/api/item/content?user=${user}&id=${id}`} download rel="noreferrer"><VscCloudDownload className={"w-6 h-6"}/></a>
                     </button>
                 </div>
             </td>
