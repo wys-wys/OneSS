@@ -39,7 +39,7 @@ async def s_i(user, route):
 async def is_video(user, i):
     name = i['name']
 
-    thumbnail = i['thumbnails'][0]['large']['url']
+    thumbnail = i['thumbnails'][0]
 
     content = '%s/item/content?user=%s&id=%s' % (OneSSApi.api, user, i['id'])
 

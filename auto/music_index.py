@@ -52,7 +52,7 @@ async def is_music(user, i, album):
     except:
         thumbnail = 'none'
     else:
-        album['coverUrl'] = i['thumbnails'][0]['large']['url']
+        album['coverUrl'] = i['thumbnails'][0]
 
     content = '%s/item/content?user=%s&id=%s' % (OneSSApi.api, user, i['id'])
 

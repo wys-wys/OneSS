@@ -24,7 +24,7 @@ export default function DemoVideos() {
                     <div key={index} className="card card-compact w-fit bg-base-100 shadow-xl hover:bg-base-300">
                         <Link href={`/exp/demo/video/${encodeURIComponent(content)}`}>
                             <a target="_blank">
-                                <figure><img src={thumbnail} alt="thumbnail" className={'aspect-video'}/></figure>
+                                <figure><img src={thumbnail.small.url} alt="thumbnail" className={'aspect-video'}/></figure>
                                 <div className="card-body">
                                     <h2 className="card-title">{name}</h2>
                                 </div>

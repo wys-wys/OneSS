@@ -25,7 +25,7 @@ export default function DemoMusic() {
                     <div key={index} className="card card-compact w-fit bg-base-100 shadow-xl hover:bg-base-300">
                         <Link href={`/exp/demo/music/${index}`}>
                             <a target="_blank">
-                                <figure><img src={coverImg ? coverImg : coverUrl} alt="cover" className={'aspect-square'}/></figure>
+                                <figure><img src={coverImg ? coverImg : coverUrl.small.url} alt="cover" className={'aspect-square'}/></figure>
                                 <div className="card-body">
                                     <h2 className="card-title">{album}</h2>
                                 </div>

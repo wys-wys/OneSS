@@ -15,7 +15,11 @@ export type itemType = {
 
 export type videoType = {
     name: string,
-    thumbnail: string,
+    thumbnail: {
+        large: { url: string },
+        medium: { url: string },
+        small: { url: string }
+    },
     content: string
 }
 
@@ -23,7 +27,11 @@ export type videoType = {
 export type musicType = {
     album: string
     coverImg: string
-    coverUrl: string
+    coverUrl: {
+        large: { url: string },
+        medium: { url: string },
+        small: { url: string }
+    }
     tracks: tracksType[]
 }
 

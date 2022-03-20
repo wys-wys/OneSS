@@ -45,7 +45,7 @@ export default function Item({user, id}: { user: string, id: string }) {
                         </CopyButton>
 
                         <button className={'btn'}>
-                            <a target={'_blank'} href={`/api/item/content?user=${user}&id=${id}`} download rel="noreferrer"><VscCloudDownload className={"w-6 h-6"}/></a>
+                            <a target={'_blank'} href={`/api/item/content?user=${user}&id=${id}`} rel="noreferrer"><VscCloudDownload className={"w-6 h-6"}/></a>
                         </button>
                     </div>
                 </div>
