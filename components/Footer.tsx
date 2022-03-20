@@ -1,7 +1,7 @@
 import Link from "next/link";
 
 import customSetting from "@/setting/customSetting";
-import {VscMail} from "react-icons/all";
+import {VscMail} from "react-icons/vsc";
 
 
 export default function Footer() {
