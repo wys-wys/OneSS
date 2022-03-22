@@ -9,8 +9,6 @@
 - 免费! | Free !
 - API
 - 多用户支持 | Multi-user Support
-- 文件下载 | File Download
-- 预览功能 | Preview Support
 - 多主题 | Multiple Themes
 - 必应每日一图 api | Bing's photo of the day
 - 可以做图床，视频云 | Cloud Storage Services for Photos and Video[(demo)](https://www.dzaaaaaa.com/blog/LSW/OneSS)
@@ -31,9 +29,15 @@
 
 ## [API](./doc/exp/api/api.md)
 
-## 实验性功能 | Experimental feature
+## Use Github Actions
 
-- [以 json 格式，返回所有用户的 Music/Video 文件夹里的 音乐/视频 索引](./doc/exp/Index.md)
+使用 Github Actions 定时构建任务，如索引等
+
+有助于提升活跃度
+
+例:
+
+- [以 json 格式，返回所有用户的 Music/Video 文件夹里的 音乐/视频 索引](./doc/exp/Actions.md)
 
 # To do
 

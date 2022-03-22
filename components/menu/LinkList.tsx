@@ -15,7 +15,7 @@ export default function LinkList() {
                 </button>
             </a></Link>
 
-            <Link href={"/exp"}><a target={'_blank'}>
+            <Link href={"/exp"}><a target={'_blank'} className={'hidden'}>
                 <button className={'btn btn-ghost'}>
                     <VscBeaker className={'w-6 h-6'}/>
                 </button>
