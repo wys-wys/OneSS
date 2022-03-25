@@ -48,7 +48,10 @@ export default function ItemList({user, route}: { user: string, route?: string[]
                         return (
                             folder
                                 ?
-                                <FolderItem user={user} route={route} name={name} size={size} index={index}/>
+                                <>
+                                    <link rel="preload" href={`/api/children?user=${user}&route=${route ? route.join('/') + '/' : ''}${name}`} as="fetch" crossOrigin="anonymous"/>
+                                    <FolderItem user={user} route={route} name={name} size={size} index={index}/>
+                                </>
                                 :
                                 <FileItem user={user} name={name} size={size} id={id} index={index}/>
                         )

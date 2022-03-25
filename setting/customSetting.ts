@@ -1,4 +1,5 @@
 const customSetting = {
+    webName: 'OneSS',
     index: {
         backgroundImage: '/api/bingPic',
         title: 'OneSS',
