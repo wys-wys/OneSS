@@ -40,3 +40,4 @@ yarn-error.log*
 *.tsbuildinfo
 auto/public/
 auto/__pycache__/
+auto/f500/
