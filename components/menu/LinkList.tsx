@@ -1,6 +1,6 @@
 import Link from "next/link";
 
-import {VscBeaker, VscGithub, VscHome} from "react-icons/vsc";
+import {VscGithub, VscHome} from "react-icons/vsc";
 
 import ThemeSwitch from "@/components/menu/ThemeSwitch";
 
@@ -12,12 +12,6 @@ export default function LinkList() {
             <Link href={"/"}><a>
                 <button className={'btn btn-ghost'}>
                     <VscHome className={"w-6 h-6"}/>
-                </button>
-            </a></Link>
-
-            <Link href={"/exp"}><a target={'_blank'} className={'hidden'}>
-                <button className={'btn btn-ghost'}>
-                    <VscBeaker className={'w-6 h-6'}/>
                 </button>
             </a></Link>
 

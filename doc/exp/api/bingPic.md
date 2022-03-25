@@ -1,9 +1,0 @@
-# bingPic
-
-- Redirect:
-
-  `image`
-
-- Example:
-
-  `https://www.bing.com/th?id=OHR.BobbioItaly_ZH-CN7993515424_1920x1080.jpg&rf=LaDigue_1920x1080.jpg&pid=hp`

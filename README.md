@@ -27,17 +27,7 @@
 
   [中文](./doc/zh/customSetting_zh.md) | en
 
-## [API](./doc/exp/api/api.md)
-
-## Use Github Actions
-
-使用 Github Actions 定时构建任务，如索引等
-
-有助于提升活跃度
-
-例:
-
-- [以 json 格式，返回所有用户的 Music/Video 文件夹里的 音乐/视频 索引](./doc/exp/Actions.md)
+# [API](./doc/exp/api/api.md)
 
 # To do
 
@@ -71,3 +61,4 @@
 - [oness](https://oness.dzaaaaaa.com/)
 - [oness-dev](https://oness-dev.dzaaaaaa.com/)
 - [在 Microsoft Graph 中使用文件](https://docs.microsoft.com/zh-cn/graph/api/resources/onedrive?view=graph-rest-1.0)
+- [SWR](https://swr.vercel.app/zh-CN/docs/getting-started)
