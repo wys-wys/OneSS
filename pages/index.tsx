@@ -13,15 +13,16 @@ export default function Home() {
         <>
             <Head>
                 <title>{customSetting.webName} | Home</title>
-                {userList.map((userName, index) => {
-                    return (
-                        <div key={index}>
-                            <link rel="preload" href={`/api/children?user=${userName}&route=`} as="fetch" crossOrigin="anonymous"/>
-                            <link rel="preload" href={`/api/quota?user=${userName}`} as="fetch" crossOrigin="anonymous"/>
-                        </div>
-                    )
-                })}
             </Head>
+            
+            {userList.map((userName, index) => {
+                return (
+                    <div key={index}>
+                        <link rel="preload" href={`/api/children?user=${userName}&route=`} as="fetch" crossOrigin="anonymous"/>
+                        <link rel="preload" href={`/api/quota?user=${userName}`} as="fetch" crossOrigin="anonymous"/>
+                    </div>
+                )
+            })}
 
             <div className={'flex flex-col md:flex-row items-center md:items-start'}>
                 <div className="hero min-h-screen" style={{backgroundImage: `url(${customSetting.index.backgroundImage})`}}>
