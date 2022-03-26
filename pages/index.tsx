@@ -1,11 +1,10 @@
 import Head from 'next/head'
+import Link from "next/link";
 
 import customSetting from "@/setting/customSetting";
 import userList from "@/setting/userList";
-import UserList from "@/components/Menu/UserList";
 import ThemeSwitch from "@/components/ThemeSwitch";
-import {VscAccount, VscGithub, VscMail} from "react-icons/vsc";
-import Link from "next/link";
+import {VscGithub, VscMail} from "react-icons/vsc";
 
 
 export default function Home() {
@@ -13,6 +12,14 @@ export default function Home() {
         <>
             <Head>
                 <title>{customSetting.siteName} | Home</title>
+                {userList.map((userName, index) => {
+                    return (
+                        <div key={index}>
+                            <link rel="preload" href={`/api/children?user=${userName}&route=`} as="fetch" crossOrigin="anonymous"/>
+                            <link rel="preload" href={`/api/quota?user=${userName}`} as="fetch" crossOrigin="anonymous"/>
+                        </div>
+                    )
+                })}
             </Head>
 
             <div className={'static flex flex-col md:flex-row items-center md:items-start'}>
@@ -36,7 +43,7 @@ export default function Home() {
                             <ul tabIndex={0} className="dropdown-content bg-base-200 text-base-content rounded-box shadow-2xl menu menu-compact p-4">
                                 {userList.map((userName, index) => {
                                     return (
-                                        <li key={index} className={'hover-bordered'}>
+                                        <li key={index} className={'hover-bordered hover-bordered'}>
                                             <Link href={`/${userName}`}><a className={'truncate'}>👤 {userName}</a></Link>
                                         </li>
                                     )
@@ -46,16 +53,16 @@ export default function Home() {
                     </div>
                     <div className="flex-none">
                         <ThemeSwitch/>
-                        <Link href={"https://github.com/Tualin14/OneSS"}><a target={'_blank'}>
+                        <a href={"https://github.com/Tualin14/OneSS"} target={'_blank'} rel="noreferrer">
                             <button className={"btn btn-ghost"}>
                                 <VscGithub className={"w-6 h-6"}/>
                             </button>
-                        </a></Link>
+                        </a>
                     </div>
                 </div>
 
                 <div className="hero min-h-screen" style={{backgroundImage: `url(${customSetting.index.backgroundImage})`}}>
-                    <div className="hero-overlay bg-opacity-60"/>
+                    <div className="hero-overlay bg-opacity-40"/>
                     <div className="hero-content text-center text-neutral-content">
                         <div className="max-w-md">
                             <h1 className="mb-5 text-7xl font-bold">{customSetting.index.title}</h1>
@@ -79,15 +86,6 @@ export default function Home() {
                     </div>
                 </div>
             </div>
-
-            {userList.map((userName, index) => {
-                return (
-                    <div key={index}>
-                        <link rel="preload" href={`/api/children?user=${userName}&route=`} as="fetch" crossOrigin="anonymous"/>
-                        <link rel="preload" href={`/api/quota?user=${userName}`} as="fetch" crossOrigin="anonymous"/>
-                    </div>
-                )
-            })}
         </>
     )
 }
