@@ -1,7 +1,7 @@
 import {useRouter} from 'next/router'
 
-import ItemList from "@/components/itemList/ItemList";
-import Menu from "@/components/Menu";
+import ItemList from "@/components/ItemList/ItemList";
+import Menu from "@/components/Menu/Menu";
 
 
 export default function UserIndex() {

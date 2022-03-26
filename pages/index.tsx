@@ -2,9 +2,9 @@ import Head from 'next/head'
 
 import customSetting from "@/setting/customSetting";
 import userList from "@/setting/userList";
-import UserList from "@/components/UserList";
+import UserList from "@/components/Menu/UserList";
 import ThemeSwitch from "@/components/ThemeSwitch";
-import {VscGithub, VscMail} from "react-icons/vsc";
+import {VscAccount, VscGithub, VscMail} from "react-icons/vsc";
 import Link from "next/link";
 
 
@@ -18,7 +18,31 @@ export default function Home() {
             <div className={'static flex flex-col md:flex-row items-center md:items-start'}>
                 <div className="absolute  navbar">
                     <div className="flex-1">
-                        <UserList userName={customSetting.siteName}/>
+                        <div className="dropdown">
+                            <label tabIndex={0} className="btn btn-ghost normal-case">
+                                <div className={'w-8 h-8'}>
+                                    <svg viewBox="0 0 624 624" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <circle cx="500" cy="388" r="124" fill="#1F7EFE" fillOpacity="0.8"/>
+                                        <path
+                                            d="M200 357.5C200 277.143 265.143 212 345.5 212H354.5C434.857 212 500 277.143 500 357.5V512H345.5C265.143 512 200 446.857 200 366.5V357.5Z"
+                                            fill="#1F7EFE"
+                                            fillOpacity="0.8"/>
+                                        <path d="M0 312C0 201.543 89.5431 112 200 112C310.457 112 400 201.543 400 312V512H200C89.5431 512 0 422.457 0 312Z" fill="#0360E4"
+                                              fillOpacity="0.8"/>
+                                    </svg>
+                                </div>
+                                <div className={'hidden md:block text-2xl ml-2'}>{customSetting.siteName}</div>
+                            </label>
+                            <ul tabIndex={0} className="dropdown-content bg-base-200 text-base-content rounded-box shadow-2xl menu menu-compact p-4">
+                                {userList.map((userName, index) => {
+                                    return (
+                                        <li key={index} className={'hover-bordered'}>
+                                            <Link href={`/${userName}`}><a className={'truncate'}>👤 {userName}</a></Link>
+                                        </li>
+                                    )
+                                })}
+                            </ul>
+                        </div>
                     </div>
                     <div className="flex-none">
                         <ThemeSwitch/>

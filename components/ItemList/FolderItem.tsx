@@ -27,24 +27,27 @@ export default function FolderItem({user, route, name, size, index}: { user: str
             </td>
 
             {/*Size*/}
-            <td>{convertB(size)}</td>
+            <td className={'text-center'}>{convertB(size)}</td>
 
             {/*Action*/}
             <td>
-                <div className={"btn-group inline"}>
-                    <button className={'btn invisible'}>
+                <div className="inline space-x-2">
+                    <button className={'btn invisible btn-square btn-sm'}>
                         <VscOpenPreview className={"w-6 h-6"}/>
                     </button>
 
-                    <CopyButton className={'btn btn-ghost'} name={name} text={`https://${window.location.host}/${user}/${route ? route.join('/') + '/' : ''}${name}`}>
+                    <CopyButton className={'btn btn-ghost btn-square btn-sm'} name={name}
+                                text={`https://${window.location.host}/${user}/${route ? route.join('/') + '/' : ''}${name}`}>
                         <VscLiveShare className={'w-6 h-6'}/>
                     </CopyButton>
 
-                    <button className={'btn invisible'}><VscCopy className={"w-6 h-6"}/></button>
+                    <button className={'btn btn-square btn-sm invisible'}><VscCopy className={"w-6 h-6"}/></button>
 
-                    <button className={'btn invisible'}><VscCloudDownload className={"w-6 h-6"}/></button>
+                    <button className={'btn btn-square btn-sm invisible'}><VscCloudDownload className={"w-6 h-6"}/></button>
                 </div>
             </td>
+
+            <link rel="preload" href={`/api/children?user=${user}&route=${route ? route.join('/') + '/' : ''}${name}`} as="fetch" crossOrigin="anonymous"/>
         </tr>
     )
 }

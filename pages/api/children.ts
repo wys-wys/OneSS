@@ -25,10 +25,9 @@ async function getChildrenByRoute(user: string, route: string = '', thumbnails: 
             params: {
                 expand: `${thumbnails ? 'thumbnails' : ''}`,
                 select: 'name,size,id,folder,file,image,video',
-                top: '50'
             },
         })
-        return res.data
+        return res.data.value
     } catch (e) {
         return {status: 233}
     }

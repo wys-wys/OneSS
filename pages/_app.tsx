@@ -2,8 +2,6 @@ import '@/styles/globals.css'
 import type {AppProps} from 'next/app'
 import Head from "next/head";
 
-import Menu from "@/components/Menu";
-import Footer from "@/components/Footer";
 import CopyDialog from "@/components/CopyModal/CopyDialog";
 import customSetting from "@/setting/customSetting";
 
@@ -20,14 +18,12 @@ export default function MyApp({Component, pageProps}: AppProps,) {
                 <link rel="mask-icon" href="/favicons/safari-pinned-tab.svg" color="#5bbad5"/>
                 <meta name="msapplication-TileColor" content="#da532c"/>
                 <meta name="theme-color" content="#ffffff"/>
+                <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=no, viewport-fit=cover"/>
             </Head>
 
-            <div className={'min-h-screen w-full'}>
-                <Component {...pageProps}/>
-            </div>
+            <Component {...pageProps}/>
 
             <CopyDialog/>
-
         </>
     );
 }
