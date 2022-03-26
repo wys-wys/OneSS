@@ -10,7 +10,7 @@ import CopyButton from "@/components/CopyModal/CopyButton";
 
 export default function FileItem({user, name, size, id, index}: { user: string, name: string, size: number, id: string, index: number }) {
     return (
-        <tr key={index}>
+        <tr key={index} className={'h-8'}>
 
             {/*CheckBox*/}
             <th><label className={'flex items-center justify-end gap-2'}>{index + 1}<input type="checkbox" className="checkbox"/></label></th>
@@ -27,25 +27,25 @@ export default function FileItem({user, name, size, id, index}: { user: string, 
             </td>
 
             {/*Size*/}
-            <td>{convertB(size)}</td>
+            <td className={'text-center'}>{convertB(size)}</td>
 
             {/*Action*/}
             <td>
-                <div className={"btn-group inline"}>
-                    <button className={'btn btn-ghost'}>
-                        <Link href={`/api/preview?user=${user}&id=${id}`}><a target="_blank"><VscOpenPreview className={"w-6 h-6"}/></a></Link>
+                <div className="inline space-x-2">
+                    <button className={'btn btn-ghost btn-square btn-sm'}>
+                        <a href={`/api/preview?user=${user}&id=${id}`} target="_blank" rel="noreferrer"><VscOpenPreview className={"w-6 h-6"}/></a>
                     </button>
 
-                    <CopyButton className={'btn btn-ghost'} name={name} text={`https://${window.location.host}/item/${user}/${id}`}>
+                    <CopyButton className={'btn btn-ghost btn-square btn-sm'} name={name} text={`https://${window.location.host}/item/${user}/${id}`}>
                         <VscLiveShare className={'w-6 h-6'}/>
                     </CopyButton>
 
-                    <CopyButton className={'btn btn-ghost'} name={name} text={`https://${window.location.host}/api/item/content?user=${user}&id=${id}`}>
+                    <CopyButton className={'btn btn-ghost btn-square btn-sm'} name={name} text={`https://${window.location.host}/api/item/content?user=${user}&id=${id}`}>
                         <VscCopy className={"w-6 h-6"}/>
                     </CopyButton>
 
 
-                    <button className={'btn btn-ghost'}>
+                    <button className={'btn btn-ghost btn-square btn-sm'}>
                         <a target={'_blank'} href={`/api/item/content?user=${user}&id=${id}`} rel="noreferrer"><VscCloudDownload className={"w-6 h-6"}/></a>
                     </button>
                 </div>

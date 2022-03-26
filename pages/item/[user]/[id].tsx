@@ -1,15 +1,17 @@
 import {useRouter} from "next/router";
 
-import SetUserName from "@/components/SetUserName";
 import Item from "@/components/Item";
+import Menu from "@/components/Menu/Menu";
 
 
 export default function ItemUserId() {
     const {user, id} = useRouter().query
 
-    SetUserName(user as string)
-
     return (
-        <Item user={user as string} id={id as string}/>
+        <>
+            <Menu userName={user as string}/>
+
+            <Item user={user as string} id={id as string}/>
+        </>
     )
 }

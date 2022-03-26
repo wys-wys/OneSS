@@ -6,6 +6,6 @@ module.exports = {
     darkMode: 'class',
     plugins: [require("daisyui")],
     daisyui: {
-        themes: ["winter", "dark", "aqua", "night"],
+        themes: ["light", "dark", "night","valentine","aqua"],
     },
 }

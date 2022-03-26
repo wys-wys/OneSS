@@ -4,10 +4,10 @@ import {VscSync} from "react-icons/vsc";
 
 import {fetcher} from "@/script/swr_get";
 import {itemType} from "@/script/data_type";
-import FolderItem from "@/components/itemList/FolderItem";
-import FileItem from "@/components/itemList/FileItem";
-import ListHeader from "@/components/itemList/ListHeader";
-import Quota from "@/components/itemList/Quota";
+import FolderItem from "@/components/ItemList/FolderItem";
+import FileItem from "@/components/ItemList/FileItem";
+import ListHeader from "@/components/ItemList/ListHeader";
+import Quota from "@/components/ItemList/Quota";
 
 
 export default function ItemList({user, route}: { user: string, route?: string[] }) {
@@ -36,10 +36,10 @@ export default function ItemList({user, route}: { user: string, route?: string[]
                 <table className="table table-compact w-full">
                     <thead>
                     <tr>
-                        <th><label className={'flex items-center justify-end gap-2 text-xl'}>N<input type="checkbox" className="checkbox"/></label></th>
-                        <th className={'text-xl capitalize'}>name</th>
-                        <th className={'text-xl capitalize'}>size</th>
-                        <th className={'text-xl capitalize'}>action</th>
+                        <th className={'w-20'}><label className={'flex items-center justify-end gap-2 text-xl'}>N<input type="checkbox" className="checkbox"/></label></th>
+                        <th className={'text-xl capitalize w-full'}>name</th>
+                        <th className={'text-xl capitalize w-20 text-center'}>size</th>
+                        <th className={'text-xl capitalize w-40 text-center'}>action</th>
                     </tr>
                     </thead>
 
@@ -54,15 +54,6 @@ export default function ItemList({user, route}: { user: string, route?: string[]
                         )
                     })}
                     </tbody>
-
-                    {/*<tfoot>*/}
-                    {/*<tr>*/}
-                    {/*    <th><label className={'flex items-center justify-end gap-2'}>N<input type="checkbox" className="checkbox"/></label></th>*/}
-                    {/*    <th className={'text-xl capitalize'}>name</th>*/}
-                    {/*    <th className={'text-xl capitalize'}>size</th>*/}
-                    {/*    <th className={'text-xl capitalize'}>action</th>*/}
-                    {/*</tr>*/}
-                    {/*</tfoot>*/}
                 </table>
             </div>
         </div>
