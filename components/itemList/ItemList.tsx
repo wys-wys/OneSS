@@ -44,7 +44,7 @@ export default function ItemList({user, route}: { user: string, route?: string[]
                     </thead>
 
                     <tbody>
-                    {data.map(({name, size, id, folder, image, video}: itemType, index: number) => {
+                    {data.value.map(({name, size, id, folder, image, video}: itemType, index: number) => {
                         return (
                             folder
                                 ?
@@ -57,16 +57,9 @@ export default function ItemList({user, route}: { user: string, route?: string[]
                         )
                     })}
                     </tbody>
-
-                    {/*<tfoot>*/}
-                    {/*<tr>*/}
-                    {/*    <th><label className={'flex items-center justify-end gap-2'}>N<input type="checkbox" className="checkbox"/></label></th>*/}
-                    {/*    <th className={'text-xl capitalize'}>name</th>*/}
-                    {/*    <th className={'text-xl capitalize'}>size</th>*/}
-                    {/*    <th className={'text-xl capitalize'}>action</th>*/}
-                    {/*</tr>*/}
-                    {/*</tfoot>*/}
                 </table>
+
+                <div>{data['@odata.nextLink'] && data['@odata.nextLink']}</div>
             </div>
         </div>
     )

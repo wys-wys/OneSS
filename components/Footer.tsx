@@ -24,13 +24,13 @@ export default function Footer() {
 
             <div className="grid-flow-col gap-4 md:place-self-center md:justify-self-end">
 
-                <Link href={`mailto:${customSetting.footer.mail}`}>
+                <Link href={`mailto:${customSetting.mail}`}>
                     <a target={'_blank'} className={'w-6 h-6 hover:text-info'}>
                         <VscMail className={'w-6 h-6'}/>
                     </a>
                 </Link>
 
-                <Link href={customSetting.footer.bilibili}>
+                <Link href={customSetting.bilibili}>
                     <a target={'_blank'} className={'w-6 h-6 hover:text-info'}>
                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1024" className="fill-current">
                             <path

@@ -12,30 +12,7 @@ export type itemType = {
     content: string
 }
 
-
-export type videoType = {
-    name: string,
-    thumbnail: {
-        large: { url: string },
-        medium: { url: string },
-        small: { url: string }
-    },
-    content: string
-}
-
-
-export type musicType = {
-    album: string
-    coverImg: string
-    coverUrl: {
-        large: { url: string },
-        medium: { url: string },
-        small: { url: string }
-    }
-    tracks: tracksType[]
-}
-
-export type tracksType = {
-    name: string
-    content: string
+export type childrenType = {
+    '@odata.nextLink': string,
+    value: itemType[]
 }

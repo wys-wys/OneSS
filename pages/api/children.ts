@@ -6,14 +6,14 @@ import getToken from "@/script/get_token";
 import baseSetting from "@/setting/baseSetting";
 
 
-const children = async (req: { query: { user: string, route?: string } }, res: NextApiResponse<itemType[]>) => {
-    const {'user': user, 'route': route} = req.query
-    const data = await getChildrenByRoute(user, route ? `/${route}` : '')
+const children = async (req: { query: { user: string, route?: string, thumbnails?: boolean } }, res: NextApiResponse<itemType[]>) => {
+    const {'user': user, 'route': route, 'thumbnails': thumbnails = false} = req.query
+    const data = await getChildrenByRoute(user, route ? `/${route}` : '', thumbnails)
     res.status(200).json(data)
 }
 export default children
 
-async function getChildrenByRoute(user: string, route: string = '') {
+async function getChildrenByRoute(user: string, route: string = '', thumbnails: boolean) {
     const accessToken = await getToken()
     const url = encodeURI(`${baseSetting.endpoints.graph_endpoint}/users/${user}/drive/root:${baseSetting.folder}${route}:/children`)
 
@@ -23,11 +23,12 @@ async function getChildrenByRoute(user: string, route: string = '') {
                 'Authorization': `Bearer ${accessToken}`
             },
             params: {
-                expand: 'thumbnails',
-                select: 'name,size,id,folder,file,image,video'
+                expand: `${thumbnails ? 'thumbnails' : ''}`,
+                select: 'name,size,id,folder,file,image,video',
+                top: '50'
             },
         })
-        return res.data.value
+        return res.data
     } catch (e) {
         return {status: 233}
     }
