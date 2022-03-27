@@ -38,7 +38,7 @@ export default function Home() {
                                 {userList.map((userName, index) => {
                                     return (
                                         <li key={index} className={'hover-bordered hover-bordered'}>
-                                            <Link href={`/${userName}`}><a className={'truncate'}>👤 {userName}</a></Link>
+                                            <Link href={`/${userName}`}><a className={'truncate'}>{userName}</a></Link>
                                         </li>
                                     )
                                 })}
