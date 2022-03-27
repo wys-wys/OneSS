@@ -17,16 +17,16 @@ export type itemType = {
 
 # GET: you.domain.com/api/
 
-- [children?user={user}&route={rout}](./children.md)
+- [children?user={user}&route={rout}](children.md)
 
-- [item/content?user={user}&id={id}](./content.md)
+- [item/content?user={user}&id={id}](content.md)
 
-- [item?user={user}&id={id}](./item.md)
+- [item?user={user}&id={id}](item.md)
 
-- [preview?user={user}&id={id}](./preview.md)
+- [preview?user={user}&id={id}](preview.md)
 
-- [users](./users.md)
+- [users](users.md)
 
-- [bingPic](./bingPic.md)
+- [bingPic](bingPic.md)
 
-- [quota](./quota.md)
+- [quota](quota.md)

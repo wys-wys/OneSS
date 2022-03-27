@@ -27,7 +27,7 @@
 
   [中文](./doc/zh/customSetting_zh.md) | en
 
-# [API](./doc/exp/api/api.md)
+# [API](doc/api/api.md)
 
 # 不会去做的功能 | Anti-features
 
