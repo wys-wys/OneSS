@@ -10,7 +10,7 @@ import CopyButton from "@/components/CopyModal/CopyButton";
 
 export default function FileItem({user, name, size, id, index}: { user: string, name: string, size: number, id: string, index: number }) {
     return (
-        <tr key={index} className={'h-8'}>
+        <tr key={index}>
 
             {/*CheckBox*/}
             <th><label className={'flex items-center justify-end gap-2'}>{index + 1}<input type="checkbox" className="checkbox"/></label></th>

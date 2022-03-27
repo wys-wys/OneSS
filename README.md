@@ -1,4 +1,4 @@
-![OneSS_T](https://oness.dzaaaaaa.com/OneSS_T.svg)
+![OneSS_T](./public/OneSS_T.svg)
 
 # OneSS
 

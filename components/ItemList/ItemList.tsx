@@ -1,13 +1,12 @@
 import useSWR from "swr";
 
-import {VscSync} from "react-icons/vsc";
-
 import {fetcher} from "@/script/swr_get";
 import {itemType} from "@/script/data_type";
 import FolderItem from "@/components/ItemList/FolderItem";
 import FileItem from "@/components/ItemList/FileItem";
 import ListHeader from "@/components/ItemList/ListHeader";
 import Quota from "@/components/ItemList/Quota";
+import ListLoading from "@/components/ItemList/ListLoading";
 
 
 export default function ItemList({user, route}: { user: string, route?: string[] }) {
@@ -16,7 +15,7 @@ export default function ItemList({user, route}: { user: string, route?: string[]
     if (!data) return (
         <div className={'w-full lg:max-w-7xl px-2 flex flex-col'}>
             {user && <ListHeader user={user} route={route}/>}
-            <VscSync className={"animate-spin w-72 h-72"}/>
+            <ListLoading/>
         </div>
     )
 
@@ -37,9 +36,9 @@ export default function ItemList({user, route}: { user: string, route?: string[]
                     <thead>
                     <tr>
                         <th className={'w-20'}><label className={'flex items-center justify-end gap-2 text-xl'}>N<input type="checkbox" className="checkbox"/></label></th>
-                        <th className={'text-xl capitalize w-full'}>name</th>
-                        <th className={'text-xl capitalize w-20 text-center'}>size</th>
-                        <th className={'text-xl capitalize w-40 text-center'}>action</th>
+                        <th className={'text-xl capitalize w-[1000px]'}>name</th>
+                        <th className={'text-xl capitalize w-32 text-center'}>size</th>
+                        <th className={'text-xl capitalize w-48 text-center'}>action</th>
                     </tr>
                     </thead>
 

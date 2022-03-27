@@ -15,7 +15,7 @@ export default function UserList({userName}: { userName?: string }) {
                 {userList.map((userName, index) => {
                     return (
                         <li key={index} className={'hover-bordered'}>
-                            <Link href={`/${userName}`}><a className={'truncate'}>👤 {userName}</a></Link>
+                            <Link href={`/${userName}`}><a className={'truncate'}>{userName}</a></Link>
                         </li>
                     )
                 })}

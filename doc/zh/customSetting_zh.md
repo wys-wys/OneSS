@@ -2,14 +2,13 @@
 
 ## 目前在逐步添加可自定义的部分
 
-1. 颜色主题部分
+1. 颜色主题
 
    本项目主题借助 daisyUI 实现，所以可根据 [daisyUI 主题部分文档](https://daisyui.com/docs/themes/) 自定义
 
-2. 主页部分
+2. 修改 setting 文件夹内 customSetting.ts 文件
 
-   修改 setting 文件夹内 customSetting.ts 文件的 index 部分
-
+- 自行修改
 - backgroundImage 背景图片
 
     - 默认为 Bing 每日一图
@@ -37,9 +36,3 @@
     },
   };
   ```
-
-3. 页脚部分
-    - name 名字
-    - link 链接
-    - mail 邮件
-    - bilibili b站链接 
