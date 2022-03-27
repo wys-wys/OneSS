@@ -8,7 +8,6 @@
 
 2. 修改 setting 文件夹内 customSetting.ts 文件
 
-- 自行修改
 - backgroundImage 背景图片
 
     - 默认为 Bing 每日一图
@@ -36,3 +35,4 @@
     },
   };
   ```
+- 其余部分自行修改
