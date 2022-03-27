@@ -18,7 +18,7 @@ export default function FileItem({user, name, size, id, index}: { user: string, 
             {/*Name*/}
             <td>
                 <div className="flex items-center gap-2">
-                    <Image className={'bg-oBlack dark:bg-oWhite bg-opacity-20 dark:bg-opacity-20 rounded'} src={'/VscIcons/' + getIconForFile(name)} width={32} height={32}
+                    <Image className={'bg-oBlack dark:bg-oWhite bg-opacity-20 dark:bg-opacity-20 rounded'} src={'https://mystatic.dzaaaaaa.com/VscIcons/' + getIconForFile(name)} width={32} height={32}
                            layout={"fixed"} alt={name}/>
                     <Link href={`/item/${user}/${id}`}>
                         <a target="_blank" className={'font-bold'}>{name}</a>
