@@ -17,7 +17,7 @@ export default function Home() {
             </Head>
 
             <div className={'static flex flex-col md:flex-row items-center md:items-start'}>
-                <div className="absolute navbar bg-base-200 bg-opacity-40">
+                <div className="absolute navbar bg-base-100 bg-opacity-20">
                     <div className="flex-1">
                         <div className="dropdown">
                             <label tabIndex={0} className="btn btn-ghost normal-case">
