@@ -56,7 +56,7 @@ export default function Home() {
                 </div>
 
                 <div className="hero min-h-screen" style={{backgroundImage: `url(${customSetting.index.backgroundImage})`}}>
-                    <div className="hero-overlay bg-opacity-40"/>
+                    <div className="hero-overlay bg-opacity-20"/>
                     <div className="hero-content text-center text-neutral-content">
                         <div className="max-w-md">
                             <h1 className="mb-5 text-7xl font-bold">{customSetting.index.title}</h1>
