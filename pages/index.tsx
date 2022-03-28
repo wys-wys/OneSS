@@ -17,7 +17,7 @@ export default function Home() {
             </Head>
 
             <div className={'static flex flex-col md:flex-row items-center md:items-start'}>
-                <div className="absolute navbar bg-base-200">
+                <div className="absolute navbar bg-base-200 bg-opacity-40">
                     <div className="flex-1">
                         <div className="dropdown">
                             <label tabIndex={0} className="btn btn-ghost normal-case">
@@ -32,7 +32,7 @@ export default function Home() {
                                               fillOpacity="0.8"/>
                                     </svg>
                                 </div>
-                                <div className={'hidden md:block text-2xl ml-2 text-neutral-content'}>{customSetting.siteName}</div>
+                                <div className={'hidden md:block text-2xl ml-2'}>{customSetting.siteName}</div>
                             </label>
                             <ul tabIndex={0} className="dropdown-content bg-base-200 text-base-content rounded-box shadow-2xl menu menu-compact p-4">
                                 {userList.map((userName, index) => {
