@@ -32,7 +32,7 @@ export default function Home() {
                                               fillOpacity="0.8"/>
                                     </svg>
                                 </div>
-                                <div className={'hidden md:block text-2xl ml-2'}>{customSetting.siteName}</div>
+                                <div className={'hidden md:block text-2xl ml-2 text-neutral-content'}>{customSetting.siteName}</div>
                             </label>
                             <ul tabIndex={0} className="dropdown-content bg-base-200 text-base-content rounded-box shadow-2xl menu menu-compact p-4">
                                 {userList.map((userName, index) => {
