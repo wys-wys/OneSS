@@ -16,7 +16,7 @@ export default function Item({user, id}: { user: string, id: string }) {
     if (!data) return (
         <div className="hero min-h-screen bg-base-200 overflow-x-auto">
             <div className="animate-pulse hero-content flex-col lg:flex-row">
-                <div className={"animate-spin w-20 h-20"}><VscSync className={"w-20 h-20"}/></div>
+                <VscSync className={"animate-spin w-20 h-20"}/>
                 <div className="text-4xl h-16 font-bold">Loading...</div>
             </div>
         </div>
