@@ -10,7 +10,7 @@ import userList from "@/setting/userList";
 const route = async (req: { query: { p: string } }, res: NextApiResponse<itemType[]>) => {
     const {'p': route} = req.query
     let data: itemType[] = []
-    for (let user of userList) {
+    for (let user of userList.users) {
         let eachData = await getByRoute(user, route)
         eachData.status != 233 && (data = data.concat(eachData))
     }

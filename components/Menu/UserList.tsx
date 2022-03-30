@@ -12,10 +12,10 @@ export default function UserList({userName}: { userName?: string }) {
                 {userName && <div className={'hidden md:block text-2xl ml-2'}>{userName}</div>}
             </label>
             <ul tabIndex={0} className="dropdown-content bg-base-200 text-base-content rounded-box shadow-2xl menu menu-compact p-4">
-                {userList.map((userName, index) => {
+                {userList.users.map((userName, index) => {
                     return (
                         <li key={index} className={'hover-bordered'}>
-                            <Link href={`/${userName}`}><a className={'truncate'}>{userName}</a></Link>
+                            <Link href={`/${userName}`}><a className={'truncate'}>{userList.nickname[userName] || userName}</a></Link>
                         </li>
                     )
                 })}
