@@ -3,16 +3,16 @@
     "baseUrl": ".",
     "paths": {
       "@/components/*": [
-        "components/*"
+        "src/components/*"
       ],
       "@/public/*": [
-        "public/*"
+        "src/public/*"
       ],
       "@/script/*": [
-        "script/*"
+        "src/script/*"
       ],
       "@/setting/*": [
-        "setting/*"
+        "src/setting/*"
       ],
       "@/styles/*": [
         "styles/*"
