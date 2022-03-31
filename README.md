@@ -26,11 +26,16 @@
 
   [中文](./doc/zh/customSetting_zh.md) | en
 
-# [API](doc/api/api.md)
+# [API](./doc/api/api.md)
 
 # 不会去做的功能 | Anti-features
 
 - 单个文件夹内文件个数在 200 以上的支持 (会泄权，建议每个文件夹不要放大于 200 个文件
+
+# Use Github Actions
+
+- 使用 Github Actions 定时构建任务，如索引等
+- 有助于提升活跃度[demo](./auto/README.md)
 
 # Issues
 
