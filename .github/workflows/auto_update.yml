@@ -1,9 +1,9 @@
 name: Auto Update
 
 on:
+  fork:
   schedule:
     - cron: '30 */6 * * *'
-  fork
   watch:
     types: started
   workflow_dispatch:
