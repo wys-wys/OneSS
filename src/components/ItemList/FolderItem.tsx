@@ -13,12 +13,15 @@ export default function FolderItem({user, route, name, size, index}: { user: str
         <tr key={index}>
 
             {/*CheckBox*/}
-            <th><label className={'flex items-center justify-end gap-2'}>{index + 1}<input type="checkbox" className="checkbox"/></label></th>
+            <th><label className={'flex items-center justify-end gap-2'}>{index + 1}
+                {/*<input type="checkbox" className="checkbox"/>*/}
+            </label></th>
 
             {/*Name*/}
             <td>
                 <div className="flex items-center gap-2">
-                    <Image className={'bg-oBlack dark:bg-oWhite bg-opacity-20 dark:bg-opacity-20 rounded'} src={'https://mystatic.dzaaaaaa.com/VscIcons/' + getIconForFolder(name)} width={32} height={32}
+                    <Image className={'bg-oBlack dark:bg-oWhite bg-opacity-20 dark:bg-opacity-20 rounded'} src={'https://mystatic.dzaaaaaa.com/VscIcons/' + getIconForFolder(name)}
+                           width={32} height={32}
                            layout={"fixed"} alt={name}/>
                     <Link href={`/${user}/${route ? route.join('/') + '/' : ''}${name}`}>
                         <a className={'font-bold'}>{name}</a>
@@ -27,7 +30,9 @@ export default function FolderItem({user, route, name, size, index}: { user: str
             </td>
 
             {/*Size*/}
-            <td className={'text-center'}>{convertB(size)}</td>
+            <td className={'text-center'}>{convertB(size)}
+                <link rel="preload" href={`/api/children?user=${user}&route=${route ? route.join('/') + '/' : ''}${name}`} as="fetch" crossOrigin="anonymous"/>
+            </td>
 
             {/*Action*/}
             <td>
@@ -46,8 +51,6 @@ export default function FolderItem({user, route, name, size, index}: { user: str
                     <button className={'btn btn-square btn-sm invisible'}><VscCloudDownload className={"w-6 h-6"}/></button>
                 </div>
             </td>
-
-            <link rel="preload" href={`/api/children?user=${user}&route=${route ? route.join('/') + '/' : ''}${name}`} as="fetch" crossOrigin="anonymous"/>
         </tr>
     )
 }

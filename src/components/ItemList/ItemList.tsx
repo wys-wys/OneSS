@@ -35,7 +35,10 @@ export default function ItemList({user, route}: { user: string, route?: string[]
                 <table className="table table-compact w-full">
                     <thead>
                     <tr>
-                        <th className={'w-20'}><label className={'flex items-center justify-end gap-2 text-xl'}>N<input type="checkbox" className="checkbox"/></label></th>
+                        <th className={'w-20'}>
+                            <label className={'flex items-center justify-end gap-2 text-xl'}>N
+                                {/*<input type="checkbox" className="checkbox"/>*/}
+                            </label></th>
                         <th className={'text-xl capitalize w-[1000px]'}>name</th>
                         <th className={'text-xl capitalize w-32 text-center'}>size</th>
                         <th className={'text-xl capitalize w-48 text-center'}>action</th>
@@ -47,9 +50,9 @@ export default function ItemList({user, route}: { user: string, route?: string[]
                         return (
                             folder
                                 ?
-                                <FolderItem user={user} route={route} name={name} size={size} index={index}/>
+                                <FolderItem key={index} user={user} route={route} name={name} size={size} index={index}/>
                                 :
-                                <FileItem user={user} name={name} size={size} id={id} index={index}/>
+                                <FileItem key={index} user={user} name={name} size={size} id={id} index={index}/>
                         )
                     })}
                     </tbody>

@@ -3,7 +3,7 @@ import type {NextApiResponse} from 'next'
 
 import {itemType} from "@/script/data_type";
 import getToken from "@/script/get_token";
-import baseSetting from "../../setting/baseSetting";
+import baseSetting from "@/setting/baseSetting";
 
 
 const children = async (req: { query: { user: string, route?: string, thumbnails?: boolean } }, res: NextApiResponse<itemType[]>) => {

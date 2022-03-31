@@ -3,7 +3,7 @@ import type {AppProps} from 'next/app'
 import Head from "next/head";
 
 import CopyDialog from "@/components/CopyModal/CopyDialog";
-import customSetting from "../setting/customSetting";
+import customSetting from "@/setting/customSetting";
 
 
 export default function MyApp({Component, pageProps}: AppProps,) {

@@ -2,7 +2,7 @@ import axios from "axios";
 import {NextApiResponse} from "next";
 
 import getToken from "@/script/get_token";
-import baseSetting from "../../setting/baseSetting";
+import baseSetting from "@/setting/baseSetting";
 
 
 const quota = async (req: { query: { user: string } }, res: NextApiResponse) => {

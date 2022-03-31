@@ -2,7 +2,7 @@ import {useRouter} from "next/router";
 
 import Item from "@/components/Item";
 import Menu from "@/components/Menu/Menu";
-import userList from "../../../setting/userList";
+import userList from "@/setting/userList";
 
 
 export default function ItemUserId() {

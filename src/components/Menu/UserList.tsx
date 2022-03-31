@@ -1,7 +1,8 @@
 import Link from "next/link"
 
-import userList from "../../setting/userList";
 import {VscAccount} from "react-icons/vsc";
+
+import userList from "@/setting/userList";
 
 
 export default function UserList({userName}: { userName?: string }) {

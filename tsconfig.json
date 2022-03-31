@@ -12,7 +12,7 @@
         "src/script/*"
       ],
       "@/setting/*": [
-        "src/setting/*"
+        "setting/*"
       ],
       "@/styles/*": [
         "styles/*"

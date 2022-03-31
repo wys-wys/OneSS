@@ -12,5 +12,4 @@ const baseSetting = {
     },
 }
 
-
 export default baseSetting

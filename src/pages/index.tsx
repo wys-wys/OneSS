@@ -3,8 +3,8 @@ import Link from "next/link";
 
 import {VscGithub} from "react-icons/vsc";
 
-import customSetting from "../setting/customSetting";
-import userList from "../setting/userList";
+import customSetting from "@/setting/customSetting";
+import userList from "@/setting/userList";
 import ThemeSwitch from "@/components/ThemeSwitch";
 import IndexLink from "@/components/IndexLink";
 
