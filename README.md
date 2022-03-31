@@ -7,10 +7,9 @@
 # 特性 | Features
 
 - 免费! | Free !
-- API
+- API Support
 - 多用户支持 | Multi-user Support
 - 多主题 | Multiple Themes
-- 必应每日一图 api | Bing's photo of the day
 - 可以做图床，视频云 | Cloud Storage Services for Photos and Video[(demo)](https://mystatic.dzaaaaaa.com/OneSS.html)
 
 # 开始 | Start

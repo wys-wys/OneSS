@@ -14,28 +14,14 @@
     - 其余部分自行修改
     - backgroundImage 背景图片
 
-        - 默认为 Bing 每日一图
+        - 默认为 Bing 近 7 天随机图片
 
-      ```ts
-      backgroundImage: "/api/bingPic";
-      ```
+          ```ts
+          backgroundImage: "/api/bingPic";
+          ```
 
         - 若要自定义图片背景，请将图片放入 Public 文件夹并修改路径，例
 
-      ```ts
-      backgroundImage: "/bg.jpg";
-      ```
-
-        - title 标题
-        - introduction 介绍
-        - 完整示例:
-
-      ```ts
-      const customSetting = {
-        index: {
-          backgroundImage: "/api/bingPic",
-          title: "OneSS",
-          introduction: "Make your Onedrive work like OSS",
-        },
-      };
-      ```
+          ```ts
+          backgroundImage: "/bg.jpg";
+          ```

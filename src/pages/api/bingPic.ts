@@ -9,7 +9,8 @@ const bingPic = async (req: NextApiRequest, res: NextApiResponse) => {
 export default bingPic
 
 async function getBingPic() {
-    const url = encodeURI("http://www.bing.com/HPImageArchive.aspx?format=js&idx=0&n=1&mkt=en-US")
+    const idx = Math.floor(Math.random() * 8)
+    const url = encodeURI(`http://www.bing.com/HPImageArchive.aspx?format=js&idx=${idx}&n=1&mkt=en-US`)
     try {
         const res = await axios.get(url, {
             headers: {

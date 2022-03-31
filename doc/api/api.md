@@ -2,17 +2,23 @@
 
 ```ts
 export type itemType = {
-  id: string;
-  name: string;
-  size: number;
-  folder: { childCount: number };
-  file: { mimeType: string; hashes: object };
-  image: { height: number; width: number };
-  video: { bitrate: number; height: number; width: number };
-  createdDateTime: string;
-  lastModifiedDateTime: string;
-  thumbnails: { 0: { large: { width: number; height: number; url: string } } };
-};
+    id: string
+    name: string
+    size: number
+    folder: { childCount: number }
+    file: { mimeType: string, hashes: object }
+    image: { height: number, width: number }
+    video: { bitrate: number, height: number, width: number }
+    createdDateTime: string
+    lastModifiedDateTime: string
+    thumbnails: {
+        0: {
+            large: { width: number, height: number, url: string },
+            medium: { width: number, height: number, url: string }
+        }
+    }
+    content: string
+}
 ```
 
 # GET: you.domain.com/api/
@@ -27,6 +33,6 @@ export type itemType = {
 
 - [users](users.md)
 
-- [bingPic](bingPic.md)
-
 - [quota](quota.md)
+
+- [bingPic](bingPic.md)
