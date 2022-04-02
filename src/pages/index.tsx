@@ -47,7 +47,7 @@ export default function Home() {
                     </div>
                     <div className="flex-none">
                         <ThemeSwitch/>
-                        <a href={"https://github.com/Tualin14/OneSS"} target={'_blank'} rel="noreferrer">
+                        <a href={customSetting.link.github} target={'_blank'} rel="noreferrer">
                             <button className={"btn btn-ghost"}>
                                 <VscGithub className={"w-6 h-6"}/>
                             </button>

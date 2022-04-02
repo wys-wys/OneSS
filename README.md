@@ -1,4 +1,4 @@
-![OneSS_T](./public/OneSS_T.svg)
+![OneSS_T](https://mystatic.dzaaaaaa.com/OneSS/OneSS_T.svg)
 
 # OneSS
 
@@ -10,7 +10,7 @@
 - API Support
 - 多用户支持 | Multi-user Support
 - 多主题 | Multiple Themes
-- 可以做图床，视频云 | Cloud Storage Services for Photos and Video[(demo)](https://mystatic.dzaaaaaa.com/OneSS.html)
+- 可以做图床，视频云 | Cloud Storage Services for Photos and Video [(demo)](https://mystatic.dzaaaaaa.com/OneSS.html)
 
 # 开始 | Start
 
@@ -32,10 +32,10 @@
 
 - 单个文件夹内文件个数在 200 以上的支持 (会泄权，建议每个文件夹不要放大于 200 个文件
 
-# [Use Github Actions](./auto)
+# [Use Github Actions](./auto/README.md)
 
 - 使用 Github Actions 定时构建任务，如索引等
-- 有助于提升活跃度
+- 有助于提升活跃度, 但活跃度计算方式并不公开，所以不保证有效
 
 # Issues
 
@@ -54,6 +54,7 @@
     - 一个作者，把完成的合法，优秀的作品传到适当网站，但因为莫须有的原因(平台间竞争，原作者被盗窃者举报......)被审核删除，那么就需要一个更好地分享位置，一个不用看别人脸色的地方。
 
 - 是的，当我们都可以自己储存并共享自己的文件的时候，我们可以建立我们自己的平台。
+
 - [OneSS应该做成什么样](https://www.dzaaaaaa.com/blog/LSW/OneSS应该做成什么样)
 
 # Licence

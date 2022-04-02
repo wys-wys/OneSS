@@ -4,6 +4,7 @@ import {VscGithub, VscHome} from "react-icons/vsc";
 
 import UserList from "@/components/Menu/UserList";
 import ThemeSwitch from "@/components/ThemeSwitch";
+import customSetting from "@/setting/customSetting";
 
 
 export default function Menu({userName}: { userName: string }) {
@@ -21,11 +22,11 @@ export default function Menu({userName}: { userName: string }) {
 
                 <ThemeSwitch/>
 
-                <Link href={"https://github.com/Tualin14/OneSS"}><a target={'_blank'}>
+                <a href={customSetting.link.github} target={'_blank'} rel="noreferrer">
                     <button className={"btn btn-ghost"}>
                         <VscGithub className={"w-6 h-6"}/>
                     </button>
-                </a></Link>
+                </a>
             </div>
         </div>
     )

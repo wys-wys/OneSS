@@ -1,10 +1,13 @@
 # Use Github Actions
 
 - 使用 Github Actions 定时构建任务，如索引等
-- 有助于提升活跃度
-- 每日更新一次,修改频率请自行修改 .github/workflows/auto.yml 文件的 schedule 部分
+- 有助于提升活跃度, 但活跃度计算方式并不公开，所以不保证有效
 
-# 部署
+# 让示例运行
+
+示例是给定时给所有文件编索引，若不想自己做，可以运行此示例
+
+每日更新一次, 频率请自行修改 .github/workflows/auto.yml 文件的 schedule 部分 [(修改方法)](https://docs.github.com/cn/actions/using-workflows/workflow-syntax-for-github-actions#onschedule)
 
 1. 修改 .github/workflows/auto.yml 文件以下部分
    [示例](/.github/workflows/auto_update.yml)

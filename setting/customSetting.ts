@@ -6,6 +6,7 @@ const customSetting = {
         introduction: 'Make your Onedrive work like OSS'
     },
     link: {
+        github: 'https://github.com/Tualin14/OneSS',
         mail: {
             enable: true,
             link: 't@dzaaaaaa.com'
