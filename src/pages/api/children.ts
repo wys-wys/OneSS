@@ -14,10 +14,15 @@ const children = async (req: { query: { user: string, route?: string, thumbnails
     const data = await getChildrenByRoute(user, route ? `/${route}` : '', thumbnails, accessToken)
     await getNextData(data, accessToken)
     if (totalData) {
-        res.status(200).json(data.value.concat(totalData))
+        const resData = data.value.concat(totalData)
+        totalData = []
+        res.status(200).json(resData)
     } else {
-        res.status(200).json(data.value)
+        const resData = data.value
+        totalData = []
+        res.status(200).json(resData)
     }
+    res.status(200).json(data.value)
 }
 export default children
 
