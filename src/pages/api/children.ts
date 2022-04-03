@@ -22,7 +22,6 @@ const children = async (req: { query: { user: string, route?: string, thumbnails
         totalData = []
         res.status(200).json(resData)
     }
-    res.status(200).json(data.value)
 }
 export default children
 
