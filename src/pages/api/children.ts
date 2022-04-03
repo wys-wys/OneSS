@@ -12,15 +12,22 @@ const children = async (req: { query: { user: string, route?: string, thumbnails
     const {'user': user, 'route': route, 'thumbnails': thumbnails = false} = req.query
     const accessToken = await getToken()
     const data = await getChildrenByRoute(user, route ? `/${route}` : '', thumbnails, accessToken)
-    await getNextData(data, accessToken)
-    if (totalData) {
-        const resData = data.value.concat(totalData)
-        totalData = []
-        res.status(200).json(resData)
+
+    if (data.status == 233) {
+        res.status(200).json(data)
+    } else if (baseSetting.over200) {
+        await getNextData(data, accessToken)
+        if (totalData) {
+            const resData = data.value.concat(totalData)
+            totalData = []
+            res.status(200).json(resData)
+        } else {
+            const resData = data.value
+            totalData = []
+            res.status(200).json(resData)
+        }
     } else {
-        const resData = data.value
-        totalData = []
-        res.status(200).json(resData)
+        res.status(200).json(data.value)
     }
 }
 export default children
