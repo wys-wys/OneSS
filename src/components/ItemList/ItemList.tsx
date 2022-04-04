@@ -1,4 +1,5 @@
 import useSWR from "swr";
+import Link from "next/link";
 
 import {fetcher} from "@/script/swr_get";
 import {itemType} from "@/script/data_type";
@@ -22,7 +23,17 @@ export default function ItemList({user, route}: { user: string, route?: string[]
     if (error || data.status == 233) return (
         <div className={'w-full lg:max-w-7xl px-2 flex flex-col'}>
             {user && <ListHeader user={user} route={route}/>}
-            <div className={"flex justify-center items-center text-2xl"}>failed to load or not found.</div>
+            <div className="hero">
+                <div className="hero-content text-center">
+                    <div className="max-w-md">
+                        <h1 className="text-5xl font-bold">233</h1>
+                        <p className="py-6 text-2xl">failed to load or not found.</p>
+                        <Link href={"/"}><a>
+                            <button className="btn btn-primary">Return Home</button>
+                        </a></Link>
+                    </div>
+                </div>
+            </div>
         </div>
     )
 
